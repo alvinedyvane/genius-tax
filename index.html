@@ -78,9 +78,15 @@
     }
     .nav-brand {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
       text-decoration: none;
       line-height: 1.2;
+    }
+    .nav-brand-text {
+      display: flex;
+      flex-direction: column;
     }
     .nav-brand-name {
       font-size: 1.15rem;
@@ -154,7 +160,9 @@
        HERO
     ───────────────────────────────────────── */
     .hero {
-      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 45%, #2a0a1a 100%);
+      background: linear-gradient(rgba(15,15,26,0.85), rgba(45,45,45,0.9)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
       position: relative;
       overflow: hidden;
       padding: 6rem 2rem 5rem;
@@ -344,14 +352,14 @@
        URGENCY / COUNTDOWN BAR
     ───────────────────────────────────────── */
     .urgency-bar {
-      background: #2D2D2D;
-      border-bottom: 3px solid var(--pink);
-      padding: 2.5rem 2rem 2rem;
+      background: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 1.5rem 2rem 1.2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
+      gap: 0.6rem;
       text-align: center;
     }
     .urgency-header {
@@ -359,19 +367,19 @@
       font-weight: 900;
       letter-spacing: 5px;
       text-transform: uppercase;
-      color: var(--pink);
+      color: #2D2D2D;
     }
     .urgency-label {
       font-size: 0.75rem;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
+      color: #6B6B6B;
     }
     .urgency-sub {
       font-size: 0.88rem;
       font-weight: 600;
-      color: rgba(255,255,255,0.5);
+      color: #6B6B6B;
       letter-spacing: 0.5px;
     }
     .urgency-countdown {
@@ -383,14 +391,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: rgba(229,0,125,0.1);
-      border: 1px solid rgba(229,0,125,0.35);
+      background: rgba(229,0,125,0.07);
+      border: 1px solid rgba(229,0,125,0.25);
       border-radius: 10px;
-      padding: 1rem 1.5rem;
-      min-width: 90px;
+      padding: 0.6rem 1rem;
+      min-width: 72px;
     }
     .cd-num {
-      font-size: 3.5rem;
+      font-size: 2.2rem;
       font-weight: 900;
       color: var(--pink);
       letter-spacing: -2px;
@@ -401,10 +409,10 @@
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
-      margin-top: 0.4rem;
+      color: #6B6B6B;
+      margin-top: 0.3rem;
     }
-    .cd-sep { font-size: 2.5rem; font-weight: 900; color: var(--pink); opacity: 0.45; margin: 0 0.1rem; padding-bottom: 1.6rem; }
+    .cd-sep { font-size: 1.8rem; font-weight: 900; color: var(--pink); opacity: 0.45; margin: 0 0.1rem; padding-bottom: 1rem; }
     .urgency-cta {
       background: var(--pink);
       color: var(--white);
@@ -421,10 +429,10 @@
     }
     .urgency-cta:hover { background: var(--pink-dark); }
     @media (max-width: 600px) {
-      .urgency-bar { gap: 0.75rem; padding: 2rem 1rem 1.5rem; }
-      .cd-num { font-size: 2.4rem; }
-      .cd-unit { min-width: 65px; padding: 0.75rem 0.75rem; }
-      .cd-sep { font-size: 1.8rem; padding-bottom: 1rem; }
+      .urgency-bar { gap: 0.5rem; padding: 1.2rem 1rem 1rem; }
+      .cd-num { font-size: 1.7rem; }
+      .cd-unit { min-width: 54px; padding: 0.5rem 0.6rem; }
+      .cd-sep { font-size: 1.4rem; padding-bottom: 0.7rem; }
     }
 
     /* ─────────────────────────────────────────
@@ -1025,9 +1033,11 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/" class="nav-brand" aria-label="Genius Tax home">
-        <img src="logos/gws-full-colour.png" alt="Genius Money" height="38" style="display:block;margin-bottom:3px;" />
-        <span class="nav-brand-name">Genius <span>Tax</span></span>
-        <span class="nav-brand-sub">Powered by Genius Money</span>
+        <img src="logos/gws-full-colour.png" alt="Genius Money" height="35" style="display:block;flex-shrink:0;" />
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Genius <span>Tax</span></span>
+          <span class="nav-brand-sub">Powered by Genius Money</span>
+        </div>
       </a>
       <ul class="nav-links">
         <li><a href="#who">Who It's For</a></li>
