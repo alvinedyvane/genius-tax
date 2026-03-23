@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTD Income Tax Compliance | Genius Money</title>
+  <meta name="description" content="Making Tax Digital is mandatory from 6 April 2026. Genius Money handles everything — digital records, quarterly submissions, HMRC compliance. Introductory annual pricing from £199/year for the first 12 months." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #E5007D;
+      --pink-dark: #c2006a;
+      --pink-light: #fce8f3;
+      --dark: #2D2D2D;
+      --grey: #F5F5F5;
+      --border: #e0e0e0;
+      --text: #333333;
+      --muted: #666666;
+      --white: #ffffff;
+      --radius: 4px;
+    }
+
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── UTILITY BAR ── */
+    .utility-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .utility-contact {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text);
+    }
+    .utility-contact a {
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .utility-contact .dot { color: var(--pink); }
+    .utility-buttons { display: flex; gap: 0.5rem; }
+    .util-btn {
+      padding: 0.35rem 0.85rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+    }
+    .util-btn.outline { border: 1.5px solid var(--pink); color: var(--pink); background: transparent; }
+    .util-btn.solid { background: var(--pink); color: var(--white); border: 1.5px solid var(--pink); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      height: 42px;
+      width: 42px;
+      border-radius: 8px;
+      display: block;
+      flex-shrink: 0;
+    }
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+    .nav-logo-text .logo-top {
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--dark);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .nav-logo-text .logo-sub {
+      font-size: 0.62rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: nowrap;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--pink); }
+    .nav-cta {
+      background: var(--pink);
+      color: var(--white);
+      padding: 0.6rem 1.4rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--pink-dark); }
+
+    /* ── URGENCY ── */
+    .urgency {
+      background: var(--pink);
+      color: var(--white);
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--white);
+      padding: 5rem 2rem 4rem;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (max-width: 800px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+    }
+    .hero-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .hero-label::before { content: ''; display: block; width: 32px; height: 2px; background: var(--pink); }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      color: var(--dark);
+      margin-bottom: 1.25rem;
+    }
+    .hero-desc {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.75;
+      border-left: 3px solid var(--pink);
+      padding-left: 1rem;
+    }
+    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .btn-pink {
+      background: var(--pink);
+      color: var(--white);
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .btn-pink:hover { background: var(--pink-dark); }
+    .btn-learn {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-learn::before { content: '—'; color: var(--text); }
+    .hero-visual {
+      background: linear-gradient(160deg, var(--pink) 0%, #9c005a 100%);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .visual-badge {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 100px;
+      padding: 0.4rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: inline-block;
+      width: fit-content;
+    }
+    .visual-date {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .visual-date span { font-size: 1rem; font-weight: 500; display: block; opacity: 0.8; margin-bottom: 0.25rem; }
+    .visual-stats {
+      display: flex;
+      gap: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      flex-wrap: wrap;
+    }
+    .vs { }
+    .vs-num { font-size: 1.6rem; font-weight: 900; letter-spacing: -0.5px; }
+    .vs-label { font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; }
+    .visual-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .vl-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+    .vl-item::before {
+      content: '✓';
+      width: 22px;
+      height: 22px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── DARK TAGLINE ── */
+    .tagline {
+      background: var(--dark);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .tagline p {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: var(--pink);
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-tag::before { content: ''; display: block; width: 24px; height: 2px; background: var(--pink); }
+    h2.section-h {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 0.75rem;
+    }
+    .section-lead {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* ── PROBLEM CARDS ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--pink);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+    .card-icon { font-size: 1.6rem; margin-bottom: 0.75rem; }
+    .card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--dark); text-transform: uppercase; letter-spacing: 0.5px; }
+    .card p { color: var(--muted); font-size: 0.875rem; line-height: 1.65; }
+
+    /* ── TIMELINE ── */
+    .timeline {
+      display: flex;
+      margin-top: 2.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+    .tl {
+      flex: 1;
+      min-width: 200px;
+      padding: 1.5rem;
+      border-right: 1px solid var(--border);
+      background: var(--white);
+    }
+    .tl:last-child { border-right: none; }
+    .tl.now { background: var(--pink); color: var(--white); }
+    .tl-label { font-size: 0.65rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; opacity: 0.7; }
+    .tl.now .tl-label { opacity: 1; color: rgba(255,255,255,0.8); }
+    .tl-date { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .tl-amount { font-size: 2rem; font-weight: 900; letter-spacing: -1px; line-height: 1; margin-bottom: 0.5rem; }
+    .tl.now .tl-amount { color: var(--white); }
+    .tl-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+    .tl.now .tl-desc { color: rgba(255,255,255,0.85); }
+
+    /* ── HOW IT WORKS ── */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; margin-top: 2.5rem; }
+    .step {
+      padding: 2rem 1.75rem;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .step:last-child { border-right: none; }
+    .step-num {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--pink);
+      opacity: 0.15;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .step h3 { font-size: 0.9rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; color: var(--dark); }
+    .step p { color: var(--muted); font-size: 0.85rem; line-height: 1.65; }
+
+    /* ── PRICING ── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .price-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      background: var(--white);
+      position: relative;
+    }
+    .price-card.featured {
+      border: 2px solid var(--pink);
+    }
+    .feat-tag {
+      position: absolute;
+      top: -12px;
+      left: 1.5rem;
+      background: var(--pink);
+      color: var(--white);
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 2px;
+    }
+    .price-tier {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .price-amount {
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .price-amount sup { font-size: 1.2rem; vertical-align: super; }
+    .price-amount sub { font-size: 1rem; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+    .price-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.6;
+    }
+    .price-features { list-style: none; margin-bottom: 1.75rem; }
+    .price-features li {
+      font-size: 0.85rem;
+      padding: 0.4rem 0;
+      padding-left: 1.25rem;
+      position: relative;
+      color: var(--text);
+    }
+    .price-features li::before { content: '✓'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+    .price-btn {
+      display: block;
+      text-align: center;
+      padding: 0.8rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      border-radius: var(--radius);
+      transition: all 0.2s;
+    }
+    .price-btn.solid { background: var(--pink); color: var(--white); }
+    .price-btn.solid:hover { background: var(--pink-dark); }
+    .price-btn.outline { border: 1.5px solid var(--pink); color: var(--pink); }
+    .price-btn.outline:hover { background: var(--pink); color: var(--white); }
+    .price-save {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--pink);
+      font-weight: 600;
+      margin-top: 0.6rem;
+    }
+
+    /* ── DOWNLOAD BOX ── */
+    .download-box {
+      background: var(--grey);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--pink);
+      border-radius: var(--radius);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+    .download-box h3 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin-bottom: 0.25rem; }
+    .download-box p { font-size: 0.875rem; color: var(--muted); max-width: 500px; }
+
+    /* ── FORM ── */
+    .form-outer { max-width: 640px; margin: 2.5rem auto 0; }
+    .form-box {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .form-header {
+      background: var(--pink);
+      padding: 1.5rem 2rem;
+      color: var(--white);
+    }
+    .form-header h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.25rem; }
+    .form-header p { font-size: 0.875rem; opacity: 0.9; }
+    .form-body { padding: 2rem; background: var(--white); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .fg { margin-bottom: 1.1rem; }
+    label { display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.35rem; color: var(--dark); }
+    input, select {
+      width: 100%;
+      padding: 0.75rem 0.9rem;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+    input:focus, select:focus { outline: none; border-color: var(--pink); }
+    .form-submit {
+      width: 100%;
+      padding: 0.95rem;
+      background: var(--pink);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover { background: var(--pink-dark); }
+    .form-waiver {
+      background: var(--pink-light);
+      border: 1px solid rgba(229,0,125,0.2);
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--pink-dark);
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+    .form-note { font-size: 0.75rem; color: var(--muted); text-align: center; margin-top: 0.75rem; line-height: 1.6; }
+    .success-msg {
+      display: none;
+      background: #ecfdf5;
+      border: 1px solid #6ee7b7;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+      color: #065f46;
+    }
+    .success-msg h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
+
+    /* ── TESTIMONIALS ── */
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .testi {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      position: relative;
+    }
+    .testi::before { content: '"'; position: absolute; top: 0.5rem; right: 1.25rem; font-size: 5rem; color: var(--pink); opacity: 0.1; font-family: Georgia, serif; line-height: 1; }
+    .testi-stars { color: var(--pink); margin-bottom: 0.75rem; font-size: 0.85rem; }
+    .testi-text { font-size: 0.875rem; color: var(--text); line-height: 1.7; margin-bottom: 1rem; }
+    .testi-name { font-weight: 700; font-size: 0.85rem; color: var(--dark); }
+    .testi-role { font-size: 0.78rem; color: var(--muted); }
+
+    /* ── FAQ ── */
+    .faq { max-width: 800px; margin-top: 2.5rem; }
+    details { border-bottom: 1px solid var(--border); }
+    summary {
+      padding: 1.1rem 0;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--dark);
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 1.2rem; color: var(--pink); flex-shrink: 0; margin-left: 1rem; }
+    details[open] summary::after { content: '−'; }
+    details p { padding-bottom: 1.1rem; color: var(--muted); font-size: 0.875rem; line-height: 1.75; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.55);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    footer img { height: 36px; margin-bottom: 1rem; filter: brightness(0) invert(1) opacity(0.7); }
+    footer a { color: var(--pink); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .utility-bar { flex-direction: column; align-items: flex-start; }
+      nav { padding: 0.75rem 1rem; }
+      .nav-links { display: none; }
+      section { padding: 3.5rem 1rem; }
+      .hero { padding: 3rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- UTILITY BAR -->
+  <div class="utility-bar">
+    <div class="utility-contact">
+      <a href="tel:03303350400"><span class="dot">●</span> 0330 335 0400</a>
+      <a href="mailto:hello@geniusmoney.co.uk"><span class="dot">●</span> hello@geniusmoney.co.uk</a>
+    </div>
+    <div class="utility-buttons">
+      <a href="https://www.geniusmoney.co.uk" class="util-btn outline">← Back to Main Site</a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="https://www.geniusmoney.co.uk" class="nav-logo">
+        <img src="gm-icon.jpg" alt="Genius Money" />
+        <div class="nav-logo-text">
+          <span class="logo-top">Genius Money</span>
+          <span class="logo-sub">MTD Tax Compliance</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#problem">The Problem</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#signup" class="nav-cta">Sign Up Now →</a>
+    </div>
+  </nav>
+
+  <!-- URGENCY -->
+  <div class="urgency">
+    ⚠️ MTD ITSA is mandatory from <strong>6 April 2026</strong>. Sign up before 1 April — free onboarding (save £95).
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-label">Making Tax Digital — 2026</div>
+        <h1>Your quarterly tax returns,<br><span style="color:var(--pink)">handled for you.</span></h1>
+        <p class="hero-desc">
+          From 6 April 2026, contractors earning over £50,000 must file quarterly reports to HMRC. We've managed contractor payroll for thousands of workers — now let us manage your tax compliance too.
+        </p>
+        <div class="hero-buttons">
+          <a href="#signup" class="btn-pink">Get Started — From £199/year</a>
+          <a href="#how-it-works" class="btn-learn">See How It Works</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <span class="visual-badge">Mandatory from</span>
+        <div class="visual-date">
+          <span>6 April 2026</span>
+          £50,000+
+        </div>
+        <div class="visual-list">
+          <div class="vl-item">4 quarterly submissions per year</div>
+          <div class="vl-item">Digital records — mandatory</div>
+          <div class="vl-item">End of Period Statement + Final Declaration</div>
+          <div class="vl-item">Penalties from first missed deadline</div>
+        </div>
+        <div class="visual-stats">
+          <div class="vs"><div class="vs-num">£199</div><div class="vs-label">Intro / year</div></div>
+          <div class="vs"><div class="vs-num">5</div><div class="vs-label">Submissions / year</div></div>
+          <div class="vs"><div class="vs-num">10 min</div><div class="vs-label">To set up</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DARK TAGLINE -->
+  <div class="tagline">
+    <p>"We've been managing payroll for contractors across the UK for years. We already have your income data. Getting you MTD-compliant takes us 10 minutes — and costs you from £199 for your entire first year."</p>
+    <p style="font-size: 0.85rem; color: #aaa; margin-top: 0.75rem;">Genius Money Ltd is <strong style="color: white;">AML-approved with HMRC</strong> — meeting HMRC's minimum standards for tax agents before we even begin.</p>
+  </div>
+
+  <!-- PROBLEM -->
+  <section id="problem" style="background:var(--grey)">
+    <div class="container">
+      <div class="section-tag">The Problem</div>
+      <h2 class="section-h">MTD Changes Everything.<br>Here's What It Actually Means.</h2>
+      <p class="section-lead">The annual self assessment return you've been filing? It's being replaced. And it's happening whether you're ready or not.</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>Quarterly Submissions — 4× Per Year</h3>
+          <p>Every three months, a summary of your income and expenses must reach HMRC. Miss one deadline and penalties apply immediately — no grace period.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💻</div>
+          <h3>Digital Records — Mandatory</h3>
+          <p>Paper records and spreadsheets alone are no longer compliant. All income and expenses must be kept in HMRC-approved software from day one.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📅</div>
+          <h3>5 Filings Per Year Minimum</h3>
+          <p>4 quarterly updates, plus an End of Period Statement, plus a Final Declaration. That's 5× more admin than the single SA return you're used to.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚠️</div>
+          <h3>Penalties Start Immediately</h3>
+          <p>Unlike the old SA system, HMRC's penalty clock starts ticking from 6 April 2026 — not at the end of the tax year. Early non-compliance is expensive.</p>
+        </div>
+      </div>
+
+      <!-- TIMELINE -->
+      <h3 style="font-size:0.75rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-top:3rem; margin-bottom:1rem;">WHO IS AFFECTED AND WHEN</h3>
+      <div class="timeline">
+        <div class="tl now">
+          <div class="tl-label">Mandatory now</div>
+          <div class="tl-date">6 April 2026</div>
+          <div class="tl-amount">£50k+</div>
+          <div class="tl-desc">Sole traders & landlords with gross income from self-employment or property above £50,000</div>
+        </div>
+        <div class="tl">
+          <div class="tl-label">Next phase</div>
+          <div class="tl-date">April 2027</div>
+          <div class="tl-amount">£30k+</div>
+          <div class="tl-desc">Threshold drops — significantly more contractors enter the scheme</div>
+        </div>
+        <div class="tl">
+          <div class="tl-label">Near universal</div>
+          <div class="tl-date">April 2028</div>
+          <div class="tl-amount">£20k+</div>
+          <div class="tl-desc">Almost all self-employed individuals and landlords will be in scope</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-tag">The Solution</div>
+      <h2 class="section-h">We Handle Everything.<br>You Get On With Work.</h2>
+      <p class="section-lead">Unlike a new accountant starting from scratch, Genius Money already processes your payroll. We start where everyone else ends.</p>
+      <div class="steps" style="border:1px solid var(--border); border-radius:var(--radius); margin-top:2.5rem;">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Sign Up in 10 Minutes</h3>
+          <p>Complete the form below. We set up your account, handle HMRC agent authorisation, and onboard you to our secure portal.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Send Us Your Records</h3>
+          <p>Each quarter, upload your receipts and invoices. That's it. We categorise, reconcile, and prepare everything.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>We File With HMRC</h3>
+          <p>We submit your quarterly updates, EOPS, and Final Declaration — all deadlines met, all filings confirmed.</p>
+        </div>
+        <div class="step" style="border-right:none">
+          <div class="step-num">04</div>
+          <h3>Stay Fully Compliant</h3>
+          <p>Quarterly reminders, real-time support, zero HMRC stress. You focus on your work. We handle the rest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" style="background:var(--grey)">
+    <div class="container">
+      <div class="section-tag">Pricing</div>
+      <h2 class="section-h">Simple, Transparent Pricing.<br>No Surprises.</h2>
+      <p class="section-lead">All plans include HMRC authorisation, quarterly submissions, EOPS, and Final Declaration. Sign up within the next 3 months and lock in our introductory annual rate — then Year 2 reverts to the monthly price.</p>
+
+      <!-- INTRO PRICING BANNER -->
+      <div style="background: var(--dark); color: white; border-radius: 8px; padding: 1.25rem 2rem; margin: 1.5rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <div style="font-size: 0.65rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--pink); margin-bottom: 0.4rem;">⚡ Limited 3-Month Sign-Up Window</div>
+          <div style="font-size: 1rem; font-weight: 700; color: white;">First 12 months: <span style="color: var(--pink);">£199/year</span> (Foundation) or <span style="color: var(--pink);">£299/year</span> (Complete) — one flat annual fee, free onboarding</div>
+          <div style="font-size: 0.8rem; color: #aaa; margin-top: 0.3rem;">Year 2 reverts to standard monthly rates. Annual-only — no monthly option on intro pricing.</div>
+        </div>
+        <a href="#signup" style="background: var(--pink); color: white; padding: 0.7rem 1.4rem; border-radius: 6px; font-weight: 700; font-size: 0.85rem; text-decoration: none; white-space: nowrap;">Claim Intro Rate</a>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-tier">Foundation</div>
+          <div style="margin-bottom: 0.15rem;">
+            <span style="font-size: 2.4rem; font-weight: 900; letter-spacing: -1.5px; color: var(--pink); line-height: 1;">£199</span>
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--pink);">/first year</span>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 0.75rem;">Then <span style="text-decoration: line-through; color: #bbb;">£468/year</span> → <strong style="color: var(--dark);">£39/month</strong> from Year 2</div>
+          <div class="price-desc">For organised contractors who keep their own records and need submissions handled.</div>
+          <ul class="price-features">
+            <li>HMRC MTD agent authorisation</li>
+            <li>4 × quarterly updates per year</li>
+            <li>End of Period Statement (EOPS)</li>
+            <li>Final Declaration</li>
+            <li>Secure client portal</li>
+            <li>Email support (48hr response)</li>
+          </ul>
+          <a href="#signup" class="price-btn outline">Get Started</a>
+          <div class="price-save">Save £269 in Year 1 + free onboarding</div>
+        </div>
+
+        <div class="price-card featured">
+          <div class="feat-tag">Most Popular</div>
+          <div class="price-tier">Complete</div>
+          <div style="margin-bottom: 0.15rem;">
+            <span style="font-size: 2.4rem; font-weight: 900; letter-spacing: -1.5px; color: var(--pink); line-height: 1;">£299</span>
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--pink);">/first year</span>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--muted); margin-bottom: 0.75rem;">Then <span style="text-decoration: line-through; color: #bbb;">£708/year</span> → <strong style="color: var(--dark);">£59/month</strong> from Year 2</div>
+          <div class="price-desc">Full service — send us your records each quarter, we handle the rest.</div>
+          <ul class="price-features">
+            <li>Everything in Foundation</li>
+            <li>Monthly bookkeeping review</li>
+            <li>CIS deduction reconciliation</li>
+            <li>Expense optimisation advice</li>
+            <li>Priority phone + email support</li>
+            <li>Quarterly tax efficiency call (15 min)</li>
+            <li>Annual tax planning review (30 min)</li>
+          </ul>
+          <a href="#signup" class="price-btn solid">Get Started</a>
+          <div class="price-save">Save £409 in Year 1 + free onboarding</div>
+        </div>
+
+        <div class="price-card">
+          <div class="price-tier">Director</div>
+          <div class="price-amount"><sup>£</sup>99<sub>/month</sub></div>
+          <div class="price-desc">For high earners with complex income — property, investments, multiple streams.</div>
+          <ul class="price-features">
+            <li>Everything in Complete</li>
+            <li>Multiple income stream handling</li>
+            <li>Capital gains review</li>
+            <li>IR35 status advisory</li>
+            <li>Dedicated named account manager</li>
+            <li>Unlimited calls, WhatsApp & email</li>
+            <li>Partner/spouse SA return included</li>
+          </ul>
+          <a href="#signup" class="price-btn outline">Get Started</a>
+          <div class="price-save">Free onboarding during sign-up window</div>
+        </div>
+      </div>
+
+      <!-- DOWNLOAD -->
+      <div class="download-box">
+        <div>
+          <h3>📥 Free MTD Readiness Checklist</h3>
+          <p>5 questions to find out if MTD applies to you and exactly what you need to do before April 6. Free PDF download.</p>
+        </div>
+        <a href="mtd-checklist.pdf" download class="btn-pink" style="white-space:nowrap">Download Free Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+      <div class="section-tag">What Contractors Say</div>
+      <h2 class="section-h">Trusted By Thousands<br>Across the UK.</h2>
+      <div class="testi-grid">
+        <div class="testi">
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-text">"Genius Money have carried out my payroll for over a year. I can honestly say I would use them wherever I am working. Always paid on time and they help me track my expenses too."</div>
+          <div class="testi-name">Verified Contractor</div>
+          <div class="testi-role">CIS Subcontractor, Construction</div>
+        </div>
+        <div class="testi">
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-text">"I signed up for Genius to carry out my tax return and they are extremely thorough. They help me record all my expenses. 100% would recommend this service!"</div>
+          <div class="testi-name">Verified Contractor</div>
+          <div class="testi-role">Self-Employed Tradesman</div>
+        </div>
+        <div class="testi">
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-text">"Been with them for three years and haven't looked back. They helped me every step of the way. A great company — highly recommend to anyone in the trade."</div>
+          <div class="testi-name">Matthew W.</div>
+          <div class="testi-role">Contractor, 3+ years with Genius</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGN UP -->
+  <section id="signup" style="background:var(--grey)">
+    <div class="container">
+      <div class="section-tag">Get Started</div>
+      <h2 class="section-h" style="text-align:center">Sign Up Today — 10 Minutes.</h2>
+      <p class="section-lead" style="margin:0 auto; text-align:center">A Genius Money advisor will contact you within 24 hours to complete HMRC authorisation and get you set up before April 6.</p>
+
+      <div class="form-outer">
+        <div class="form-box">
+          <div class="form-header">
+            <h3>Reserve Your Spot — Free Onboarding Before April 1</h3>
+            <p>Save £95 in onboarding fees. No payment taken until your account is fully set up.</p>
+          </div>
+          <div class="form-body">
+            <div id="form-container">
+              <div class="form-waiver">🎁 Sign up before 1 April 2026 — onboarding fee waived (save £95)</div>
+
+              <div class="form-row">
+                <div class="fg">
+                  <label for="fname">First Name *</label>
+                  <input type="text" id="fname" placeholder="John" required />
+                </div>
+                <div class="fg">
+                  <label for="lname">Last Name *</label>
+                  <input type="text" id="lname" placeholder="Smith" required />
+                </div>
+              </div>
+              <div class="fg">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" placeholder="john@email.com" required />
+              </div>
+              <div class="fg">
+                <label for="phone">Mobile Number *</label>
+                <input type="tel" id="phone" placeholder="07700 000000" required />
+              </div>
+              <div class="fg">
+                <label for="income">Annual Gross Income *</label>
+                <select id="income" required>
+                  <option value="" disabled selected>Select income band</option>
+                  <option value="50-75k">£50,000 – £75,000</option>
+                  <option value="75-100k">£75,000 – £100,000</option>
+                  <option value="100k+">£100,000+</option>
+                  <option value="under-50k">Under £50,000 (interested for 2027)</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label for="plan">Preferred Plan</label>
+                <select id="plan">
+                  <option value="complete" selected>Complete — £299/year intro (Most Popular)</option>
+                  <option value="foundation">Foundation — £199/year intro</option>
+                  <option value="director">Director — £99/month (standard rate)</option>
+                  <option value="unsure">Not sure — advise me</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label for="accountant">Do you currently have an accountant?</label>
+                <select id="accountant">
+                  <option value="no">No</option>
+                  <option value="yes-switch">Yes — looking to switch</option>
+                  <option value="yes-keep">Yes — keeping for other work</option>
+                </select>
+              </div>
+              <button class="form-submit" onclick="handleSubmit(event)">Reserve My Place — Free Onboarding →</button>
+              <div class="form-note">🔒 Your details are secure and will never be shared with third parties.<br>By submitting you agree to be contacted by a Genius Money advisor.</div>
+            </div>
+            <div class="success-msg" id="success-msg">
+              <h3>✅ You're registered!</h3>
+              <p>A Genius Money advisor will be in touch within 24 hours to complete your setup. Check your inbox — and your spam folder just in case.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-h">Common Questions.</h2>
+      <div class="faq">
+        <details>
+          <summary>Am I definitely affected by MTD ITSA?</summary>
+          <p>If your gross income from self-employment and/or property exceeded £50,000 in the 2024/25 tax year, yes — MTD ITSA is mandatory for you from 6 April 2026. This is gross income (turnover), not profit. PAYE/umbrella income doesn't count toward the threshold, but CIS earnings and self-employment income do.</p>
+        </details>
+        <details>
+          <summary>I already have an accountant. Can I still use Genius Money for MTD?</summary>
+          <p>Yes. Many contractors use Genius Money for MTD compliance while retaining their existing accountant for company accounts or investment advice. We handle the quarterly updates and HMRC submissions — your accountant continues with everything else.</p>
+        </details>
+        <details>
+          <summary>What do I need to do each quarter?</summary>
+          <p>Very little. Three weeks before each deadline we send a reminder. You upload your receipts and invoices to our secure portal. We categorise, reconcile, and submit. Your total time per quarter: under 30 minutes.</p>
+        </details>
+        <details>
+          <summary>What if I sign up after April 6?</summary>
+          <p>You can still sign up after April 6 and we'll help you catch up — but HMRC penalties start from the first missed deadline. Signing up before April 1 also means your onboarding fee is waived (saving £95).</p>
+        </details>
+        <details>
+          <summary>Is my limited company affected?</summary>
+          <p>MTD for Corporation Tax is still under consultation — your limited company is not currently affected. However, if you also have personal self-employment or property income over £50,000, your personal tax position IS affected. Our Director tier handles PSC directors with mixed income.</p>
+        </details>
+        <details>
+          <summary>How do you get authorised to file on my behalf?</summary>
+          <p>We're an authorised HMRC tax agent. Once you sign up, we guide you through the HMRC Online Agent Authorisation — it takes about 10 minutes. HMRC processes this in 10–14 days, which is why signing up now is important.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="gm-wordmark.jpg" alt="Genius Money" />
+    <p>© 2026 Genius Money | Genius Payroll Limited | Authorised HMRC Tax Agent</p>
+    <p style="margin-top:0.5rem">
+      <a href="https://www.geniusmoney.co.uk">geniusmoney.co.uk</a> ·
+      <a href="tel:03303350400">0330 335 0400</a> ·
+      <a href="mailto:hello@geniusmoney.co.uk">hello@geniusmoney.co.uk</a>
+    </p>
+    <p style="margin-top:1rem; font-size:0.72rem; opacity:0.5">This page is for information purposes. MTD ITSA compliance requirements may change. Always verify with HMRC guidance.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const fname = document.getElementById('fname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const income = document.getElementById('income').value;
+      if (!fname || !email || !phone || !income) { alert('Please fill in all required fields.'); return; }
+      document.getElementById('form-container').style.display = 'none';
+      const s = document.getElementById('success-msg');
+      s.style.display = 'block';
+      s.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+
+</body>
+</html>
