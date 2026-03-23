@@ -154,7 +154,7 @@
        HERO
     ───────────────────────────────────────── */
     .hero {
-      background: var(--dark);
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 45%, #2a0a1a 100%);
       position: relative;
       overflow: hidden;
       padding: 6rem 2rem 5rem;
@@ -163,8 +163,8 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 900px 600px at 70% 50%, rgba(229,0,125,0.18) 0%, transparent 70%),
-                  radial-gradient(ellipse 600px 400px at 20% 80%, rgba(229,0,125,0.08) 0%, transparent 60%);
+      background: radial-gradient(ellipse 900px 600px at 70% 50%, rgba(229,0,125,0.3) 0%, transparent 65%),
+                  radial-gradient(ellipse 500px 400px at 10% 90%, rgba(229,0,125,0.14) 0%, transparent 60%);
       pointer-events: none;
     }
     .hero-inner {
@@ -344,14 +344,22 @@
        URGENCY / COUNTDOWN BAR
     ───────────────────────────────────────── */
     .urgency-bar {
-      background: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 100%);
-      border-bottom: 2px solid var(--pink);
-      padding: 0.85rem 2rem;
+      background: #2D2D2D;
+      border-bottom: 3px solid var(--pink);
+      padding: 2.5rem 2rem 2rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
+      gap: 1rem;
+      text-align: center;
+    }
+    .urgency-header {
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--pink);
     }
     .urgency-label {
       font-size: 0.75rem;
@@ -360,54 +368,63 @@
       text-transform: uppercase;
       color: rgba(255,255,255,0.5);
     }
+    .urgency-sub {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.5px;
+    }
     .urgency-countdown {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.75rem;
     }
     .cd-unit {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: rgba(229,0,125,0.12);
-      border: 1px solid rgba(229,0,125,0.25);
-      border-radius: 6px;
-      padding: 0.4rem 0.65rem;
-      min-width: 52px;
+      background: rgba(229,0,125,0.1);
+      border: 1px solid rgba(229,0,125,0.35);
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      min-width: 90px;
     }
     .cd-num {
-      font-size: 1.3rem;
+      font-size: 3.5rem;
       font-weight: 900;
-      color: var(--white);
-      letter-spacing: -0.5px;
+      color: var(--pink);
+      letter-spacing: -2px;
       line-height: 1;
     }
     .cd-label {
-      font-size: 0.55rem;
+      font-size: 0.6rem;
       font-weight: 800;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-top: 0.2rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 0.4rem;
     }
-    .cd-sep { font-size: 1.1rem; font-weight: 900; color: var(--pink); opacity: 0.6; margin: 0 0.1rem; }
+    .cd-sep { font-size: 2.5rem; font-weight: 900; color: var(--pink); opacity: 0.45; margin: 0 0.1rem; padding-bottom: 1.6rem; }
     .urgency-cta {
       background: var(--pink);
       color: var(--white);
-      padding: 0.5rem 1.2rem;
+      padding: 0.65rem 1.6rem;
       border-radius: 100px;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 800;
       text-decoration: none;
       letter-spacing: 0.5px;
       text-transform: uppercase;
       white-space: nowrap;
       transition: background 0.2s;
+      margin-top: 0.5rem;
     }
     .urgency-cta:hover { background: var(--pink-dark); }
     @media (max-width: 600px) {
-      .urgency-bar { gap: 1rem; padding: 0.75rem 1rem; }
-      .urgency-label { display: none; }
+      .urgency-bar { gap: 0.75rem; padding: 2rem 1rem 1.5rem; }
+      .cd-num { font-size: 2.4rem; }
+      .cd-unit { min-width: 65px; padding: 0.75rem 0.75rem; }
+      .cd-sep { font-size: 1.8rem; padding-bottom: 1rem; }
     }
 
     /* ─────────────────────────────────────────
@@ -1008,6 +1025,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/" class="nav-brand" aria-label="Genius Tax home">
+        <img src="logos/gws-full-colour.png" alt="Genius Money" height="38" style="display:block;margin-bottom:3px;" />
         <span class="nav-brand-name">Genius <span>Tax</span></span>
         <span class="nav-brand-sub">Powered by Genius Money</span>
       </a>
@@ -1023,6 +1041,24 @@
       </div>
     </div>
   </nav>
+
+  <!-- ═══════════════════════════════════════
+       URGENCY / COUNTDOWN
+  ═══════════════════════════════════════ -->
+  <div class="urgency-bar" role="timer" aria-live="polite" aria-label="Countdown to MTD deadline">
+    <div class="urgency-header">MTD DEADLINE</div>
+    <div class="urgency-countdown" id="countdown">
+      <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">Mins</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">Secs</span></div>
+    </div>
+    <div class="urgency-sub">days until Making Tax Digital goes live</div>
+    <a href="#signup" class="urgency-cta">Claim Early Bird</a>
+  </div>
 
   <!-- ═══════════════════════════════════════
        HERO
@@ -1061,23 +1097,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════════
-       URGENCY / COUNTDOWN
-  ═══════════════════════════════════════ -->
-  <div class="urgency-bar" role="timer" aria-live="polite" aria-label="Countdown to MTD deadline">
-    <span class="urgency-label">MTD Deadline</span>
-    <div class="urgency-countdown" id="countdown">
-      <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">Mins</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">Secs</span></div>
-    </div>
-    <a href="#signup" class="urgency-cta">Claim Early Bird</a>
-  </div>
 
   <!-- ═══════════════════════════════════════
        WHO IS THIS FOR
