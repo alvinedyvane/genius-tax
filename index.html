@@ -160,9 +160,9 @@
        HERO
     ───────────────────────────────────────── */
     .hero {
-      background: linear-gradient(rgba(15,15,26,0.85), rgba(45,45,45,0.9)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80');
-      background-size: cover;
-      background-position: center;
+      background: #ffffff;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
       position: relative;
       overflow: hidden;
       padding: 6rem 2rem 5rem;
@@ -171,8 +171,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 900px 600px at 70% 50%, rgba(229,0,125,0.3) 0%, transparent 65%),
-                  radial-gradient(ellipse 500px 400px at 10% 90%, rgba(229,0,125,0.14) 0%, transparent 60%);
+      background: none;
       pointer-events: none;
     }
     .hero-inner {
@@ -207,7 +206,7 @@
       font-weight: 900;
       line-height: 1.08;
       letter-spacing: -1.5px;
-      color: var(--white);
+      color: var(--dark);
       margin-bottom: 1.5rem;
     }
     .hero h1 em {
@@ -216,13 +215,13 @@
     }
     .hero-sub {
       font-size: 1rem;
-      color: rgba(255,255,255,0.65);
+      color: #666666;
       font-weight: 500;
       line-height: 1.75;
       margin-bottom: 2.5rem;
       max-width: 480px;
     }
-    .hero-sub strong { color: rgba(255,255,255,0.9); font-weight: 700; }
+    .hero-sub strong { color: var(--dark); font-weight: 700; }
     .hero-actions {
       display: flex;
       align-items: center;
@@ -249,20 +248,20 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: rgba(255,255,255,0.65);
+      color: #666666;
       font-size: 0.82rem;
       font-weight: 700;
       text-decoration: none;
       transition: color 0.2s;
     }
-    .btn-ghost:hover { color: var(--white); }
+    .btn-ghost:hover { color: var(--dark); }
     .btn-ghost::after { content: '↓'; font-size: 0.9rem; }
 
     /* Hero card */
     .hero-card {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: #f7f7f7;
+      backdrop-filter: none;
+      border: 1px solid #e0e0e0;
       border-radius: var(--radius-lg);
       padding: 2.5rem;
       display: flex;
@@ -338,9 +337,9 @@
       align-items: baseline;
       gap: 0.5rem;
     }
-    .hero-card-from .from-label { font-size: 0.72rem; color: rgba(255,255,255,0.45); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-    .hero-card-from .from-price { font-size: 2rem; font-weight: 900; color: var(--white); letter-spacing: -1px; }
-    .hero-card-from .from-mo { font-size: 0.85rem; color: rgba(255,255,255,0.45); font-weight: 500; }
+    .hero-card-from .from-label { font-size: 0.72rem; color: #999999; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .hero-card-from .from-price { font-size: 2rem; font-weight: 900; color: var(--dark); letter-spacing: -1px; }
+    .hero-card-from .from-mo { font-size: 0.85rem; color: #999999; font-weight: 500; }
 
     @media (max-width: 820px) {
       .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
