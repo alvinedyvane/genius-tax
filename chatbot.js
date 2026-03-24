@@ -466,6 +466,10 @@
         case 'qualify-step1-no':      wizardStep2No();          break;
         case 'qualify-step2-over50k': wizardStep3Over50K();     break;
         case 'qualify-step2-under50k':wizardStep3Under50K();    break;
+        case 'qualify-growth-details': wizardGrowthDetails();   break;
+        case 'qualify-growth-signup':  wizardGrowthSignup();    break;
+        case 'qualify-essential-details': wizardEssentialDetails(); break;
+        case 'qualify-essential-signup':  wizardEssentialSignup();  break;
         default:                      answerFallback();         break;
       }
     }, 380);
@@ -545,13 +549,38 @@
   /** Step 3a — MTD mandatory → Growth / MTD Compliance plan */
   function wizardStep3Over50K() {
     addMsg('bot',
-      'You\u2019ll need MTD compliance from April 2026 \u2014 it\u2019s mandatory. Our Growth plan handles everything: ' +
-      'Sage software, quarterly HMRC reporting, dedicated account manager. ' +
-      'Just \u00A349/month (early bird, normally \u00A379).<br><br>' +
+      'You\u2019ll need MTD compliance from April 2026 \u2014 it\u2019s mandatory. ' +
+      'Our <strong>Growth plan</strong> at \u00A349/month (early bird, normally \u00A379) handles it all.'
+    );
+    setQR([
+      { label: 'Tell me more \u2139\uFE0F', action: 'qualify-growth-details' },
+      { label: 'Sign up \u2014 \u00A349/month \u2192', action: 'qualify-growth-signup' }
+    ]);
+  }
+
+  function wizardGrowthDetails() {
+    addMsg('bot',
+      '<strong>Here\u2019s what you get with Growth:</strong><br><br>' +
+      '\u2705 Full quarterly HMRC submissions \u2014 we handle all 4 per year<br>' +
+      '\u2705 Sage software (HMRC-approved) \u2014 all set up for you<br>' +
+      '\u2705 Dedicated account manager who calls you monthly<br>' +
+      '\u2705 Annual accounts prepared and filed<br>' +
+      '\u2705 Compliance alerts so you never miss a deadline<br>' +
+      '\u2705 HMRC agent authorisation \u2014 we deal with HMRC on your behalf<br><br>' +
+      'No penalties. No stress. No surprises.'
+    );
+    setQR([
+      { label: 'Sign up now \u2014 \u00A349/month \u2192', action: 'qualify-growth-signup' }
+    ]);
+  }
+
+  function wizardGrowthSignup() {
+    addMsg('bot',
+      'Great choice! \uD83C\uDF89 Click below to get started \u2014 takes 2 minutes:<br><br>' +
       '<a href="https://buy.stripe.com/fZu00j7io5KT4gO76P9EI04" ' +
       '   target="_blank" rel="noopener noreferrer" ' +
       '   class="gtax-cta" ' +
-      '   style="display:inline-block;text-decoration:none;min-height:44px;line-height:44px;padding:0 1.2rem;">' +
+      '   style="display:inline-block;text-decoration:none;min-height:44px;line-height:44px;padding:0 1.2rem;background:#E5007D;color:#fff;border-radius:8px;font-weight:600;text-align:center;">' +
       'Sign up for Growth \u2014 \u00A349/month \u2192' +
       '</a>'
     );
@@ -562,11 +591,36 @@
   function wizardStep3Under50K() {
     addMsg('bot',
       'You don\u2019t need MTD yet, but you still need your annual self-assessment sorted. ' +
-      'Our Essential plan handles everything for just \u00A329/month.<br><br>' +
+      'Our <strong>Essential plan</strong> handles it for just \u00A329/month.'
+    );
+    setQR([
+      { label: 'Tell me more \u2139\uFE0F', action: 'qualify-essential-details' },
+      { label: 'Sign up \u2014 \u00A329/month \u2192', action: 'qualify-essential-signup' }
+    ]);
+  }
+
+  function wizardEssentialDetails() {
+    addMsg('bot',
+      '<strong>Here\u2019s what you get with Essential:</strong><br><br>' +
+      '\u2705 Full self-assessment tax return prepared and filed<br>' +
+      '\u2705 Bookkeeping guidance and support<br>' +
+      '\u2705 HMRC filing handled on your behalf<br>' +
+      '\u2705 Email support from our tax team<br>' +
+      '\u2705 Compliance reminders so you never miss a deadline<br><br>' +
+      'Simple, affordable, sorted.'
+    );
+    setQR([
+      { label: 'Sign up now \u2014 \u00A329/month \u2192', action: 'qualify-essential-signup' }
+    ]);
+  }
+
+  function wizardEssentialSignup() {
+    addMsg('bot',
+      'Great choice! \uD83C\uDF89 Click below to get started \u2014 takes 2 minutes:<br><br>' +
       '<a href="https://buy.stripe.com/cNi9ATcCIb5d14C76P9EI03" ' +
       '   target="_blank" rel="noopener noreferrer" ' +
       '   class="gtax-cta" ' +
-      '   style="display:inline-block;text-decoration:none;min-height:44px;line-height:44px;padding:0 1.2rem;">' +
+      '   style="display:inline-block;text-decoration:none;min-height:44px;line-height:44px;padding:0 1.2rem;background:#E5007D;color:#fff;border-radius:8px;font-weight:600;text-align:center;">' +
       'Sign up for Essential \u2014 \u00A329/month \u2192' +
       '</a>'
     );
