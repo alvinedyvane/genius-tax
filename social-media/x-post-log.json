@@ -12,5 +12,19 @@
         "text": "MTD is coming! 12 days to go. Are you ready? Let Genius Tax handle it! Sign up now. #GeniusTax #MTD"
       }
     }
+  },
+  {
+    "timestamp": "2026-03-24T16:12:20Z",
+    "tweet_text": "Early bird deal: 49 per month was 79 - ONLY until April 5. Genius Tax is your HMRC Authorised Agent with Sage software. Zero stress. geniustax.co.uk #GeniusTax #MTD",
+    "status_code": 201,
+    "response": {
+      "data": {
+        "text": "Early bird deal: 49 per month was 79 - ONLY until April 5. Genius Tax is your HMRC Authorised Agent with Sage software. Zero stress. https://t.co/PS0pKbfsPc #GeniusTax #MTD",
+        "edit_history_tweet_ids": [
+          "2036476216522195222"
+        ],
+        "id": "2036476216522195222"
+      }
+    }
   }
 ]
