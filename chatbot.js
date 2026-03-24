@@ -577,7 +577,7 @@
   function wizardGrowthSignup() {
     addMsg('bot',
       'Great choice! \uD83C\uDF89 Click below to get started \u2014 takes 2 minutes:<br><br>' +
-      '<a href="https://buy.stripe.com/fZu00j7io5KT4gO76P9EI04" ' +
+      '<a href="https://buy.stripe.com/aFafZh9qw8X54gOgHp9EI07" ' +
       '   target="_blank" rel="noopener noreferrer" ' +
       '   class="gtax-cta" ' +
       '   style="display:inline-block;text-decoration:none;min-height:44px;line-height:44px;padding:0 1.2rem;background:#E5007D;color:#fff;border-radius:8px;font-weight:600;text-align:center;">' +
@@ -617,7 +617,7 @@
   function wizardEssentialSignup() {
     addMsg('bot',
       'Great choice! \uD83C\uDF89 Click below to get started \u2014 takes 2 minutes:<br><br>' +
-      '<a href="https://buy.stripe.com/cNi9ATcCIb5d14C76P9EI03" ' +
+      '<a href="https://buy.stripe.com/bJe00j6ekc9hfZw3UD9EI06" ' +
       '   target="_blank" rel="noopener noreferrer" ' +
       '   class="gtax-cta" ' +
       '   style="display:inline-block;text-decoration:none;min-height:44px;line-height:44px;padding:0 1.2rem;background:#E5007D;color:#fff;border-radius:8px;font-weight:600;text-align:center;">' +
