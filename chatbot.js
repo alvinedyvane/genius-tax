@@ -87,7 +87,7 @@
       '      <div class="gtax-hdr-name">Genius Tax Assistant</div>',
       '      <div class="gtax-hdr-status">Online — MTD expert</div>',
       '    </div>',
-      '    <button class="gtax-reset-btn" onclick="gtaxReset()" aria-label="New conversation" title="Start new chat" style="background:none;border:none;color:#fff;font-size:0.75rem;cursor:pointer;padding:4px 8px;opacity:0.8;margin-right:4px;">🔄 New</button>',
+      '    <button class="gtax-reset-btn" onclick="gtaxReset()" aria-label="New conversation" title="Start new chat" style="background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;font-size:0.7rem;cursor:pointer;padding:4px 10px;border-radius:12px;margin-right:6px;backdrop-filter:blur(4px);transition:background 0.2s;" onmouseover="this.style.background=\'rgba(255,255,255,0.35)\'" onmouseout="this.style.background=\'rgba(255,255,255,0.2)\'">🔄 New</button>',
       '    <button class="gtax-close-btn" onclick="gtaxToggle()" aria-label="Close chat">✕</button>',
       '  </div>',
 
