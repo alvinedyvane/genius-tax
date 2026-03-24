@@ -195,9 +195,9 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(34,197,94,0.12);
-      border: 1px solid rgba(34,197,94,0.35);
-      color: #4ade80;
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.15);
+      color: #1a1a1a;
       font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 1.5px;
@@ -205,6 +205,7 @@
       padding: 0.4rem 1rem;
       border-radius: 100px;
       margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .hmrc-badge-icon { font-size: 1rem; }
     .hmrc-badge-text { white-space: nowrap; }
@@ -561,13 +562,20 @@
     .urgency-bar {
       background: #ffffff;
       border-bottom: 1px solid #e0e0e0;
-      padding: 1.5rem 2rem 1.2rem;
+      padding: 0.9rem 2rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem 2rem;
+      text-align: center;
+    }
+    .urgency-left {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      text-align: center;
+      gap: 0.3rem;
     }
     .urgency-header {
       font-size: 0.72rem;
@@ -636,7 +644,7 @@
     }
     .urgency-cta:hover { background: var(--pink-dark); }
     @media (max-width: 600px) {
-      .urgency-bar { gap: 0.5rem; padding: 1.2rem 1rem 1rem; }
+      .urgency-bar { flex-direction: column; gap: 0.5rem; padding: 1.2rem 1rem 1rem; }
       .cd-num { font-size: 1.7rem; }
       .cd-unit { min-width: 54px; padding: 0.5rem 0.6rem; }
       .cd-sep { font-size: 1.4rem; padding-bottom: 0.7rem; }
@@ -1337,20 +1345,17 @@
        URGENCY / COUNTDOWN
   ═══════════════════════════════════════ -->
   <div class="urgency-bar" role="timer" aria-live="polite" aria-label="Countdown to MTD deadline">
-    <div class="urgency-header">MTD DEADLINE</div>
-    <div class="urgency-countdown" id="countdown">
-      <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">Mins</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">Secs</span></div>
-    </div>
-    <div class="urgency-sub">days until Making Tax Digital goes live</div>
-    <div class="hmrc-trust-badge" style="margin-top:0.6rem;justify-content:center;">
-      <span class="hmrc-badge-icon">🛡️</span>
-      <span class="hmrc-badge-text">HMRC Authorised Tax Agent &nbsp;·&nbsp; AML Approved</span>
+    <div class="urgency-left">
+      <div class="urgency-header">MTD DEADLINE</div>
+      <div class="urgency-countdown" id="countdown">
+        <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">Mins</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">Secs</span></div>
+      </div>
     </div>
     <a href="https://buy.stripe.com/fZu00j7io5KT4gO76P9EI04" target="_blank" rel="noopener" class="urgency-cta">Claim Early Bird</a>
   </div>
