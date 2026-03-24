@@ -23,7 +23,7 @@ const STRIPE_CONFIG = {
   // 🔑  YOUR STRIPE PUBLISHABLE KEY
   //     Replace with: pk_test_xxxx  (test) or pk_live_xxxx (live)
   // ──────────────────────────────────────────────────────────
-  publishableKey: 'pk_test_PLACEHOLDER',
+  publishableKey: 'pk_live_51HJyJ4HEfg6rZsrfL5UaIuUy0zZ5eGZccd51RKeBXFUNeSaaB1b2qtnBTpvcGKSAwKoSZrROxBP4bV2mz1ud0ZXt00QtRIWkjh',
 
   // ──────────────────────────────────────────────────────────
   // 💷  STRIPE PRICE IDs  (one per plan)
@@ -31,9 +31,9 @@ const STRIPE_CONFIG = {
   //     then paste the price_xxxx ID here.
   // ──────────────────────────────────────────────────────────
   prices: {
-    standard:  'price_PLACEHOLDER_29',   // £29/month  — Standard plan
-    earlyBird: 'price_PLACEHOLDER_49',   // £49/month  — MTD Compliance Early Bird  ← PRIMARY CONVERSION
-    premium:   'price_PLACEHOLDER_149'   // £149/month — Premium plan
+    standard:  'price_1TEUw6HEfg6rZsrf1JjzCpy2',   // £29/month  — Standard plan
+    earlyBird: 'price_1TEUwHHEfg6rZsrfV0YdJls2',   // £49/month  — MTD Compliance Early Bird  ← PRIMARY CONVERSION
+    premium:   'price_1TEUwIHEfg6rZsrfpPJt5GDN'   // £149/month — Premium plan
   },
 
   // ──────────────────────────────────────────────────────────
