@@ -21,6 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="chatbot.css" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -751,6 +752,7 @@
     }
     .price-btn {
       display: block;
+      width: 100%;
       text-align: center;
       padding: 0.85rem;
       font-size: 0.84rem;
@@ -760,7 +762,12 @@
       font-family: 'Montserrat', sans-serif;
       letter-spacing: 0.5px;
       transition: all 0.2s;
+      cursor: pointer;
     }
+    /* Reset button-element defaults so .price-btn looks identical on <button> and <a> */
+    button.price-btn { background: none; border: none; }
+    button.price-btn.outline { border: 2px solid var(--border); }
+    button.price-btn:disabled { cursor: wait; }
     .price-btn.solid {
       background: var(--pink);
       color: var(--white);
@@ -1041,9 +1048,77 @@
       letter-spacing: 0.5px;
     }
     .footer-trust::before { content: '🔒'; font-size: 0.75rem; }
+
+    /* ── Stripe checkout loading spinner ── */
+    .gtax-spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: gtax-spin 0.7s linear infinite;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    .price-btn.outline .gtax-spinner {
+      border-color: rgba(229,0,125,0.3);
+      border-top-color: var(--pink);
+    }
+    @keyframes gtax-spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ── Thank-you banner (hidden until ?success=true) ── */
+    #gtax-thankyou {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5rem 2rem;
+      background: var(--pink-faint);
+      border-bottom: 3px solid var(--pink);
+    }
+    #gtax-thankyou .ty-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+    #gtax-thankyou h2 { font-size: 2rem; font-weight: 900; color: var(--dark); margin-bottom: 0.75rem; }
+    #gtax-thankyou p  { font-size: 1.05rem; color: var(--muted); max-width: 480px; line-height: 1.65; }
+    #gtax-thankyou .ty-email {
+      margin-top: 1.5rem;
+      display: inline-block;
+      background: var(--pink);
+      color: #fff;
+      padding: 0.65rem 1.8rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    #gtax-thankyou .ty-email:hover { background: var(--pink-dark); }
   </style>
+
+  <!-- Stripe.js — loaded from Stripe's CDN for PCI compliance -->
+  <!-- ⚠️  Do NOT self-host this script — Stripe requires it comes from js.stripe.com -->
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
+
+  <!-- ═══════════════════════════════════════
+       THANK-YOU BANNER
+       Hidden by default. Shown when Stripe
+       redirects back with ?success=true.
+  ═══════════════════════════════════════ -->
+  <div id="gtax-thankyou" role="region" aria-label="Payment confirmed">
+    <div class="ty-icon">🎉</div>
+    <h2>You're all set!</h2>
+    <p>
+      Welcome to Genius Tax. Your subscription is confirmed — our team will be
+      in touch within one business day to get your account fully set up.
+    </p>
+    <a href="mailto:hello@geniustax.co.uk" class="ty-email">
+      ✉️ hello@geniustax.co.uk
+    </a>
+  </div>
 
   <!-- ═══════════════════════════════════════
        STICKY NAV
@@ -1231,7 +1306,8 @@
             <li>Bookkeeping guidance</li>
             <li>Email support</li>
           </ul>
-          <a href="#signup" class="price-btn outline">Get Started →</a>
+          <!-- Stripe checkout: plan key = 'standard' (price_PLACEHOLDER_29) -->
+          <button class="price-btn outline" onclick="gtaxCheckout('standard', this)">Sign Up Now →</button>
         </div>
 
         <!-- MTD COMPLIANCE — FEATURED -->
@@ -1260,7 +1336,8 @@
             <li>HMRC agent authorisation</li>
             <li>End of Period Statement + Final Declaration</li>
           </ul>
-          <a href="#signup" class="price-btn solid">Claim Early Bird →</a>
+          <!-- Stripe checkout: plan key = 'earlyBird' (price_PLACEHOLDER_49) — PRIMARY CONVERSION TARGET -->
+          <button class="price-btn solid" onclick="gtaxCheckout('earlyBird', this)">Claim Early Bird →</button>
         </div>
 
         <!-- PREMIUM -->
@@ -1279,7 +1356,8 @@
             <li>VAT returns &amp; compliance</li>
             <li>Senior accountant assigned</li>
           </ul>
-          <a href="#signup" class="price-btn outline">Get Started →</a>
+          <!-- Stripe checkout: plan key = 'premium' (price_PLACEHOLDER_149) -->
+          <button class="price-btn outline" onclick="gtaxCheckout('premium', this)">Sign Up Now →</button>
         </div>
 
       </div>
@@ -1541,697 +1619,12 @@
   </script>
 
   <!-- ═══════════════════════════════════════
-       CHATBOT WIDGET
-       Genius Tax — MTD Assistant
-       Web3Forms key: swap YOUR_WEB3FORMS_KEY
+       CHATBOT WIDGET (external files)
   ═══════════════════════════════════════ -->
-  <style>
-    /* ── Chat Bubble ── */
-    #gtax-bubble {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #e5007d;
-      box-shadow: 0 4px 24px rgba(229,0,125,0.45);
-      cursor: pointer;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-      animation: gtax-pulse 2.8s ease-in-out infinite;
-      border: none;
-      outline: none;
-    }
-    #gtax-bubble:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 32px rgba(229,0,125,0.65);
-      animation: none;
-    }
-    #gtax-bubble svg {
-      width: 28px;
-      height: 28px;
-      fill: #ffffff;
-      transition: transform 0.25s ease, opacity 0.2s;
-    }
-    #gtax-bubble .gtax-icon-close {
-      position: absolute;
-      font-size: 22px;
-      color: #fff;
-      font-weight: 300;
-      line-height: 1;
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-    #gtax-bubble.open svg { opacity: 0; }
-    #gtax-bubble.open .gtax-icon-close { opacity: 1; }
+  <script src="chatbot.js"></script>
 
-    @keyframes gtax-pulse {
-      0%, 100% { box-shadow: 0 4px 24px rgba(229,0,125,0.45); transform: scale(1); }
-      50%       { box-shadow: 0 4px 40px rgba(229,0,125,0.72); transform: scale(1.05); }
-    }
-
-    /* ── Chat Window ── */
-    #gtax-window {
-      position: fixed;
-      bottom: 96px;
-      right: 24px;
-      width: 375px;
-      max-height: 570px;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 56px rgba(0,0,0,0.18), 0 2px 12px rgba(0,0,0,0.08);
-      z-index: 9998;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      transform: scale(0.82) translateY(24px);
-      transform-origin: bottom right;
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), opacity 0.22s ease;
-      font-family: 'Montserrat', Arial, sans-serif;
-    }
-    #gtax-window.open {
-      transform: scale(1) translateY(0);
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    /* Header */
-    .gtax-hdr {
-      background: linear-gradient(135deg, #e5007d 0%, #c2006a 100%);
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      flex-shrink: 0;
-    }
-    .gtax-hdr-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.18);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 19px;
-      flex-shrink: 0;
-    }
-    .gtax-hdr-info { flex: 1; min-width: 0; }
-    .gtax-hdr-name {
-      font-size: 0.87rem;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: 0.1px;
-      white-space: nowrap;
-    }
-    .gtax-hdr-status {
-      font-size: 0.67rem;
-      color: rgba(255,255,255,0.85);
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      margin-top: 1px;
-    }
-    .gtax-hdr-status::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      background: #4ade80;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .gtax-close-btn {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.15);
-      border: none;
-      cursor: pointer;
-      color: #fff;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s;
-      flex-shrink: 0;
-      font-family: inherit;
-      line-height: 1;
-    }
-    .gtax-close-btn:hover { background: rgba(255,255,255,0.28); }
-
-    /* Message area */
-    .gtax-msgs {
-      flex: 1;
-      overflow-y: auto;
-      padding: 14px 14px 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-      background: #f8f8f8;
-      scroll-behavior: smooth;
-    }
-    .gtax-msgs::-webkit-scrollbar { width: 3px; }
-    .gtax-msgs::-webkit-scrollbar-track { background: transparent; }
-    .gtax-msgs::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
-
-    .gtax-msg {
-      max-width: 90%;
-      padding: 10px 13px;
-      border-radius: 14px;
-      font-size: 0.81rem;
-      line-height: 1.62;
-      font-weight: 500;
-      color: #111111;
-      animation: gtax-msg-pop 0.22s ease;
-      word-wrap: break-word;
-    }
-    @keyframes gtax-msg-pop {
-      from { opacity: 0; transform: translateY(7px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .gtax-msg.bot {
-      background: #ffffff;
-      border: 1px solid #e8e8e8;
-      border-bottom-left-radius: 3px;
-      align-self: flex-start;
-    }
-    .gtax-msg.user {
-      background: #e5007d;
-      color: #ffffff;
-      border-bottom-right-radius: 3px;
-      align-self: flex-end;
-      border: none;
-    }
-    .gtax-msg b, .gtax-msg strong { font-weight: 800; }
-    .gtax-msg em { font-style: italic; color: #666; }
-
-    /* CTA button inside messages */
-    .gtax-cta {
-      display: inline-block;
-      margin-top: 10px;
-      background: #e5007d;
-      color: #ffffff !important;
-      padding: 8px 16px;
-      border-radius: 100px;
-      font-size: 0.76rem;
-      font-weight: 800;
-      text-decoration: none;
-      cursor: pointer;
-      border: none;
-      font-family: 'Montserrat', Arial, sans-serif;
-      transition: background 0.18s;
-      letter-spacing: 0.2px;
-    }
-    .gtax-cta:hover { background: #c2006a; }
-
-    /* Quick replies */
-    .gtax-qr-wrap {
-      padding: 9px 12px 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      background: #f8f8f8;
-      border-top: 1px solid #ececec;
-      flex-shrink: 0;
-    }
-    .gtax-qr-btn {
-      background: #ffffff;
-      border: 1.5px solid #e5007d;
-      color: #e5007d;
-      padding: 6px 12px;
-      border-radius: 100px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.15s, color 0.15s, transform 0.1s;
-      font-family: 'Montserrat', Arial, sans-serif;
-      letter-spacing: 0.1px;
-      white-space: nowrap;
-    }
-    .gtax-qr-btn:hover { background: #e5007d; color: #fff; }
-    .gtax-qr-btn:active { transform: scale(0.96); }
-
-    /* Contact form (inside chat) */
-    .gtax-cf {
-      padding: 12px 14px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      background: #f8f8f8;
-      border-top: 1px solid #ececec;
-      flex-shrink: 0;
-    }
-    /* Override page-level input styles for the chatbot form */
-    .gtax-cf input[type="text"],
-    .gtax-cf input[type="email"],
-    .gtax-cf textarea {
-      width: 100% !important;
-      padding: 9px 11px !important;
-      background: #ffffff !important;
-      border: 1.5px solid #e0e0e0 !important;
-      border-radius: 8px !important;
-      font-size: 0.79rem !important;
-      font-family: 'Montserrat', Arial, sans-serif !important;
-      color: #111111 !important;
-      transition: border-color 0.2s !important;
-      outline: none !important;
-      resize: none !important;
-      box-sizing: border-box !important;
-      appearance: none !important;
-    }
-    .gtax-cf input[type="text"]:focus,
-    .gtax-cf input[type="email"]:focus,
-    .gtax-cf textarea:focus {
-      border-color: #e5007d !important;
-    }
-    .gtax-cf input[type="text"]::placeholder,
-    .gtax-cf input[type="email"]::placeholder,
-    .gtax-cf textarea::placeholder { color: #aaa !important; }
-    .gtax-cf textarea { height: 68px; }
-    .gtax-cf-submit {
-      background: #e5007d;
-      color: #ffffff;
-      border: none;
-      padding: 10px;
-      border-radius: 100px;
-      font-size: 0.79rem;
-      font-weight: 800;
-      cursor: pointer;
-      font-family: 'Montserrat', Arial, sans-serif;
-      transition: background 0.18s;
-      letter-spacing: 0.3px;
-    }
-    .gtax-cf-submit:hover { background: #c2006a; }
-    .gtax-cf-submit:disabled { background: #ccc; cursor: not-allowed; }
-    .gtax-cf-cancel {
-      background: transparent;
-      border: none;
-      color: #999;
-      font-size: 0.72rem;
-      cursor: pointer;
-      font-family: inherit;
-      text-align: center;
-      padding: 2px 0;
-      transition: color 0.2s;
-    }
-    .gtax-cf-cancel:hover { color: #e5007d; }
-
-    /* Mobile responsive */
-    @media (max-width: 430px) {
-      #gtax-window {
-        bottom: 0;
-        right: 0;
-        width: 100vw;
-        max-height: 82vh;
-        border-radius: 16px 16px 0 0;
-        transform-origin: bottom center;
-      }
-      #gtax-bubble {
-        bottom: 16px;
-        right: 16px;
-        width: 54px;
-        height: 54px;
-      }
-    }
-  </style>
-
-  <!-- Bubble button -->
-  <button id="gtax-bubble" onclick="gtaxToggle()" aria-label="Open Genius Tax chat" aria-expanded="false" aria-controls="gtax-window">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M12 2C6.477 2 2 6.253 2 11.5c0 2.304.861 4.412 2.28 6.048L3 21l3.75-1.182A10.05 10.05 0 0 0 12 21c5.523 0 10-4.253 10-9.5S17.523 2 12 2z"/>
-    </svg>
-    <span class="gtax-icon-close" aria-hidden="true">✕</span>
-  </button>
-
-  <!-- Chat window -->
-  <div id="gtax-window" role="dialog" aria-label="Genius Tax Chat Assistant" aria-modal="true">
-
-    <!-- Header -->
-    <div class="gtax-hdr">
-      <div class="gtax-hdr-avatar" aria-hidden="true">💬</div>
-      <div class="gtax-hdr-info">
-        <div class="gtax-hdr-name">Genius Tax Assistant</div>
-        <div class="gtax-hdr-status">Online — MTD expert</div>
-      </div>
-      <button class="gtax-close-btn" onclick="gtaxToggle()" aria-label="Close chat">✕</button>
-    </div>
-
-    <!-- Messages -->
-    <div class="gtax-msgs" id="gtax-msgs" aria-live="polite" aria-atomic="false"></div>
-
-    <!-- Quick-reply buttons (dynamic) -->
-    <div class="gtax-qr-wrap" id="gtax-qr" style="display:none;"></div>
-
-    <!-- Contact form (hidden until "I have a question") -->
-    <div class="gtax-cf" id="gtax-cf" style="display:none;">
-      <input type="text"  id="gtax-cf-name"    placeholder="Your name *"    autocomplete="name" />
-      <input type="email" id="gtax-cf-email"   placeholder="Your email *"   autocomplete="email" />
-      <textarea           id="gtax-cf-message" placeholder="Your question (optional)…"></textarea>
-      <button class="gtax-cf-submit" id="gtax-cf-submit" onclick="gtaxSendForm()">Send message →</button>
-      <button class="gtax-cf-cancel" onclick="gtaxCancelForm()">← Go back</button>
-    </div>
-
-  </div>
-
-  <script>
-  (function () {
-    'use strict';
-
-    var _open = false;
-
-    /* ── Toggle open / close ── */
-    window.gtaxToggle = function () {
-      _open = !_open;
-      var win    = document.getElementById('gtax-window');
-      var bubble = document.getElementById('gtax-bubble');
-      if (_open) {
-        win.classList.add('open');
-        bubble.classList.add('open');
-        bubble.setAttribute('aria-expanded', 'true');
-        if (!document.getElementById('gtax-msgs').children.length) gtaxInit();
-      } else {
-        win.classList.remove('open');
-        bubble.classList.remove('open');
-        bubble.setAttribute('aria-expanded', 'false');
-      }
-    };
-
-    /* ── Initialise with greeting ── */
-    function gtaxInit() {
-      addMsg('bot', 'Hi! 👋 I\'m here to help you get sorted with Making Tax Digital. What would you like to know?');
-      setQR([
-        { label: 'What is MTD?',            action: 'mtd'     },
-        { label: 'How much does it cost?',  action: 'cost'    },
-        { label: 'How do I sign up?',       action: 'signup'  },
-        { label: 'I have a question',       action: 'contact' }
-      ]);
-    }
-
-    /* ── Add a message bubble ── */
-    function addMsg(who, html) {
-      var wrap = document.getElementById('gtax-msgs');
-      var el   = document.createElement('div');
-      el.className = 'gtax-msg ' + who;
-      el.innerHTML = html;
-      wrap.appendChild(el);
-      setTimeout(function () { wrap.scrollTop = wrap.scrollHeight; }, 40);
-      return el;
-    }
-
-    /* ── Set quick-reply buttons ── */
-    function setQR(btns) {
-      var wrap = document.getElementById('gtax-qr');
-      wrap.innerHTML = '';
-      if (!btns || !btns.length) { wrap.style.display = 'none'; return; }
-      btns.forEach(function (b) {
-        var btn = document.createElement('button');
-        btn.className   = 'gtax-qr-btn';
-        btn.textContent = b.label;
-        btn.onclick     = function () { gtaxHandle(b.action, b.label); };
-        wrap.appendChild(btn);
-      });
-      wrap.style.display = 'flex';
-    }
-
-    /* ── Route a quick-reply action ── */
-    window.gtaxHandle = function (action, label) {
-      if (label) addMsg('user', label);
-      setQR([]);
-      setTimeout(function () {
-        switch (action) {
-          case 'mtd':          answerMTD();       break;
-          case 'mtd-affects':  answerAffects();   break;
-          case 'mtd-penalty':  answerPenalty();   break;
-          case 'cost':         answerCost();      break;
-          case 'plan-std':     answerStandard();  break;
-          case 'plan-mtd':     answerMTDPlan();   break;
-          case 'plan-premium': answerPremium();   break;
-          case 'signup':       answerSignup();    break;
-          case 'contact':      showContactForm(); break;
-          case 'main-menu':    mainMenu();        break;
-        }
-      }, 380);
-    };
-
-    /* ─────────────────────────────────────
-       ANSWER FLOWS
-    ───────────────────────────────────── */
-
-    function answerMTD() {
-      addMsg('bot',
-        '<strong>Making Tax Digital (MTD)</strong> is HMRC\'s move to fully digitalise the UK tax system. 📋<br><br>' +
-        'From <strong>6 April 2026</strong>, sole traders and landlords with gross income over <strong>£50,000</strong> must:<br>' +
-        '&nbsp;✓ Keep digital records<br>' +
-        '&nbsp;✓ Submit <strong>4 quarterly updates</strong> to HMRC<br>' +
-        '&nbsp;✓ Use HMRC-approved software (Genius Tax uses <strong>Sage</strong>)<br>' +
-        '&nbsp;✓ File an End of Period Statement + Final Declaration<br><br>' +
-        'The threshold also <strong>drops to £30,000 in April 2027</strong> — so even if you\'re under now, you may not be for long.'
-      );
-      setQR([
-        { label: 'Does this affect me?',    action: 'mtd-affects'  },
-        { label: 'What are the penalties?', action: 'mtd-penalty'  },
-        { label: 'How much does it cost?',  action: 'cost'         },
-        { label: 'Sign me up!',             action: 'signup'       }
-      ]);
-    }
-
-    function answerAffects() {
-      addMsg('bot',
-        'MTD ITSA is mandatory from <strong>6 April 2026</strong> if your <em>gross</em> self-employment or property income exceeds <strong>£50,000</strong> in the 2024/25 tax year. 🎯<br><br>' +
-        'PAYE / umbrella income <strong>doesn\'t count</strong> toward the threshold.<br><br>' +
-        'If you\'re between <strong>£30K–£50K</strong> today, the threshold drops to £30,000 in <strong>April 2027</strong> — so now is the right time to get set up.<br><br>' +
-        '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get compliant — from £29/month →</button>'
-      );
-      setQR([
-        { label: 'What are the penalties?', action: 'mtd-penalty' },
-        { label: 'See pricing',             action: 'cost'        },
-        { label: 'Sign me up!',             action: 'signup'      }
-      ]);
-    }
-
-    function answerPenalty() {
-      addMsg('bot',
-        'HMRC uses a <strong>points-based penalty system</strong> for MTD. ⚠️<br><br>' +
-        'Every missed quarterly deadline earns <strong>1 penalty point</strong>. Once you hit 4 points:<br>' +
-        '&nbsp;→ <strong>£200 fine</strong> issued immediately<br>' +
-        '&nbsp;→ <strong>£200 for each missed submission</strong> after that<br><br>' +
-        'Unlike the old SA system, the clock starts from <strong>6 April 2026</strong> — not end of year. Getting sorted early avoids any risk.<br><br>' +
-        '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get compliant now →</button>'
-      );
-      setQR([
-        { label: 'How much does it cost?', action: 'cost'    },
-        { label: 'Sign me up!',            action: 'signup'  },
-        { label: 'I have a question',      action: 'contact' }
-      ]);
-    }
-
-    function answerCost() {
-      addMsg('bot',
-        'Three plans — all include <strong>HMRC agent authorisation</strong> and no setup fees: 💷<br><br>' +
-        '<strong>📦 Standard — £29/month</strong><br>' +
-        'Annual self-assessment. Ideal for income under £50K.<br><br>' +
-        '<strong>⭐ MTD Compliance — £49/month</strong> <em style="color:#888">(was £79)</em><br>' +
-        'Full quarterly MTD reporting via Sage. Early Bird — <strong>save £360/year</strong>. Most popular.<br><br>' +
-        '<strong>🏆 Premium — £149/month</strong><br>' +
-        'MTD Compliance + payroll, CIS, VAT &amp; senior accountant.<br><br>' +
-        '<em style="color:#e5007d;font-weight:700;">🐣 Early Bird ends 5th April 2026 — don\'t miss it!</em>'
-      );
-      setQR([
-        { label: 'Standard — £29/month',        action: 'plan-std'     },
-        { label: 'MTD Compliance — £49/month',  action: 'plan-mtd'     },
-        { label: 'Premium — £149/month',        action: 'plan-premium' },
-        { label: 'Sign me up!',                 action: 'signup'       }
-      ]);
-    }
-
-    function answerStandard() {
-      addMsg('bot',
-        '<strong>Standard Plan — £29/month</strong> 📦<br><br>' +
-        'Perfect for self-employed, freelancers and sole traders with income under £50K who need annual self-assessment taken care of.<br><br>' +
-        '&nbsp;✓ Tax return preparation<br>' +
-        '&nbsp;✓ HMRC filing &amp; confirmation<br>' +
-        '&nbsp;✓ Bookkeeping guidance<br>' +
-        '&nbsp;✓ Email support<br><br>' +
-        '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get started on Standard →</button>'
-      );
-      setQR([
-        { label: 'See all plans',     action: 'cost'    },
-        { label: 'Sign me up!',       action: 'signup'  },
-        { label: 'I have a question', action: 'contact' }
-      ]);
-    }
-
-    function answerMTDPlan() {
-      addMsg('bot',
-        '<strong>MTD Compliance — £49/month ⭐</strong><br>' +
-        '<em style="color:#e5007d;">Early Bird (was £79) — save £360 in your first year</em><br><br>' +
-        'Our most popular plan. Full quarterly digital MTD reporting via <strong>Sage</strong> for income over £50K. We handle every submission so you don\'t have to.<br><br>' +
-        '&nbsp;✓ MTD quarterly digital reporting via Sage<br>' +
-        '&nbsp;✓ Full annual accounts<br>' +
-        '&nbsp;✓ Dedicated account manager<br>' +
-        '&nbsp;✓ Phone &amp; email support<br>' +
-        '&nbsp;✓ Compliance alerts &amp; reminders<br>' +
-        '&nbsp;✓ HMRC agent authorisation<br>' +
-        '&nbsp;✓ End of Period Statement + Final Declaration<br><br>' +
-        '<em>Early Bird price locked for your first 12 months. Ends 5th April 2026.</em><br><br>' +
-        '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Claim Early Bird — £49/month →</button>'
-      );
-      setQR([
-        { label: 'See all plans',     action: 'cost'    },
-        { label: 'Sign me up!',       action: 'signup'  },
-        { label: 'I have a question', action: 'contact' }
-      ]);
-    }
-
-    function answerPremium() {
-      addMsg('bot',
-        '<strong>Premium Plan — £149/month</strong> 🏆<br><br>' +
-        'For contractors, CIS workers and sole traders who need the full service. Everything in MTD Compliance, plus:<br><br>' +
-        '&nbsp;✓ Payroll management<br>' +
-        '&nbsp;✓ CIS deduction handling<br>' +
-        '&nbsp;✓ VAT returns &amp; compliance<br>' +
-        '&nbsp;✓ Senior accountant assigned to your account<br><br>' +
-        'Ideal if you have employees, run CIS, or need complex tax handled end-to-end.<br><br>' +
-        '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get started on Premium →</button>'
-      );
-      setQR([
-        { label: 'See all plans',     action: 'cost'    },
-        { label: 'Sign me up!',       action: 'signup'  },
-        { label: 'I have a question', action: 'contact' }
-      ]);
-    }
-
-    function answerSignup() {
-      addMsg('bot',
-        'Signing up takes under <strong>5 minutes</strong> and most clients are fully active within <strong>48 hours</strong>. 🚀<br><br>' +
-        '<strong>1. Fill in the form</strong><br>' +
-        'Name, email, income band, preferred plan. That\'s it.<br><br>' +
-        '<strong>2. Upload your records</strong><br>' +
-        'Each quarter, drop your receipts &amp; invoices into our secure portal — most people spend under 20 min/quarter.<br><br>' +
-        '<strong>3. We handle HMRC</strong><br>' +
-        'We prepare and file every submission directly with HMRC. You get confirmation every time. Zero stress.<br><br>' +
-        'No payment taken until your account is fully active. HMRC agent authorisation included.<br><br>' +
-        '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Sign up now — from £29/month →</button>'
-      );
-      setQR([
-        { label: 'How much does it cost?', action: 'cost'    },
-        { label: 'I have a question',      action: 'contact' }
-      ]);
-    }
-
-    function mainMenu() {
-      addMsg('bot', 'Anything else I can help you with? 👇');
-      setQR([
-        { label: 'What is MTD?',           action: 'mtd'     },
-        { label: 'How much does it cost?', action: 'cost'    },
-        { label: 'How do I sign up?',      action: 'signup'  },
-        { label: 'I have a question',      action: 'contact' }
-      ]);
-    }
-
-    /* ─────────────────────────────────────
-       CONTACT FORM FLOW
-    ───────────────────────────────────── */
-
-    function showContactForm() {
-      addMsg('bot', 'No problem! 😊 Fill in your details below and a Genius Tax advisor will be in touch within one working day.');
-      document.getElementById('gtax-qr').style.display = 'none';
-      document.getElementById('gtax-cf').style.display = 'flex';
-      setTimeout(function () {
-        document.getElementById('gtax-cf-name').focus();
-      }, 120);
-    }
-
-    window.gtaxCancelForm = function () {
-      document.getElementById('gtax-cf').style.display = 'none';
-      mainMenu();
-    };
-
-    window.gtaxSendForm = function () {
-      var name    = (document.getElementById('gtax-cf-name').value    || '').trim();
-      var email   = (document.getElementById('gtax-cf-email').value   || '').trim();
-      var message = (document.getElementById('gtax-cf-message').value || '').trim();
-      var re      = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      if (!name)          { alert('Please enter your name.');           return; }
-      if (!re.test(email)){ alert('Please enter a valid email address.');return; }
-
-      var btn = document.getElementById('gtax-cf-submit');
-      btn.disabled    = true;
-      btn.textContent = 'Sending…';
-
-      fetch('https://api.web3forms.com/submit', {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          access_key: '869a7fca-8813-4924-837c-524d27de33ba',
-          subject:    'Genius Tax Chat Enquiry from ' + name,
-          from_name:  'Genius Tax Chatbot',
-          name:       name,
-          email:      email,
-          message:    message || '(no message entered)',
-          replyto:    email
-        })
-      })
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        document.getElementById('gtax-cf').style.display = 'none';
-        btn.disabled    = false;
-        btn.textContent = 'Send message →';
-        /* clear fields */
-        document.getElementById('gtax-cf-name').value    = '';
-        document.getElementById('gtax-cf-email').value   = '';
-        document.getElementById('gtax-cf-message').value = '';
-
-        if (data.success) {
-          addMsg('bot',
-            '✅ <strong>Message sent!</strong> Thanks ' + name + ' — a Genius Tax advisor will be in touch within one working day. Check your inbox (and spam folder just in case)!<br><br>' +
-            '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Or sign up right now →</button>'
-          );
-        } else {
-          addMsg('bot',
-            'Hmm, something went wrong on our end. 😕 Please email us directly at ' +
-            '<a href="mailto:hello@geniustax.co.uk" style="color:#e5007d;font-weight:700;">hello@geniustax.co.uk</a> ' +
-            'and we\'ll get back to you fast.'
-          );
-        }
-        setQR([{ label: 'Back to menu', action: 'main-menu' }]);
-      })
-      .catch(function () {
-        document.getElementById('gtax-cf').style.display = 'none';
-        btn.disabled    = false;
-        btn.textContent = 'Send message →';
-        addMsg('bot',
-          'Hmm, something went wrong. Please email us at ' +
-          '<a href="mailto:hello@geniustax.co.uk" style="color:#e5007d;font-weight:700;">hello@geniustax.co.uk</a> ' +
-          'and we\'ll get back to you promptly.'
-        );
-        setQR([{ label: 'Back to menu', action: 'main-menu' }]);
-      });
-    };
-
-    /* ─────────────────────────────────────
-       SCROLL TO SIGNUP + CLOSE
-    ───────────────────────────────────── */
-    window.gtaxScrollToSignup = function () {
-      /* close chat first for a clean UX */
-      if (_open) gtaxToggle();
-      var target = document.getElementById('signup');
-      if (!target) return;
-      var navEl = document.querySelector('.nav');
-      var navH  = navEl ? navEl.offsetHeight : 0;
-      var y     = target.getBoundingClientRect().top + window.scrollY - navH - 16;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    };
-
-  }());
-  </script>
+  <!-- Stripe checkout logic — swap PLACEHOLDER values in stripe-checkout.js to go live -->
+  <script src="stripe-checkout.js"></script>
 
 </body>
 </html>

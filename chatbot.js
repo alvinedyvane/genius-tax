@@ -1,0 +1,667 @@
+/**
+ * chatbot.js — Genius Tax MTD Assistant Widget
+ * Pure client-side, no frameworks, no dependencies.
+ *
+ * KNOWLEDGE BASE TOPICS (>= 8):
+ *  1. What is MTD?
+ *  2. Who is affected? (threshold, self-employed / landlords)
+ *  3. Penalties for non-compliance
+ *  4. Pricing overview (all three plans)
+ *  5. Standard plan (£29/month)
+ *  6. MTD Compliance plan (£49/month early bird)
+ *  7. Premium plan (£149/month)
+ *  8. How to sign up (the 3-step process)
+ *  9. Early bird deadline (5 April 2026)
+ * 10. Contact / I have a question
+ *
+ * WEBHOOK NOTIFICATION (wire to Telegram later):
+ * --------------------------------------------------
+ * To receive a Telegram message every time someone chats:
+ *
+ *   1. Create a Telegram bot via @BotFather → get BOT_TOKEN
+ *   2. Get your chat ID (send /start to the bot and check
+ *      https://api.telegram.org/bot<TOKEN>/getUpdates)
+ *   3. Replace WEBHOOK_URL below with:
+ *      "https://api.telegram.org/bot<BOT_TOKEN>/sendMessage"
+ *   4. In notifyWebhook(), change the fetch body to:
+ *      JSON.stringify({ chat_id: "<YOUR_CHAT_ID>", text: payload.message })
+ *
+ * For a generic webhook (Zapier, Make, n8n, etc.):
+ *   Just set WEBHOOK_URL to your endpoint — the function POSTs JSON.
+ * --------------------------------------------------
+ */
+
+(function () {
+  'use strict';
+
+  /* ──────────────────────────────────────────────
+     CONFIG
+  ────────────────────────────────────────────── */
+
+  /**
+   * Set to your webhook URL to receive notifications when someone chats.
+   * Leave empty ('') to disable.
+   * Example: 'https://hooks.zapier.com/hooks/catch/xxxxx/yyyyy/'
+   */
+  var WEBHOOK_URL = '';
+
+  /** Auto-open the chat after this many milliseconds (30 s). Set 0 to disable. */
+  var AUTO_OPEN_DELAY_MS = 30000;
+
+  /** localStorage key for persisting conversations. */
+  var LS_KEY = 'gtax_chat_history';
+
+  /* ──────────────────────────────────────────────
+     INJECT HTML
+  ────────────────────────────────────────────── */
+
+  function injectHTML() {
+    var html = [
+      /* Bubble toggle button */
+      '<button id="gtax-bubble" onclick="gtaxToggle()"',
+      '  aria-label="Open Genius Tax chat"',
+      '  aria-expanded="false"',
+      '  aria-controls="gtax-window">',
+      '  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">',
+      '    <path d="M12 2C6.477 2 2 6.253 2 11.5c0 2.304.861 4.412 2.28 6.048L3 21',
+      '      l3.75-1.182A10.05 10.05 0 0 0 12 21c5.523 0 10-4.253 10-9.5S17.523 2 12 2z"/>',
+      '  </svg>',
+      '  <span class="gtax-icon-close" aria-hidden="true">✕</span>',
+      '</button>',
+
+      /* Chat window */
+      '<div id="gtax-window" role="dialog"',
+      '     aria-label="Genius Tax Chat Assistant"',
+      '     aria-modal="true">',
+
+      '  <!-- Header -->',
+      '  <div class="gtax-hdr">',
+      '    <div class="gtax-hdr-avatar" aria-hidden="true">💬</div>',
+      '    <div class="gtax-hdr-info">',
+      '      <div class="gtax-hdr-name">Genius Tax Assistant</div>',
+      '      <div class="gtax-hdr-status">Online — MTD expert</div>',
+      '    </div>',
+      '    <button class="gtax-close-btn" onclick="gtaxToggle()" aria-label="Close chat">✕</button>',
+      '  </div>',
+
+      '  <!-- Messages -->',
+      '  <div class="gtax-msgs" id="gtax-msgs"',
+      '       aria-live="polite" aria-atomic="false"></div>',
+
+      '  <!-- Quick-reply buttons (dynamic) -->',
+      '  <div class="gtax-qr-wrap" id="gtax-qr" style="display:none;"></div>',
+
+      '  <!-- Contact form (shown on "I have a question") -->',
+      '  <div class="gtax-cf" id="gtax-cf" style="display:none;">',
+      '    <input type="text"  id="gtax-cf-name"    placeholder="Your name *"',
+      '           autocomplete="name" />',
+      '    <input type="email" id="gtax-cf-email"   placeholder="Your email *"',
+      '           autocomplete="email" />',
+      '    <textarea           id="gtax-cf-message" placeholder="Your question (optional)…"></textarea>',
+      '    <button class="gtax-cf-submit" id="gtax-cf-submit" onclick="gtaxSendForm()">',
+      '      Send message →',
+      '    </button>',
+      '    <button class="gtax-cf-cancel" onclick="gtaxCancelForm()">← Go back</button>',
+      '  </div>',
+
+      '</div>'
+    ].join('\n');
+
+    var div = document.createElement('div');
+    div.innerHTML = html;
+    while (div.firstChild) {
+      document.body.appendChild(div.firstChild);
+    }
+  }
+
+  /* ──────────────────────────────────────────────
+     STATE
+  ────────────────────────────────────────────── */
+
+  var _open         = false;
+  var _interacted   = false;   /* set true on first user action; blocks auto-open */
+  var _autoTimer    = null;
+  var _conversation = [];      /* persisted to localStorage */
+
+  /* ──────────────────────────────────────────────
+     INIT (called once DOM is ready)
+  ────────────────────────────────────────────── */
+
+  function init() {
+    injectHTML();
+    loadHistory();
+
+    /* Auto-open after delay if user hasn't interacted */
+    if (AUTO_OPEN_DELAY_MS > 0) {
+      _autoTimer = setTimeout(function () {
+        if (!_interacted && !_open) gtaxToggle();
+      }, AUTO_OPEN_DELAY_MS);
+    }
+  }
+
+  /* ──────────────────────────────────────────────
+     TOGGLE OPEN / CLOSE
+  ────────────────────────────────────────────── */
+
+  window.gtaxToggle = function () {
+    _open       = !_open;
+    _interacted = true;
+    clearTimeout(_autoTimer);
+
+    var win    = document.getElementById('gtax-window');
+    var bubble = document.getElementById('gtax-bubble');
+
+    if (_open) {
+      win.classList.add('open');
+      bubble.classList.add('open');
+      bubble.setAttribute('aria-expanded', 'true');
+
+      /* Show greeting if no history */
+      var msgs = document.getElementById('gtax-msgs');
+      if (!msgs.children.length) {
+        if (_conversation.length) {
+          restoreHistory();
+        } else {
+          gtaxInit();
+        }
+      }
+    } else {
+      win.classList.remove('open');
+      bubble.classList.remove('open');
+      bubble.setAttribute('aria-expanded', 'false');
+    }
+  };
+
+  /* ──────────────────────────────────────────────
+     GREETING
+  ────────────────────────────────────────────── */
+
+  function gtaxInit() {
+    addMsg('bot', 'Hi! 👋 I\'m here to help with any questions about Making Tax Digital. What would you like to know?');
+    setQR([
+      { label: 'What is MTD?',           action: 'mtd'     },
+      { label: 'Pricing',                action: 'cost'    },
+      { label: 'Am I affected?',         action: 'mtd-affects' },
+      { label: 'Sign up',                action: 'signup'  }
+    ]);
+  }
+
+  /* ──────────────────────────────────────────────
+     MESSAGES
+  ────────────────────────────────────────────── */
+
+  function addMsg(who, html) {
+    var wrap = document.getElementById('gtax-msgs');
+    var el   = document.createElement('div');
+    el.className = 'gtax-msg ' + who;
+    el.innerHTML = html;
+    wrap.appendChild(el);
+    setTimeout(function () { wrap.scrollTop = wrap.scrollHeight; }, 40);
+
+    /* Persist to history */
+    _conversation.push({ who: who, html: html });
+    saveHistory();
+
+    return el;
+  }
+
+  /* ──────────────────────────────────────────────
+     QUICK-REPLY BUTTONS
+  ────────────────────────────────────────────── */
+
+  function setQR(btns) {
+    var wrap = document.getElementById('gtax-qr');
+    wrap.innerHTML = '';
+    if (!btns || !btns.length) { wrap.style.display = 'none'; return; }
+    btns.forEach(function (b) {
+      var btn = document.createElement('button');
+      btn.className   = 'gtax-qr-btn';
+      btn.textContent = b.label;
+      btn.onclick     = function () { gtaxHandle(b.action, b.label); };
+      wrap.appendChild(btn);
+    });
+    wrap.style.display = 'flex';
+  }
+
+  /* ──────────────────────────────────────────────
+     KEYWORD MATCHING (free-text input, optional)
+     Not wired to a text input in this build, but
+     ready to use — call gtaxMatchKeyword(text).
+  ────────────────────────────────────────────── */
+
+  var KB = [
+    { patterns: ['what is mtd','making tax digital','mtd mean','mtd is','what mtd'],
+      action: 'mtd' },
+    { patterns: ['affects me','do i need','am i','threshold','£50','50k','50,000','qualify','affected'],
+      action: 'mtd-affects' },
+    { patterns: ['penalty','penalt','fine','miss','late','points'],
+      action: 'mtd-penalty' },
+    { patterns: ['price','pricing','cost','how much','£29','£49','£79','£149','plan','plans','monthly'],
+      action: 'cost' },
+    { patterns: ['standard','£29','29/month','29 month','annual'],
+      action: 'plan-std' },
+    { patterns: ['mtd compliance','£49','49/month','early bird','49 month'],
+      action: 'plan-mtd' },
+    { patterns: ['premium','£149','149/month','payroll','cis','vat'],
+      action: 'plan-premium' },
+    { patterns: ['sign up','signup','get started','register','join'],
+      action: 'signup' },
+    { patterns: ['contact','email','hello@','question','speak','talk','human','advisor','team'],
+      action: 'contact' },
+    { patterns: ['deadline','april 2026','april 5','april 6','6 april','5 april','2026','2027','£30','30k','30,000'],
+      action: 'mtd-affects' }
+  ];
+
+  function gtaxMatchKeyword(text) {
+    var lower = text.toLowerCase();
+    for (var i = 0; i < KB.length; i++) {
+      var entry = KB[i];
+      for (var j = 0; j < entry.patterns.length; j++) {
+        if (lower.indexOf(entry.patterns[j]) !== -1) return entry.action;
+      }
+    }
+    return 'fallback';
+  }
+
+  /* ──────────────────────────────────────────────
+     ROUTE ACTIONS
+  ────────────────────────────────────────────── */
+
+  window.gtaxHandle = function (action, label) {
+    _interacted = true;
+    if (label) addMsg('user', label);
+    setQR([]);
+    notifyWebhook({ type: 'quick_reply', action: action, label: label || '' });
+
+    setTimeout(function () {
+      switch (action) {
+        case 'mtd':          answerMTD();       break;
+        case 'mtd-affects':  answerAffects();   break;
+        case 'mtd-penalty':  answerPenalty();   break;
+        case 'cost':         answerCost();      break;
+        case 'plan-std':     answerStandard();  break;
+        case 'plan-mtd':     answerMTDPlan();   break;
+        case 'plan-premium': answerPremium();   break;
+        case 'signup':       answerSignup();    break;
+        case 'early-bird':   answerEarlyBird(); break;
+        case 'genius-tax':   answerGeniusTax(); break;
+        case 'contact':      showContactForm(); break;
+        case 'main-menu':    mainMenu();        break;
+        case 'fallback':     answerFallback();  break;
+        default:             answerFallback();  break;
+      }
+    }, 380);
+  };
+
+  /* ──────────────────────────────────────────────
+     ANSWER FLOWS  (10 distinct topics)
+  ────────────────────────────────────────────── */
+
+  /* TOPIC 1 — What is MTD? */
+  function answerMTD() {
+    addMsg('bot',
+      '<strong>Making Tax Digital (MTD)</strong> is HMRC\'s programme to digitalise the UK tax system. 📋<br><br>' +
+      'From <strong>6 April 2026</strong>, sole traders and landlords with gross income over <strong>£50,000</strong> must:<br>' +
+      '&nbsp;✓ Keep digital records<br>' +
+      '&nbsp;✓ Submit <strong>4 quarterly updates</strong> to HMRC<br>' +
+      '&nbsp;✓ Use HMRC-approved software (Genius Tax uses <strong>Sage</strong>)<br>' +
+      '&nbsp;✓ File an End of Period Statement + Final Declaration<br><br>' +
+      'The threshold <strong>drops to £30,000 in April 2027</strong> — so even if you\'re under now, you may not be for long.'
+    );
+    setQR([
+      { label: 'Am I affected?',          action: 'mtd-affects'  },
+      { label: 'What are the penalties?', action: 'mtd-penalty'  },
+      { label: 'Pricing',                 action: 'cost'         },
+      { label: 'Sign up',                 action: 'signup'       }
+    ]);
+  }
+
+  /* TOPIC 2 — Who is affected? */
+  function answerAffects() {
+    addMsg('bot',
+      'MTD ITSA is mandatory from <strong>6 April 2026</strong> if your <em>gross</em> self-employment or property income exceeds <strong>£50,000</strong> in 2024/25. 🎯<br><br>' +
+      'PAYE / umbrella income <strong>doesn\'t count</strong> toward the threshold.<br><br>' +
+      'Between <strong>£30K–£50K</strong> today? The threshold drops to £30,000 in <strong>April 2027</strong> — now is the right time to get set up.<br><br>' +
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get compliant — from £29/month →</button>'
+    );
+    setQR([
+      { label: 'What are the penalties?', action: 'mtd-penalty' },
+      { label: 'Pricing',                 action: 'cost'        },
+      { label: 'Sign up',                 action: 'signup'      }
+    ]);
+  }
+
+  /* TOPIC 3 — Penalties */
+  function answerPenalty() {
+    addMsg('bot',
+      'HMRC uses a <strong>points-based penalty system</strong> for MTD. ⚠️<br><br>' +
+      'Every missed quarterly deadline earns <strong>1 penalty point</strong>. Hit 4 points:<br>' +
+      '&nbsp;→ <strong>£200 fine</strong> issued immediately<br>' +
+      '&nbsp;→ <strong>£200 for each missed submission</strong> after that<br><br>' +
+      'Unlike the old SA system, the clock starts from <strong>6 April 2026</strong> — not end of year. Getting sorted early removes all risk.<br><br>' +
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get compliant now →</button>'
+    );
+    setQR([
+      { label: 'Pricing',           action: 'cost'    },
+      { label: 'Sign up',           action: 'signup'  },
+      { label: 'I have a question', action: 'contact' }
+    ]);
+  }
+
+  /* TOPIC 4 — Pricing overview */
+  function answerCost() {
+    addMsg('bot',
+      'Three plans — all include <strong>HMRC agent authorisation</strong> and no setup fees: 💷<br><br>' +
+      '<strong>📦 Standard — £29/month</strong><br>' +
+      'Annual self-assessment. Ideal for income under £50K.<br><br>' +
+      '<strong>⭐ MTD Compliance — £49/month</strong> <em style="color:#888">(was £79)</em><br>' +
+      'Full quarterly MTD reporting via Sage. Early Bird — <strong>save £360/year</strong>. Most popular.<br><br>' +
+      '<strong>🏆 Premium — £149/month</strong><br>' +
+      'MTD Compliance + payroll, CIS, VAT &amp; senior accountant.<br><br>' +
+      '<em style="color:#e5007d;font-weight:700;">🐣 Early Bird ends 5th April 2026 — don\'t miss it!</em>'
+    );
+    setQR([
+      { label: 'Standard — £29/month',       action: 'plan-std'     },
+      { label: 'MTD Compliance — £49/month', action: 'plan-mtd'     },
+      { label: 'Premium — £149/month',       action: 'plan-premium' },
+      { label: 'Sign up',                    action: 'signup'       }
+    ]);
+  }
+
+  /* TOPIC 5 — Standard plan */
+  function answerStandard() {
+    addMsg('bot',
+      '<strong>Standard Plan — £29/month</strong> 📦<br><br>' +
+      'Perfect for self-employed, freelancers and sole traders with income under £50K who need annual self-assessment taken care of.<br><br>' +
+      '&nbsp;✓ Tax return preparation<br>' +
+      '&nbsp;✓ HMRC filing &amp; confirmation<br>' +
+      '&nbsp;✓ Bookkeeping guidance<br>' +
+      '&nbsp;✓ Email support<br><br>' +
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get started on Standard →</button>'
+    );
+    setQR([
+      { label: 'See all plans',     action: 'cost'    },
+      { label: 'Sign up',           action: 'signup'  },
+      { label: 'I have a question', action: 'contact' }
+    ]);
+  }
+
+  /* TOPIC 6 — MTD Compliance plan */
+  function answerMTDPlan() {
+    addMsg('bot',
+      '<strong>MTD Compliance — £49/month ⭐</strong><br>' +
+      '<em style="color:#e5007d;">Early Bird (was £79) — save £360 in your first year</em><br><br>' +
+      'Our most popular plan. Full quarterly digital MTD reporting via <strong>Sage</strong> for income over £50K.<br><br>' +
+      '&nbsp;✓ MTD quarterly digital reporting via Sage<br>' +
+      '&nbsp;✓ Full annual accounts<br>' +
+      '&nbsp;✓ Dedicated account manager<br>' +
+      '&nbsp;✓ Phone &amp; email support<br>' +
+      '&nbsp;✓ Compliance alerts &amp; reminders<br>' +
+      '&nbsp;✓ HMRC agent authorisation<br>' +
+      '&nbsp;✓ End of Period Statement + Final Declaration<br><br>' +
+      '<em>Early Bird price locked for your first 12 months. Ends 5th April 2026.</em><br><br>' +
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Claim Early Bird — £49/month →</button>'
+    );
+    setQR([
+      { label: 'See all plans',     action: 'cost'    },
+      { label: 'Sign up',           action: 'signup'  },
+      { label: 'I have a question', action: 'contact' }
+    ]);
+  }
+
+  /* TOPIC 7 — Premium plan */
+  function answerPremium() {
+    addMsg('bot',
+      '<strong>Premium Plan — £149/month</strong> 🏆<br><br>' +
+      'For contractors, CIS workers and sole traders who need the full service. Everything in MTD Compliance, plus:<br><br>' +
+      '&nbsp;✓ Payroll management<br>' +
+      '&nbsp;✓ CIS deduction handling<br>' +
+      '&nbsp;✓ VAT returns &amp; compliance<br>' +
+      '&nbsp;✓ Senior accountant assigned to your account<br><br>' +
+      'Ideal if you have employees, run CIS, or need complex tax handled end-to-end.<br><br>' +
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get started on Premium →</button>'
+    );
+    setQR([
+      { label: 'See all plans',     action: 'cost'    },
+      { label: 'Sign up',           action: 'signup'  },
+      { label: 'I have a question', action: 'contact' }
+    ]);
+  }
+
+  /* TOPIC 8 — How to sign up */
+  function answerSignup() {
+    addMsg('bot',
+      'Signing up takes under <strong>5 minutes</strong> — most clients are fully active within <strong>48 hours</strong>. 🚀<br><br>' +
+      '<strong>1. Fill in the form</strong> — name, email, income band, preferred plan.<br><br>' +
+      '<strong>2. Upload your records</strong> — each quarter, drop your receipts &amp; invoices into our secure portal (most people spend under 20 min/quarter).<br><br>' +
+      '<strong>3. We handle HMRC</strong> — we prepare and file every submission directly. You get confirmation every time. Zero stress.<br><br>' +
+      'No payment taken until your account is fully active. HMRC agent authorisation included.<br><br>' +
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Sign up now — from £29/month →</button>'
+    );
+    setQR([
+      { label: 'Pricing',           action: 'cost'    },
+      { label: 'I have a question', action: 'contact' }
+    ]);
+  }
+
+  /* TOPIC 9 — Early bird */
+  function answerEarlyBird() {
+    addMsg('bot',
+      '🐣 <strong>Early Bird offer</strong><br><br>' +
+      'Our MTD Compliance plan normally costs <strong>£79/month</strong>. Sign up before <strong>5th April 2026</strong> and lock in just <strong>£49/month</strong> — saving you <strong>£360</strong> over your first year.<br><br>' +
+      'This rate is guaranteed for your first 12 months.<br><br>' +
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Claim Early Bird →</button>'
+    );
+    setQR([
+      { label: 'Sign up now',   action: 'signup'  },
+      { label: 'See all plans', action: 'cost'    }
+    ]);
+  }
+
+  /* TOPIC 10 — About Genius Tax */
+  function answerGeniusTax() {
+    addMsg('bot',
+      '<strong>About Genius Tax</strong> 🛡️<br><br>' +
+      'Genius Tax is powered by <strong>Genius Money (Genius Payroll Limited)</strong> — an <strong>AML-approved HMRC authorised tax agent</strong> with years of experience managing payroll and tax compliance for thousands of UK contractors and self-employed workers.<br><br>' +
+      '&nbsp;✓ HMRC-authorised agent<br>' +
+      '&nbsp;✓ AML approved<br>' +
+      '&nbsp;✓ Uses HMRC-compliant Sage software<br>' +
+      '&nbsp;✓ Files <em>directly</em> with HMRC on your behalf<br><br>' +
+      'Questions? Email us at <a href="mailto:hello@geniustax.co.uk" style="color:#e5007d;font-weight:700;">hello@geniustax.co.uk</a>'
+    );
+    setQR([
+      { label: 'Pricing',   action: 'cost'    },
+      { label: 'Sign up',   action: 'signup'  }
+    ]);
+  }
+
+  /* FALLBACK */
+  function answerFallback() {
+    addMsg('bot',
+      'That\'s a great question! Let me connect you with our team. 😊<br><br>' +
+      'You can email us at <a href="mailto:hello@geniustax.co.uk" style="color:#e5007d;font-weight:700;">hello@geniustax.co.uk</a>, or leave your details below and we\'ll get back to you.'
+    );
+    setQR([
+      { label: 'Leave my details', action: 'contact'    },
+      { label: 'Back to menu',     action: 'main-menu'  }
+    ]);
+  }
+
+  /* Main menu */
+  function mainMenu() {
+    addMsg('bot', 'Anything else I can help you with? 👇');
+    setQR([
+      { label: 'What is MTD?',  action: 'mtd'         },
+      { label: 'Pricing',       action: 'cost'        },
+      { label: 'Am I affected?',action: 'mtd-affects' },
+      { label: 'Sign up',       action: 'signup'      }
+    ]);
+  }
+
+  /* ──────────────────────────────────────────────
+     CONTACT FORM
+  ────────────────────────────────────────────── */
+
+  function showContactForm() {
+    addMsg('bot', 'No problem! 😊 Fill in your details below and a Genius Tax advisor will be in touch within one working day.');
+    document.getElementById('gtax-qr').style.display = 'none';
+    document.getElementById('gtax-cf').style.display = 'flex';
+    setTimeout(function () { document.getElementById('gtax-cf-name').focus(); }, 120);
+  }
+
+  window.gtaxCancelForm = function () {
+    document.getElementById('gtax-cf').style.display = 'none';
+    mainMenu();
+  };
+
+  window.gtaxSendForm = function () {
+    var name    = (document.getElementById('gtax-cf-name').value    || '').trim();
+    var email   = (document.getElementById('gtax-cf-email').value   || '').trim();
+    var message = (document.getElementById('gtax-cf-message').value || '').trim();
+    var re      = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!name)           { alert('Please enter your name.');            return; }
+    if (!re.test(email)) { alert('Please enter a valid email address.'); return; }
+
+    var btn = document.getElementById('gtax-cf-submit');
+    btn.disabled    = true;
+    btn.textContent = 'Sending…';
+
+    /* Notify webhook */
+    notifyWebhook({ type: 'contact_form', name: name, email: email, message: message });
+
+    fetch('https://api.web3forms.com/submit', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: '869a7fca-8813-4924-837c-524d27de33ba',
+        subject:    'Genius Tax Chat Enquiry from ' + name,
+        from_name:  'Genius Tax Chatbot',
+        name:       name,
+        email:      email,
+        message:    message || '(no message entered)',
+        replyto:    email
+      })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      document.getElementById('gtax-cf').style.display = 'none';
+      btn.disabled    = false;
+      btn.textContent = 'Send message →';
+      document.getElementById('gtax-cf-name').value    = '';
+      document.getElementById('gtax-cf-email').value   = '';
+      document.getElementById('gtax-cf-message').value = '';
+
+      if (data.success) {
+        addMsg('bot',
+          '✅ <strong>Message sent!</strong> Thanks ' + name + ' — a Genius Tax advisor will be in touch within one working day. Check your inbox (and spam folder just in case)!<br><br>' +
+          '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Or sign up right now →</button>'
+        );
+      } else {
+        addMsg('bot',
+          'Hmm, something went wrong on our end. 😕 Please email us directly at ' +
+          '<a href="mailto:hello@geniustax.co.uk" style="color:#e5007d;font-weight:700;">hello@geniustax.co.uk</a> ' +
+          'and we\'ll get back to you fast.'
+        );
+      }
+      setQR([{ label: 'Back to menu', action: 'main-menu' }]);
+    })
+    .catch(function () {
+      document.getElementById('gtax-cf').style.display = 'none';
+      btn.disabled    = false;
+      btn.textContent = 'Send message →';
+      addMsg('bot',
+        'Hmm, something went wrong. Please email us at ' +
+        '<a href="mailto:hello@geniustax.co.uk" style="color:#e5007d;font-weight:700;">hello@geniustax.co.uk</a> ' +
+        'and we\'ll get back to you promptly.'
+      );
+      setQR([{ label: 'Back to menu', action: 'main-menu' }]);
+    });
+  };
+
+  /* ──────────────────────────────────────────────
+     SCROLL TO SIGNUP + CLOSE CHAT
+  ────────────────────────────────────────────── */
+
+  window.gtaxScrollToSignup = function () {
+    if (_open) gtaxToggle();
+    var target = document.getElementById('signup');
+    if (!target) return;
+    var navEl = document.querySelector('.nav');
+    var navH  = navEl ? navEl.offsetHeight : 0;
+    var y     = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+
+  /* ──────────────────────────────────────────────
+     WEBHOOK NOTIFICATION
+     ─────────────────────────────────────────────
+     Fires whenever a visitor sends a message.
+     POSTs JSON: { type, label/name/email/message, timestamp, url }
+
+     TO WIRE TO TELEGRAM:
+       1. Set WEBHOOK_URL = 'https://api.telegram.org/bot<TOKEN>/sendMessage'
+       2. Change the fetch body to:
+          JSON.stringify({ chat_id: '<YOUR_CHAT_ID>', text: msg })
+          where msg = 'Genius Tax Chat: ' + JSON.stringify(payload)
+  ────────────────────────────────────────────── */
+
+  function notifyWebhook(payload) {
+    if (!WEBHOOK_URL) return;   /* no-op when URL not set */
+    try {
+      payload.timestamp = new Date().toISOString();
+      payload.url       = window.location.href;
+      fetch(WEBHOOK_URL, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload)
+      }).catch(function () { /* silently ignore webhook failures */ });
+    } catch (e) { /* never break the chat */ }
+  }
+
+  /* ──────────────────────────────────────────────
+     LOCALSTORAGE PERSISTENCE
+  ────────────────────────────────────────────── */
+
+  function saveHistory() {
+    try {
+      /* Keep last 40 messages to avoid bloating storage */
+      var trimmed = _conversation.slice(-40);
+      localStorage.setItem(LS_KEY, JSON.stringify(trimmed));
+    } catch (e) { /* ignore quota errors */ }
+  }
+
+  function loadHistory() {
+    try {
+      var raw = localStorage.getItem(LS_KEY);
+      if (raw) _conversation = JSON.parse(raw) || [];
+    } catch (e) { _conversation = []; }
+  }
+
+  function restoreHistory() {
+    _conversation.forEach(function (m) {
+      var wrap = document.getElementById('gtax-msgs');
+      var el   = document.createElement('div');
+      el.className = 'gtax-msg ' + m.who;
+      el.innerHTML = m.html;
+      wrap.appendChild(el);
+    });
+    setTimeout(function () {
+      var wrap = document.getElementById('gtax-msgs');
+      wrap.scrollTop = wrap.scrollHeight;
+    }, 60);
+    /* Restore main menu buttons */
+    mainMenu();
+  }
+
+  /* ──────────────────────────────────────────────
+     BOOT
+  ────────────────────────────────────────────── */
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+}());
