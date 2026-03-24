@@ -39,6 +39,12 @@
   ────────────────────────────────────────────── */
 
   /**
+   * AI Chat API endpoint (Cloudflare tunnel → Mac mini Express server).
+   * Set to '' to disable AI and use keyword matching only.
+   */
+  var CHAT_API = 'https://chat.greedisgood.co/chat';
+
+  /**
    * Set to your webhook URL to receive notifications when someone chats.
    * Leave empty ('') to disable.
    * Example: 'https://hooks.zapier.com/hooks/catch/xxxxx/yyyyy/'
@@ -91,6 +97,20 @@
       '  <!-- Quick-reply buttons (dynamic) -->',
       '  <div class="gtax-qr-wrap" id="gtax-qr" style="display:none;"></div>',
 
+      '  <!-- Free-text input -->',
+      '  <div class="gtax-input-row" id="gtax-input-row">',
+      '    <input type="text" id="gtax-user-input"',
+      '           placeholder="Type a message…"',
+      '           autocomplete="off"',
+      '           onkeydown="if(event.key===\'Enter\')gtaxSendText()" />',
+      '    <button class="gtax-send-btn" onclick="gtaxSendText()" aria-label="Send message">',
+      '      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">',
+      '        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+      '        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+      '      </svg>',
+      '    </button>',
+      '  </div>',
+
       '  <!-- Contact form (shown on "I have a question") -->',
       '  <div class="gtax-cf" id="gtax-cf" style="display:none;">',
       '    <input type="text"  id="gtax-cf-name"    placeholder="Your name *"',
@@ -121,7 +141,9 @@
   var _open         = false;
   var _interacted   = false;   /* set true on first user action; blocks auto-open */
   var _autoTimer    = null;
-  var _conversation = [];      /* persisted to localStorage */
+  var _conversation = [];      /* persisted to localStorage (HTML) */
+  var _apiHistory   = [];      /* clean text history for AI API {role, content} */
+  var _aiPending    = false;   /* prevents double-sends while awaiting AI */
 
   /* ──────────────────────────────────────────────
      INIT (called once DOM is ready)

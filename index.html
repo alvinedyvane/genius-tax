@@ -368,6 +368,190 @@
     }
 
     /* ─────────────────────────────────────────
+       HERO PRICING CARDS
+    ───────────────────────────────────────── */
+    .hero-pricing {
+      max-width: 1200px;
+      margin: 3rem auto 0;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-pricing-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .hero-pricing-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 0.5rem;
+    }
+    .hero-pricing-eyebrow::before,
+    .hero-pricing-eyebrow::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+    }
+    .hero-pricing-title {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+    .hero-pricing-title em {
+      font-style: normal;
+      color: var(--pink);
+    }
+    .hero-pricing-from {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 500;
+      margin-top: 0.35rem;
+    }
+    .hero-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .hero-price-card {
+      background: rgba(255,255,255,0.10);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      transition: transform 0.2s, background 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-price-card:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.15);
+    }
+    .hero-price-card.featured-hero {
+      background: var(--pink);
+      border-color: var(--pink);
+      box-shadow: 0 6px 30px rgba(229,0,125,0.45);
+    }
+    .hero-price-card.featured-hero:hover {
+      background: var(--pink-dark);
+    }
+    .hero-price-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: rgba(255,255,255,0.25);
+      color: var(--white);
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-bottom-left-radius: 8px;
+    }
+    .hero-price-tier {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+    }
+    .hero-price-card.featured-hero .hero-price-tier {
+      color: rgba(255,255,255,0.85);
+    }
+    .hero-price-amount {
+      display: flex;
+      align-items: baseline;
+      gap: 0.2rem;
+      line-height: 1;
+    }
+    .hero-price-amount .sup { font-size: 1.1rem; font-weight: 800; color: var(--white); }
+    .hero-price-amount .num { font-size: 2.6rem; font-weight: 900; color: var(--white); letter-spacing: -2px; }
+    .hero-price-amount .mo { font-size: 0.8rem; color: rgba(255,255,255,0.65); font-weight: 500; align-self: flex-end; margin-bottom: 0.3rem; }
+    .hero-price-was {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.55);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: -0.4rem;
+    }
+    .hero-price-was s { text-decoration: line-through; }
+    .hero-price-was .saving-tag {
+      background: rgba(255,255,255,0.2);
+      color: var(--white);
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+    }
+    .hero-price-desc {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.55;
+      font-weight: 500;
+    }
+    .hero-price-card.featured-hero .hero-price-desc {
+      color: rgba(255,255,255,0.8);
+    }
+    .hero-price-btn {
+      display: block;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: auto;
+      white-space: nowrap;
+    }
+    .hero-price-btn.outline-white {
+      border: 2px solid rgba(255,255,255,0.45);
+      color: var(--white);
+      background: transparent;
+    }
+    .hero-price-btn.outline-white:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.7);
+    }
+    .hero-price-btn.solid-white {
+      background: var(--white);
+      color: var(--pink);
+      border: 2px solid var(--white);
+    }
+    .hero-price-btn.solid-white:hover {
+      background: rgba(255,255,255,0.9);
+      transform: translateY(-1px);
+    }
+    @media (max-width: 820px) {
+      .hero-pricing { margin-top: 2.5rem; }
+      .hero-pricing-grid { grid-template-columns: 1fr; gap: 0.85rem; }
+      .hero-price-card { padding: 1.25rem 1.2rem; }
+      .hero-price-amount .num { font-size: 2.2rem; }
+      .hero-price-btn { padding: 0.85rem 1rem; font-size: 0.85rem; min-height: 48px; display: flex; align-items: center; justify-content: center; }
+    }
+    @media (min-width: 821px) and (max-width: 1050px) {
+      .hero-pricing-grid { gap: 0.75rem; }
+      .hero-price-card { padding: 1.25rem 1.1rem; }
+      .hero-price-amount .num { font-size: 2.2rem; }
+    }
+
+    /* ─────────────────────────────────────────
        URGENCY / COUNTDOWN BAR
     ───────────────────────────────────────── */
     .urgency-bar {
@@ -1203,6 +1387,58 @@
         </div>
       </div>
     </div>
+
+    <!-- ── HERO PRICING: Quick-access pricing cards ── -->
+    <div class="hero-pricing" id="hero-pricing" aria-label="Quick pricing overview">
+      <div class="hero-pricing-header">
+        <div class="hero-pricing-eyebrow">Simple Pricing, No Surprises</div>
+        <h2 class="hero-pricing-title">Pick your plan. <em>Get sorted.</em></h2>
+        <p class="hero-pricing-from">From <strong style="color:var(--white)">£29/month</strong> — no setup fees, no hidden extras</p>
+      </div>
+      <div class="hero-pricing-grid">
+
+        <!-- Essential -->
+        <div class="hero-price-card">
+          <div class="hero-price-tier">Essential</div>
+          <div class="hero-price-amount">
+            <span class="sup">£</span>
+            <span class="num">29</span>
+            <span class="mo">/month</span>
+          </div>
+          <p class="hero-price-desc">Annual self-assessment for income under £50K. Done, filed, confirmed.</p>
+          <a class="hero-price-btn outline-white" href="https://buy.stripe.com/cNi9ATcCIb5d14C76P9EI03" target="_blank" rel="noopener">Get Started →</a>
+        </div>
+
+        <!-- Growth Early Bird — FEATURED -->
+        <div class="hero-price-card featured-hero">
+          <span class="hero-price-badge">⭐ Most Popular</span>
+          <div class="hero-price-tier">Growth Early Bird</div>
+          <div class="hero-price-amount">
+            <span class="sup">£</span>
+            <span class="num">49</span>
+            <span class="mo">/month</span>
+          </div>
+          <div class="hero-price-was"><s>£79/mo</s> <span class="saving-tag">Save £360/yr</span></div>
+          <p class="hero-price-desc">Full MTD compliance. Quarterly Sage submissions, dedicated account manager. Lock in before 5 April 2026.</p>
+          <a class="hero-price-btn solid-white" href="https://buy.stripe.com/fZu00j7io5KT4gO76P9EI04" target="_blank" rel="noopener">Claim Early Bird →</a>
+        </div>
+
+        <!-- Premium -->
+        <div class="hero-price-card">
+          <div class="hero-price-tier">Premium</div>
+          <div class="hero-price-amount">
+            <span class="sup">£</span>
+            <span class="num">149</span>
+            <span class="mo">/month</span>
+          </div>
+          <p class="hero-price-desc">MTD Compliance plus payroll, CIS, VAT &amp; a senior accountant on your account.</p>
+          <a class="hero-price-btn outline-white" href="https://buy.stripe.com/00w6oH3285KT5kSbn59EI05" target="_blank" rel="noopener">Get Started →</a>
+        </div>
+
+      </div>
+    </div>
+    <!-- ── END HERO PRICING ── -->
+
   </section>
 
   <!-- ═══════════════════════════════════════
