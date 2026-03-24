@@ -246,9 +246,140 @@
   }
 
   /* ──────────────────────────────────────────────
+     TEXT INPUT HANDLER — wires the free-text box
+  ────────────────────────────────────────────── */
+
+  window.gtaxSendText = function () {
+    var input = document.getElementById('gtax-user-input');
+    if (!input) return;
+    var text = (input.value || '').trim();
+    if (!text || _aiPending) return;
+    input.value = '';
+
+    _interacted = true;
+    notifyWebhook({ type: 'free_text', message: text });
+    addMsg('user', escapeHTML(text));
+    setQR([]);
+
+    sendMessage(text);
+  };
+
+  /* ──────────────────────────────────────────────
+     AI API — sendMessage with keyword fallback
+  ────────────────────────────────────────────── */
+
+  function escapeHTML(str) {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function showTypingIndicator() {
+    var wrap = document.getElementById('gtax-msgs');
+    var el   = document.createElement('div');
+    el.className = 'gtax-msg bot gtax-typing';
+    el.id        = 'gtax-typing-indicator';
+    el.innerHTML = '<span class="gtax-dot"></span><span class="gtax-dot"></span><span class="gtax-dot"></span>';
+    wrap.appendChild(el);
+    setTimeout(function () { wrap.scrollTop = wrap.scrollHeight; }, 40);
+  }
+
+  function removeTypingIndicator() {
+    var el = document.getElementById('gtax-typing-indicator');
+    if (el) el.parentNode.removeChild(el);
+  }
+
+  function sendMessage(text) {
+    /* Try AI API first; fall back to keyword matching if unavailable */
+    if (!CHAT_API) {
+      /* API disabled — use keyword matching directly */
+      setTimeout(function () {
+        var action = gtaxMatchKeyword(text);
+        gtaxHandle(action, null);
+      }, 380);
+      return;
+    }
+
+    _aiPending = true;
+    var inputEl = document.getElementById('gtax-user-input');
+    if (inputEl) inputEl.disabled = true;
+
+    showTypingIndicator();
+
+    /* Record in clean API history */
+    _apiHistory.push({ role: 'user', content: text });
+    if (_apiHistory.length > 20) _apiHistory = _apiHistory.slice(-20);
+
+    /* Send last 10 turns as history (excluding the current message, already in body) */
+    var historyToSend = _apiHistory.slice(-11, -1);
+
+    fetch(CHAT_API, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ message: text, history: historyToSend }),
+      signal:  AbortSignal.timeout ? AbortSignal.timeout(15000) : undefined
+    })
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      removeTypingIndicator();
+      _aiPending = false;
+      if (inputEl) inputEl.disabled = false;
+
+      var reply = (data && data.reply) ? data.reply : null;
+      if (!reply) throw new Error('empty reply');
+
+      /* Record assistant reply in API history */
+      _apiHistory.push({ role: 'assistant', content: reply });
+      if (_apiHistory.length > 20) _apiHistory = _apiHistory.slice(-20);
+
+      addMsg('bot', escapeHTML(reply).replace(/\n/g, '<br>'));
+      /* No quick-reply buttons after AI response — let conversation flow naturally */
+      setQR([
+        { label: 'See pricing',       action: 'cost'    },
+        { label: 'Sign up',           action: 'signup'  },
+        { label: 'Contact the team',  action: 'contact' }
+      ]);
+    })
+    .catch(function (err) {
+      console.warn('[GeniusTax chat] AI API unavailable, falling back to keyword matching.', err);
+      removeTypingIndicator();
+      _aiPending = false;
+      if (inputEl) inputEl.disabled = false;
+
+      /* Remove the failed user message from API history since we're falling back */
+      if (_apiHistory.length && _apiHistory[_apiHistory.length - 1].role === 'user') {
+        _apiHistory.pop();
+      }
+
+      /* Keyword matching fallback */
+      var action = gtaxMatchKeyword(text);
+      setTimeout(function () {
+        switch (action) {
+          case 'mtd':          answerMTD();       break;
+          case 'mtd-affects':  answerAffects();   break;
+          case 'mtd-penalty':  answerPenalty();   break;
+          case 'cost':         answerCost();      break;
+          case 'plan-std':     answerStandard();  break;
+          case 'plan-mtd':     answerMTDPlan();   break;
+          case 'plan-premium': answerPremium();   break;
+          case 'signup':       answerSignup();    break;
+          case 'contact':      showContactForm(); break;
+          default:             answerFallback();  break;
+        }
+      }, 200);
+    });
+  }
+
+  /* ──────────────────────────────────────────────
      KEYWORD MATCHING (free-text input, optional)
-     Not wired to a text input in this build, but
-     ready to use — call gtaxMatchKeyword(text).
+     Used as AI fallback and for quick-reply routing.
+     Call gtaxMatchKeyword(text) to get an action.
   ────────────────────────────────────────────── */
 
   var KB = [
