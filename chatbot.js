@@ -87,6 +87,7 @@
       '      <div class="gtax-hdr-name">Genius Tax Assistant</div>',
       '      <div class="gtax-hdr-status">Online — MTD expert</div>',
       '    </div>',
+      '    <button class="gtax-reset-btn" onclick="gtaxReset()" aria-label="New conversation" title="Start new chat" style="background:none;border:none;color:#fff;font-size:0.75rem;cursor:pointer;padding:4px 8px;opacity:0.8;margin-right:4px;">🔄 New</button>',
       '    <button class="gtax-close-btn" onclick="gtaxToggle()" aria-label="Close chat">✕</button>',
       '  </div>',
 
@@ -164,6 +165,16 @@
   /* ──────────────────────────────────────────────
      TOGGLE OPEN / CLOSE
   ────────────────────────────────────────────── */
+
+  window.gtaxReset = function () {
+    /* Clear conversation history and restart */
+    localStorage.removeItem(LS_KEY);
+    _conversation = [];
+    if (typeof _apiHistory !== 'undefined') _apiHistory = [];
+    var msgs = document.getElementById('gtax-msgs');
+    if (msgs) msgs.innerHTML = '';
+    gtaxInit();
+  };
 
   window.gtaxToggle = function () {
     _open       = !_open;
@@ -260,6 +271,15 @@
     notifyWebhook({ type: 'free_text', message: text });
     addMsg('user', escapeHTML(text));
     setQR([]);
+
+    /* Intercept qualification-wizard trigger phrases before sending to AI */
+    var _lower = text.toLowerCase();
+    if (_lower.indexOf('do i need') !== -1 ||
+        _lower.indexOf('am i affected') !== -1 ||
+        _lower.indexOf('qualify') !== -1) {
+      setTimeout(function () { startQualWizard(); }, 380);
+      return;
+    }
 
     sendMessage(text);
   };
@@ -428,20 +448,25 @@
 
     setTimeout(function () {
       switch (action) {
-        case 'mtd':          answerMTD();       break;
-        case 'mtd-affects':  answerAffects();   break;
-        case 'mtd-penalty':  answerPenalty();   break;
-        case 'cost':         answerCost();      break;
-        case 'plan-std':     answerStandard();  break;
-        case 'plan-mtd':     answerMTDPlan();   break;
-        case 'plan-premium': answerPremium();   break;
-        case 'signup':       answerSignup();    break;
-        case 'early-bird':   answerEarlyBird(); break;
-        case 'genius-tax':   answerGeniusTax(); break;
-        case 'contact':      showContactForm(); break;
-        case 'main-menu':    mainMenu();        break;
-        case 'fallback':     answerFallback();  break;
-        default:             answerFallback();  break;
+        case 'mtd':                   answerMTD();              break;
+        case 'mtd-affects':           startQualWizard();        break;
+        case 'mtd-penalty':           answerPenalty();          break;
+        case 'cost':                  answerCost();             break;
+        case 'plan-std':              answerStandard();         break;
+        case 'plan-mtd':              answerMTDPlan();          break;
+        case 'plan-premium':          answerPremium();          break;
+        case 'signup':                answerSignup();           break;
+        case 'early-bird':            answerEarlyBird();        break;
+        case 'genius-tax':            answerGeniusTax();        break;
+        case 'contact':               showContactForm();        break;
+        case 'main-menu':             mainMenu();               break;
+        case 'fallback':              answerFallback();         break;
+        /* ── Qualification wizard steps ── */
+        case 'qualify-step1-yes':     wizardStep2Yes();         break;
+        case 'qualify-step1-no':      wizardStep2No();          break;
+        case 'qualify-step2-over50k': wizardStep3Over50K();     break;
+        case 'qualify-step2-under50k':wizardStep3Under50K();    break;
+        default:                      answerFallback();         break;
       }
     }, 380);
   };
@@ -482,6 +507,70 @@
       { label: 'Pricing',                 action: 'cost'        },
       { label: 'Sign up',                 action: 'signup'      }
     ]);
+  }
+
+  /* ──────────────────────────────────────────────
+     QUALIFICATION WIZARD
+     Triggered by: "Am I affected?" button (mtd-affects action)
+     or free-text containing "do i need" / "am i affected" / "qualify"
+  ────────────────────────────────────────────── */
+
+  /** Step 1 — are you self-employed / freelancer / contractor / landlord? */
+  function startQualWizard() {
+    addMsg('bot', "Let\u2019s find out! \uD83D\uDC4B Are you self-employed, a freelancer, contractor, or landlord?");
+    setQR([
+      { label: 'Yes \u2705', action: 'qualify-step1-yes' },
+      { label: 'No \u274C',  action: 'qualify-step1-no'  }
+    ]);
+  }
+
+  /** Step 2a — over £50K? */
+  function wizardStep2Yes() {
+    addMsg('bot', 'Do you earn over \u00A350,000 a year from self-employment or rental income?');
+    setQR([
+      { label: 'Yes, over \u00A350K',  action: 'qualify-step2-over50k'  },
+      { label: 'No, under \u00A350K',  action: 'qualify-step2-under50k' }
+    ]);
+  }
+
+  /** Step 2b — not self-employed */
+  function wizardStep2No() {
+    addMsg('bot',
+      'No worries! Genius Tax is designed for self-employed people, freelancers, contractors, and landlords. ' +
+      'If your situation changes, we\u2019ll be here! \uD83D\uDE0A'
+    );
+    setQR([{ label: 'Back to menu', action: 'main-menu' }]);
+  }
+
+  /** Step 3a — MTD mandatory → Growth / MTD Compliance plan */
+  function wizardStep3Over50K() {
+    addMsg('bot',
+      'You\u2019ll need MTD compliance from April 2026 \u2014 it\u2019s mandatory. Our Growth plan handles everything: ' +
+      'Sage software, quarterly HMRC reporting, dedicated account manager. ' +
+      'Just \u00A349/month (early bird, normally \u00A379).<br><br>' +
+      '<a href="https://buy.stripe.com/fZu00j7io5KT4gO76P9EI04" ' +
+      '   target="_blank" rel="noopener noreferrer" ' +
+      '   class="gtax-cta" ' +
+      '   style="display:inline-block;text-decoration:none;min-height:44px;line-height:44px;padding:0 1.2rem;">' +
+      'Sign up for Growth \u2014 \u00A349/month \u2192' +
+      '</a>'
+    );
+    setQR([]);
+  }
+
+  /** Step 3b — not yet mandatory → Essential / Standard plan */
+  function wizardStep3Under50K() {
+    addMsg('bot',
+      'You don\u2019t need MTD yet, but you still need your annual self-assessment sorted. ' +
+      'Our Essential plan handles everything for just \u00A329/month.<br><br>' +
+      '<a href="https://buy.stripe.com/cNi9ATcCIb5d14C76P9EI03" ' +
+      '   target="_blank" rel="noopener noreferrer" ' +
+      '   class="gtax-cta" ' +
+      '   style="display:inline-block;text-decoration:none;min-height:44px;line-height:44px;padding:0 1.2rem;">' +
+      'Sign up for Essential \u2014 \u00A329/month \u2192' +
+      '</a>'
+    );
+    setQR([]);
   }
 
   /* TOPIC 3 — Penalties */
