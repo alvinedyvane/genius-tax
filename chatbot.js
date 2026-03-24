@@ -550,7 +550,7 @@
   function wizardStep3Over50K() {
     addMsg('bot',
       'You\u2019ll need MTD compliance from April 2026 \u2014 it\u2019s mandatory. ' +
-      'Our <strong>Growth plan</strong> at \u00A3299/year (just \u00A325/month) \u2014 early bird, normally \u00A3588/year handles it all.'
+      'Our <strong>Growth plan</strong> at \u00A3299/year (just \u00A330/month) \u2014 early bird, normally \u00A3588/year handles it all.'
     );
     setQR([
       { label: 'Tell me more \u2139\uFE0F', action: 'qualify-growth-details' },
