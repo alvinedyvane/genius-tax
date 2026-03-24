@@ -7,8 +7,8 @@
  *  2. Who is affected? (threshold, self-employed / landlords)
  *  3. Penalties for non-compliance
  *  4. Pricing overview (all three plans)
- *  5. Standard plan (£29/month)
- *  6. MTD Compliance plan (£49/month early bird)
+ *  5. Essential plan (£199/year / £16.58/month, 24-month commitment)
+ *  6. Growth plan (£299/year / £25/month early bird before 5 April 2026)
  *  7. Premium plan (£149/month)
  *  8. How to sign up (the 3-step process)
  *  9. Early bird deadline (5 April 2026)
@@ -409,11 +409,11 @@
       action: 'mtd-affects' },
     { patterns: ['penalty','penalt','fine','miss','late','points'],
       action: 'mtd-penalty' },
-    { patterns: ['price','pricing','cost','how much','£29','£49','£79','£149','plan','plans','monthly'],
+    { patterns: ['price','pricing','cost','how much','£29','£49','£79','£149','£199','£299','£25','16.58','plan','plans','monthly'],
       action: 'cost' },
-    { patterns: ['standard','£29','29/month','29 month','annual'],
+    { patterns: ['essential','standard','£29','£199','29/month','29 month','199/year','16.58','annual'],
       action: 'plan-std' },
-    { patterns: ['mtd compliance','£49','49/month','early bird','49 month'],
+    { patterns: ['growth','mtd compliance','£49','£299','£25','49/month','early bird','49 month','299/year','25/month'],
       action: 'plan-mtd' },
     { patterns: ['premium','£149','149/month','payroll','cis','vat'],
       action: 'plan-premium' },
@@ -504,7 +504,7 @@
       'MTD ITSA is mandatory from <strong>6 April 2026</strong> if your <em>gross</em> self-employment or property income exceeds <strong>£50,000</strong> in 2024/25. 🎯<br><br>' +
       'PAYE / umbrella income <strong>doesn\'t count</strong> toward the threshold.<br><br>' +
       'Between <strong>£30K–£50K</strong> today? The threshold drops to £30,000 in <strong>April 2027</strong> — now is the right time to get set up.<br><br>' +
-      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get compliant — from £29/month →</button>'
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get compliant — from £16.58/month →</button>'
     );
     setQR([
       { label: 'What are the penalties?', action: 'mtd-penalty' },
@@ -550,11 +550,11 @@
   function wizardStep3Over50K() {
     addMsg('bot',
       'You\u2019ll need MTD compliance from April 2026 \u2014 it\u2019s mandatory. ' +
-      'Our <strong>Growth plan</strong> at \u00A349/month (early bird, normally \u00A379) handles it all.'
+      'Our <strong>Growth plan</strong> at \u00A3299/year (just \u00A325/month) \u2014 early bird, normally \u00A3588/year handles it all.'
     );
     setQR([
       { label: 'Tell me more \u2139\uFE0F', action: 'qualify-growth-details' },
-      { label: 'Sign up \u2014 \u00A349/month \u2192', action: 'qualify-growth-signup' }
+      { label: 'Sign up \u2014 \u00A3299/year \u2192', action: 'qualify-growth-signup' }
     ]);
   }
 
@@ -570,7 +570,7 @@
       'No penalties. No stress. No surprises.'
     );
     setQR([
-      { label: 'Sign up now \u2014 \u00A349/month \u2192', action: 'qualify-growth-signup' }
+      { label: 'Sign up now \u2014 \u00A3299/year \u2192', action: 'qualify-growth-signup' }
     ]);
   }
 
@@ -581,7 +581,7 @@
       '   target="_blank" rel="noopener noreferrer" ' +
       '   class="gtax-cta" ' +
       '   style="display:inline-block;text-decoration:none;min-height:44px;line-height:44px;padding:0 1.2rem;background:#E5007D;color:#fff;border-radius:8px;font-weight:600;text-align:center;">' +
-      'Sign up for Growth \u2014 \u00A349/month \u2192' +
+      'Sign up for Growth \u2014 \u00A3299/year \u2192' +
       '</a>'
     );
     setQR([]);
@@ -591,11 +591,11 @@
   function wizardStep3Under50K() {
     addMsg('bot',
       'You don\u2019t need MTD yet, but you still need your annual self-assessment sorted. ' +
-      'Our <strong>Essential plan</strong> handles it for just \u00A329/month.'
+      'Our <strong>Essential plan</strong> handles it for just \u00A3199/year (\u00A316.58/month).'
     );
     setQR([
       { label: 'Tell me more \u2139\uFE0F', action: 'qualify-essential-details' },
-      { label: 'Sign up \u2014 \u00A329/month \u2192', action: 'qualify-essential-signup' }
+      { label: 'Sign up \u2014 \u00A3199/year \u2192', action: 'qualify-essential-signup' }
     ]);
   }
 
@@ -610,7 +610,7 @@
       'Simple, affordable, sorted.'
     );
     setQR([
-      { label: 'Sign up now \u2014 \u00A329/month \u2192', action: 'qualify-essential-signup' }
+      { label: 'Sign up now \u2014 \u00A3199/year \u2192', action: 'qualify-essential-signup' }
     ]);
   }
 
@@ -621,7 +621,7 @@
       '   target="_blank" rel="noopener noreferrer" ' +
       '   class="gtax-cta" ' +
       '   style="display:inline-block;text-decoration:none;min-height:44px;line-height:44px;padding:0 1.2rem;background:#E5007D;color:#fff;border-radius:8px;font-weight:600;text-align:center;">' +
-      'Sign up for Essential \u2014 \u00A329/month \u2192' +
+      'Sign up for Essential \u2014 \u00A3199/year \u2192' +
       '</a>'
     );
     setQR([]);
@@ -648,32 +648,32 @@
   function answerCost() {
     addMsg('bot',
       'Three plans — all include <strong>HMRC agent authorisation</strong> and no setup fees: 💷<br><br>' +
-      '<strong>📦 Standard — £29/month</strong><br>' +
+      '<strong>📦 Essential — £199/year</strong> <em style="color:#888">(£16.58/month, 24-month commitment)</em><br>' +
       'Annual self-assessment. Ideal for income under £50K.<br><br>' +
-      '<strong>⭐ MTD Compliance — £49/month</strong> <em style="color:#888">(was £79)</em><br>' +
-      'Full quarterly MTD reporting via Sage. Early Bird — <strong>save £360/year</strong>. Most popular.<br><br>' +
+      '<strong>⭐ Growth — £299/year</strong> <em style="color:#888">(just £25/month — early bird before 5 Apr 2026)</em><br>' +
+      'Full quarterly MTD reporting via Sage. Early Bird — <strong>save £289/year vs standard rate</strong>. Most popular.<br><br>' +
       '<strong>🏆 Premium — £149/month</strong><br>' +
-      'MTD Compliance + payroll, CIS, VAT &amp; senior accountant.<br><br>' +
+      'Growth + payroll, CIS, VAT &amp; senior accountant.<br><br>' +
       '<em style="color:#e5007d;font-weight:700;">🐣 Early Bird ends 5th April 2026 — don\'t miss it!</em>'
     );
     setQR([
-      { label: 'Standard — £29/month',       action: 'plan-std'     },
-      { label: 'MTD Compliance — £49/month', action: 'plan-mtd'     },
-      { label: 'Premium — £149/month',       action: 'plan-premium' },
-      { label: 'Sign up',                    action: 'signup'       }
+      { label: 'Essential — £199/year',  action: 'plan-std'     },
+      { label: 'Growth — £299/year',     action: 'plan-mtd'     },
+      { label: 'Premium — £149/month',   action: 'plan-premium' },
+      { label: 'Sign up',                action: 'signup'       }
     ]);
   }
 
   /* TOPIC 5 — Standard plan */
   function answerStandard() {
     addMsg('bot',
-      '<strong>Standard Plan — £29/month</strong> 📦<br><br>' +
+      '<strong>Essential Plan — £199/year</strong> <em style="color:#888">(£16.58/month, 24-month commitment)</em> 📦<br><br>' +
       'Perfect for self-employed, freelancers and sole traders with income under £50K who need annual self-assessment taken care of.<br><br>' +
       '&nbsp;✓ Tax return preparation<br>' +
       '&nbsp;✓ HMRC filing &amp; confirmation<br>' +
       '&nbsp;✓ Bookkeeping guidance<br>' +
       '&nbsp;✓ Email support<br><br>' +
-      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get started on Standard →</button>'
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Get started on Essential →</button>'
     );
     setQR([
       { label: 'See all plans',     action: 'cost'    },
@@ -685,8 +685,8 @@
   /* TOPIC 6 — MTD Compliance plan */
   function answerMTDPlan() {
     addMsg('bot',
-      '<strong>MTD Compliance — £49/month ⭐</strong><br>' +
-      '<em style="color:#e5007d;">Early Bird (was £79) — save £360 in your first year</em><br><br>' +
+      '<strong>Growth — £299/year ⭐</strong> <em style="color:#888">(just £25/month)</em><br>' +
+      '<em style="color:#e5007d;">Early Bird before 5 April 2026 — normally £588/year (£49/mo). 3-year commitment.</em><br><br>' +
       'Our most popular plan. Full quarterly digital MTD reporting via <strong>Sage</strong> for income over £50K.<br><br>' +
       '&nbsp;✓ MTD quarterly digital reporting via Sage<br>' +
       '&nbsp;✓ Full annual accounts<br>' +
@@ -695,8 +695,8 @@
       '&nbsp;✓ Compliance alerts &amp; reminders<br>' +
       '&nbsp;✓ HMRC agent authorisation<br>' +
       '&nbsp;✓ End of Period Statement + Final Declaration<br><br>' +
-      '<em>Early Bird price locked for your first 12 months. Ends 5th April 2026.</em><br><br>' +
-      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Claim Early Bird — £49/month →</button>'
+      '<em>Early Bird: Year 1 £299/year. Year 2 £49/mo. Year 3 £79/mo. Ends 5th April 2026.</em><br><br>' +
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Claim Early Bird — £299/year →</button>'
     );
     setQR([
       { label: 'See all plans',     action: 'cost'    },
@@ -732,7 +732,7 @@
       '<strong>2. Upload your records</strong> — each quarter, drop your receipts &amp; invoices into our secure portal (most people spend under 20 min/quarter).<br><br>' +
       '<strong>3. We handle HMRC</strong> — we prepare and file every submission directly. You get confirmation every time. Zero stress.<br><br>' +
       'No payment taken until your account is fully active. HMRC agent authorisation included.<br><br>' +
-      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Sign up now — from £29/month →</button>'
+      '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Sign up now — from £16.58/month →</button>'
     );
     setQR([
       { label: 'Pricing',           action: 'cost'    },
@@ -744,8 +744,8 @@
   function answerEarlyBird() {
     addMsg('bot',
       '🐣 <strong>Early Bird offer</strong><br><br>' +
-      'Our MTD Compliance plan normally costs <strong>£79/month</strong>. Sign up before <strong>5th April 2026</strong> and lock in just <strong>£49/month</strong> — saving you <strong>£360</strong> over your first year.<br><br>' +
-      'This rate is guaranteed for your first 12 months.<br><br>' +
+      'Our Growth plan normally costs <strong>£49/month (£588/year)</strong> in Year 1. Sign up before <strong>5th April 2026</strong> and lock in just <strong>£299/year (£25/month)</strong> — a 3-year commitment.<br><br>' +
+      'Year 2: £49/month. Year 3: £79/month. Early bird year-1 rate ends 5 April 2026.<br><br>' +
       '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Claim Early Bird →</button>'
     );
     setQR([

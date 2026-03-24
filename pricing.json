@@ -1,0 +1,96 @@
+{
+  "lastUpdated": "2026-03-24",
+  "currency": "GBP",
+  "currencySymbol": "£",
+  "earlyBirdDeadline": "2026-04-05",
+  "plans": {
+    "essential": {
+      "name": "Essential",
+      "target": "Self-assessment for income under £50K",
+      "commitment": "24 months",
+      "year1": {
+        "upfront": 199,
+        "monthly": 16.58,
+        "label": "£199/year or £16.58/month"
+      },
+      "year2": {
+        "upfront": 260,
+        "monthly": 21.67,
+        "label": "£260/year or £21.67/month"
+      },
+      "features": [
+        "Tax return preparation",
+        "HMRC filing & confirmation",
+        "Bookkeeping guidance",
+        "Email support"
+      ],
+      "stripeLink": "https://buy.stripe.com/cNi9ATcCIb5d14C76P9EI03",
+      "stripeProduct": "prod_UCunidQQqmvQk8",
+      "stripePrice": "price_1TEUxXHEfg6rZsrfh9K7dl5f"
+    },
+    "growth": {
+      "name": "Growth",
+      "target": "Full MTD compliance for income over £50K",
+      "commitment": "3 years",
+      "earlyBird": {
+        "year1": {
+          "upfront": 299,
+          "monthly": 25,
+          "label": "£299/year or £25/month"
+        },
+        "year2": {
+          "monthly": 49,
+          "annual": 588,
+          "label": "£49/month (£588/year)"
+        },
+        "year3": {
+          "monthly": 79,
+          "annual": 948,
+          "label": "£79/month (£948/year)"
+        },
+        "saving": "Save £289 in Year 1"
+      },
+      "postDeadline": {
+        "year1": {
+          "monthly": 49,
+          "annual": 588,
+          "label": "£49/month"
+        },
+        "year2": {
+          "monthly": 79,
+          "annual": 948,
+          "label": "£79/month"
+        }
+      },
+      "features": [
+        "MTD quarterly digital reporting via Sage",
+        "Full annual accounts",
+        "Dedicated account manager",
+        "Phone & email support",
+        "Compliance alerts & reminders",
+        "HMRC agent authorisation",
+        "End of Period Statement + Final Declaration"
+      ],
+      "stripeLink": "https://buy.stripe.com/fZu00j7io5KT4gO76P9EI04",
+      "stripeProduct": "prod_UCupULuNIssgts",
+      "stripePrice": "price_1TEUzzHEfg6rZsrfKgum39Q9"
+    },
+    "premium": {
+      "name": "Premium",
+      "target": "Full MTD + payroll, CIS, VAT, senior accountant",
+      "monthly": 149,
+      "features": [
+        "Everything in Growth plan",
+        "Payroll management",
+        "CIS deduction handling",
+        "VAT returns & compliance",
+        "Senior accountant assigned"
+      ],
+      "stripeLink": "https://buy.stripe.com/00w6oH3285KT5kSbn59EI05",
+      "stripeProduct": "prod_UCurMp75kLSQIP",
+      "stripePrice": "price_1TEV1lHEfg6rZsrfOnS4ubOW"
+    }
+  },
+  "fromPrice": "£16.58/month",
+  "headline": "From £16.58/month"
+}
