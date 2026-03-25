@@ -1495,6 +1495,7 @@
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
+      <a href="tel:02077002000" class="nav-phone" style="color:#fff;font-weight:700;font-size:0.85rem;margin-right:1rem;text-decoration:none;display:flex;align-items:center;gap:0.35rem;">📞 020 7700 2000</a>
       <a href="#pricing" class="nav-cta">Get Started →</a>
       <div class="nav-hamburger" role="button" aria-label="Open menu" onclick="this.classList.toggle('open')">
         <span></span><span></span><span></span>
@@ -2041,6 +2042,26 @@
       msg.style.display = 'block';
       msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+  </script>
+
+  <!-- ═══════════════════════════════════════
+       FLOATING CALL BUTTON (mobile)
+  ═══════════════════════════════════════ -->
+  <a href="tel:02077002000" id="floating-call-btn" style="
+    display:none;position:fixed;bottom:100px;left:20px;z-index:9998;
+    background:#E5007D;color:#fff;width:56px;height:56px;border-radius:50%;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);text-decoration:none;
+    font-size:1.5rem;align-items:center;justify-content:center;
+    transition:transform 0.2s;
+  " aria-label="Call us">📞</a>
+  <script>
+    (function(){
+      var btn=document.getElementById('floating-call-btn');
+      if(window.innerWidth<=768){btn.style.display='flex';}
+      window.addEventListener('resize',function(){
+        btn.style.display=window.innerWidth<=768?'flex':'none';
+      });
+    })();
   </script>
 
   <!-- ═══════════════════════════════════════
