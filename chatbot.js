@@ -52,7 +52,7 @@
   var WEBHOOK_URL = '';
 
   /** Auto-open the chat after this many milliseconds (30 s). Set 0 to disable. */
-  var AUTO_OPEN_DELAY_MS = 30000;
+  var AUTO_OPEN_DELAY_MS = 0;
 
   /** localStorage key for persisting conversations. */
   var LS_KEY = 'gtax_chat_history';
@@ -210,12 +210,12 @@
   ────────────────────────────────────────────── */
 
   function gtaxInit() {
-    addMsg('bot', 'Hi! 👋 I\'m here to help with any questions about Making Tax Digital. What would you like to know?');
+    addMsg('bot', 'Hey! 👋 Need to get MTD compliant before the April deadline? I can help you find the right plan in under a minute.');
     setQR([
+      { label: '✅ Yes, show me',         action: 'wizard'  },
       { label: 'What is MTD?',           action: 'mtd'     },
-      { label: 'Pricing',                action: 'cost'    },
-      { label: 'Am I affected?',         action: 'mtd-affects' },
-      { label: 'Sign up',                action: 'signup'  }
+      { label: 'View pricing',           action: 'cost'    },
+      { label: 'Am I affected?',         action: 'mtd-affects' }
     ]);
   }
 
