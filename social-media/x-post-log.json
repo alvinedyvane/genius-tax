@@ -26,5 +26,58 @@
         "id": "2036476216522195222"
       }
     }
+  },
+  {
+    "timestamp": "2026-03-24T21:12:27Z",
+    "tweet_text": "The clock is ticking on MTD. Freelancers, contractors, landlords - earn 50K plus self-employed? This affects YOU. 12 days left. geniustax.co.uk #GeniusTax #SelfEmployed #MTD",
+    "status_code": 201,
+    "response": {
+      "data": {
+        "edit_history_tweet_ids": [
+          "2036551741798306099"
+        ],
+        "text": "The clock is ticking on MTD. Freelancers, contractors, landlords - earn 50K plus self-employed? This affects YOU. 12 days left. https://t.co/PS0pKbfsPc #GeniusTax #SelfEmployed #MTD",
+        "id": "2036551741798306099"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-25T11:14:16Z",
+    "tweet_text": "\ud83d\udd28 Builders, electricians, plumbers \u2014 MTD affects YOU if you earn \u00a350K+ self-employed. 11 days to get compliant. HMRC fines start April 6. We handle everything from \u00a3199/year. geniustax.co.uk #GeniusTax #MTD #Trades #Construction",
+    "image": "/Users/donnapaulsen/Projects/genius-tax/social-media/images/branded/02-built-for-people.png",
+    "status_code": 400,
+    "response": {
+      "error": "FINALIZE failed: {\"request\":\"\\/1.1\\/media\\/upload.json\",\"error\":\"Segments do not add up to provided total file size.\"}"
+    }
+  },
+  {
+    "timestamp": "2026-03-25T11:19:47.448263+00:00",
+    "tweet_text": "Still filing paper returns? That ends for self-employed from April 6.\n\nMTD is digital-only. Three steps to get sorted:\n\n1\ufe0f\u20e3 Sign up (3 minutes)\n2\ufe0f\u20e3 Send us your records\n3\ufe0f\u20e3 We handle HMRC\n\nFrom \u00a3199/year. Early bird \u00a3299/year ends 5 April.\n\ngeniustax.co.uk\n\n#GeniusTax #MTD #SelfEmployed",
+    "image": "/Users/donnapaulsen/Projects/genius-tax/social-media/images/branded/03-three-steps.png",
+    "status_code": 201,
+    "response": {
+      "data": {
+        "id": "2036764980603707726",
+        "edit_history_tweet_ids": [
+          "2036764980603707726"
+        ],
+        "text": "Still filing paper returns? That ends for self-employed from April 6.\n\nMTD is digital-only. Three steps to get sorted:\n\n1\ufe0f\u20e3 Sign up (3 minutes)\n2\ufe0f\u20e3 Send us your records\n3\ufe0f\u20e3 We handle HMRC\n\nFrom \u00a3199/year. Early bird \u00a3299/year ends 5 April.\n\nhttps://t.co/PS0pKbfsPc\n\n#GeniusTax #MTD\u2026 https://t.co/QV7M4F7J6n"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-25T11:30:35Z",
+    "tweet_text": "Still filing paper returns? That ends for the self-employed from April 6. MTD is digital-only. We'll handle the switch. From \u00a320/mo. geniustax.co.uk #GeniusTax #MTD",
+    "image": "/Users/donnapaulsen/Projects/genius-tax/social-media/images/branded/04-simple-pricing.png",
+    "status_code": 201,
+    "response": {
+      "data": {
+        "id": "2036767698927972469",
+        "edit_history_tweet_ids": [
+          "2036767698927972469"
+        ],
+        "text": "Still filing paper returns? That ends for the self-employed from April 6. MTD is digital-only. We'll handle the switch. From \u00a320/mo. https://t.co/PS0pKbfsPc #GeniusTax #MTD https://t.co/DC7IkyKVWL"
+      }
+    }
   }
 ]

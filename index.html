@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Genius Tax — Your Tax. Sorted. | Powered by Genius Money</title>
-  <meta name="description" content="Genius Tax handles your self-assessment, MTD compliance and more — from £20/month. Self-employed, freelancers, landlords and contractors sorted. HMRC-authorised." />
-  <meta name="keywords" content="self assessment tax return, MTD Making Tax Digital, accountant UK, self employed tax, freelancer tax, landlord tax return, sole trader accountant" />
+  <title>Genius Tax Solutions | MTD Compliance &amp; Self-Assessment | HMRC Authorised</title>
+  <meta name="description" content="Making Tax Digital compliance from £199/year. HMRC Authorised Agent with Sage software. Self-assessment, MTD quarterly reporting, and full tax management for self-employed and landlords." />
+  <meta name="keywords" content="MTD, Making Tax Digital, self-assessment, HMRC, tax compliance, self-employed, landlord, Sage, UK tax, quarterly reporting" />
   <link rel="canonical" href="https://geniustax.co.uk/" />
+  <meta name="geo.region" content="GB" />
+  <meta name="geo.placename" content="Portsmouth" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -1299,6 +1301,162 @@
   <!-- Stripe.js — loaded from Stripe's CDN for PCI compliance -->
   <!-- ⚠️  Do NOT self-host this script — Stripe requires it comes from js.stripe.com -->
   <script src="https://js.stripe.com/v3/"></script>
+
+  <!-- ═══════════════════════════════════════
+       STRUCTURED DATA (JSON-LD)
+  ═══════════════════════════════════════ -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Genius Tax Solutions",
+      "url": "https://geniustax.co.uk/",
+      "logo": "https://geniustax.co.uk/logos/gm-icon-outline-black.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "020 7700 2000",
+        "contactType": "customer service",
+        "email": "hello@geniusmoney.co.uk",
+        "areaServed": "GB",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.instagram.com/geniusmoneytax/",
+        "https://x.com/geniusmoneytax",
+        "https://www.linkedin.com/company/genius-money-tax-solutions/"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Genius Tax Solutions",
+      "url": "https://geniustax.co.uk/",
+      "logo": "https://geniustax.co.uk/logos/gm-icon-outline-black.png",
+      "image": "https://geniustax.co.uk/og-image.jpg",
+      "telephone": "020 7700 2000",
+      "email": "hello@geniusmoney.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 6 Sovereign Gate, 308-314 Commercial Road",
+        "addressLocality": "Portsmouth",
+        "addressCountry": "GB"
+      },
+      "description": "HMRC Authorised Tax Agent providing Making Tax Digital compliance, self-assessment, and full tax management for self-employed individuals, landlords, freelancers and contractors across the UK.",
+      "priceRange": "££"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Making Tax Digital (MTD) Compliance",
+      "provider": {
+        "@type": "Organization",
+        "name": "Genius Tax Solutions",
+        "url": "https://geniustax.co.uk/"
+      },
+      "serviceType": "Tax Compliance",
+      "description": "Full MTD ITSA compliance service including quarterly digital reporting via Sage, HMRC submissions, dedicated account manager, and annual accounts.",
+      "areaServed": "GB",
+      "offers": {
+        "@type": "Offer",
+        "price": "299",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "299",
+          "priceCurrency": "GBP",
+          "unitText": "year"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Self-Assessment Tax Return",
+      "provider": {
+        "@type": "Organization",
+        "name": "Genius Tax Solutions",
+        "url": "https://geniustax.co.uk/"
+      },
+      "serviceType": "Tax Return",
+      "description": "Annual self-assessment tax return preparation and HMRC filing for self-employed, freelancers, landlords and sole traders.",
+      "areaServed": "GB",
+      "offers": {
+        "@type": "Offer",
+        "price": "199",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "199",
+          "priceCurrency": "GBP",
+          "unitText": "year"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Making Tax Digital (MTD)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Making Tax Digital (MTD) for Income Tax is HMRC's programme to digitise the UK tax system. From 6 April 2026, sole traders and landlords with gross income over £50,000 must keep digital records using HMRC-approved software and submit a quarterly summary of income and expenses directly to HMRC. It replaces the single annual self-assessment return for those in scope. Genius Tax handles this entirely on your behalf."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who needs to comply with MTD from April 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MTD ITSA is mandatory from 6 April 2026 for self-employed individuals and landlords whose gross income (turnover — not profit) from self-employment and/or property exceeds £50,000 in the 2024/25 tax year. PAYE and umbrella income does not count toward the threshold. If you're unsure, sign up and we'll confirm your position for free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What penalties will I face if I miss an MTD deadline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HMRC uses a points-based penalty system for MTD. Every missed quarterly deadline earns a penalty point. Once you reach the threshold (4 points for quarterly filers), HMRC issues a £200 financial penalty — plus further £200 penalties for each subsequent missed submission. Unlike the old SA system, the penalty clock starts from 6 April 2026, not the end of the tax year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the Early Bird offer details?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our MTD Compliance plan normally costs £79/month. Sign up before 5th April 2026 and you lock in our Early Bird rate of £49/month — saving you £360 over your first year. This rate is guaranteed for your first 12 months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the threshold really dropping to £30K in 2027?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The MTD ITSA threshold is scheduled to drop to £30,000 in April 2027, bringing significantly more self-employed people and landlords into scope. If your income is between £30K and £50K today, you'll likely be in scope next year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to do anything once I've signed up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Very little. Each quarter we'll send you a reminder. You upload your income records and receipts to our secure portal — most clients spend under 20 minutes per quarter. We handle categorisation, reconciliation, preparation, and HMRC submission. You receive confirmation when each filing is complete."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Genius Tax authorised by HMRC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Genius Tax is powered by Genius Money (Genius Payroll Limited), an AML-approved HMRC tax agent with years of experience managing payroll and tax compliance for thousands of UK contractors and self-employed workers. We are fully authorised to file directly with HMRC on your behalf."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
 </head>
 <body>
 

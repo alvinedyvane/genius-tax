@@ -1,0 +1,52 @@
+{
+  "brand": {
+    "pink": "#E5007D",
+    "dark": "#2D2D2D",
+    "grey": "#F7F7F7",
+    "border": "#E8E8E8",
+    "font": "Montserrat",
+    "fontWeights": [400, 600, 700, 800, 900]
+  },
+  "chrome": {
+    "logoHeight": "90px",
+    "contactFontSize": "2rem",
+    "urlFontSize": "2rem",
+    "flagHeight": "28px",
+    "flagBadgeFontSize": "1rem"
+  },
+  "contact": {
+    "phone": "020 7700 2000",
+    "email": "hello@geniusmoney.co.uk",
+    "url": "geniustax.co.uk",
+    "footerLine": "020 7700 2000  |  hello@geniusmoney.co.uk"
+  },
+  "dimensions": {
+    "square": { "width": 1080, "height": 1080 },
+    "story": { "width": 1080, "height": 1920 },
+    "linkedin": { "width": 1200, "height": 630 }
+  },
+  "assets": {
+    "logoColour": "~/Projects/genius-tax/logos/gws-full-colour.png",
+    "logoWhite": "~/Projects/genius-tax/logos/gws-white.png",
+    "flag": "/tmp/union-jack.png"
+  },
+  "heroPhotos": [
+    {
+      "id": "photo-1522202176988-66273c2fd55f",
+      "description": "Team collaboration at table",
+      "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80",
+      "used": true
+    }
+  ],
+  "templates": [
+    "01-your-tax-sorted",
+    "02-built-for-people",
+    "03-three-steps",
+    "04-simple-pricing",
+    "05-questions-story",
+    "06-pick-your-plan",
+    "07-ready-sorted",
+    "08-linkedin-hero",
+    "09-pricing-detailed"
+  ]
+}
