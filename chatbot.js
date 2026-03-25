@@ -210,9 +210,9 @@
   ────────────────────────────────────────────── */
 
   function gtaxInit() {
-    addMsg('bot', 'Hey! 👋 Need to get MTD compliant before the April deadline? I can help you find the right plan in under a minute.');
+    addMsg('bot', 'Hi there! 👋 Are you here for online tax services? Want to know more about Making Tax Digital?');
     setQR([
-      { label: '✅ Yes, show me',         action: 'wizard'  },
+      { label: '✅ Yes, tell me more',    action: 'wizard'  },
       { label: 'What is MTD?',           action: 'mtd'     },
       { label: 'View pricing',           action: 'cost'    },
       { label: 'Am I affected?',         action: 'mtd-affects' }
