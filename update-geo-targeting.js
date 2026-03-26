@@ -17,7 +17,7 @@ function main() {
   // Geo target constants
   var UK_GEO      = 'geoTargetConstants/2826';   // United Kingdom (to remove)
   var ENGLAND_GEO = 'geoTargetConstants/20339';  // England
-  var WALES_GEO   = 'geoTargetConstants/20340';  // Wales
+  var WALES_GEO   = 'geoTargetConstants/20343';  // Wales (confirmed)
 
   for (var i = 0; i < campaigns.length; i++) {
     var campName = campaigns[i];
