@@ -2080,5 +2080,26 @@
   <!-- Stripe checkout logic — swap PLACEHOLDER values in stripe-checkout.js to go live -->
   <script src="stripe-checkout.js?v=1774363488"></script>
 
+  <!-- Google Ads conversion event — fires on ?success=true (Stripe redirect) -->
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('success') === 'true') {
+        // Show thank-you banner
+        var ty = document.getElementById('gtax-thankyou');
+        if (ty) {
+          ty.style.display = 'block';
+          ty.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        // Fire Google Ads conversion
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-953085689/purchase',
+            'transaction_id': params.get('session_id') || ''
+          });
+        }
+      }
+    })();
+  </script>
 </body>
 </html>
