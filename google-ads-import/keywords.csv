@@ -1,0 +1,122 @@
+Campaign,Ad Group,Keyword,Match Type,Max CPC,Status
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","[mtd registration]",Exact,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","[register for mtd]",Exact,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","[making tax digital registration]",Exact,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","[how to register for making tax digital]",Exact,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","[mtd for income tax]",Exact,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","[mtd itsa registration]",Exact,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","[making tax digital income tax self assessment]",Exact,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","[mtd itsa 2026]",Exact,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","[register for making tax digital 2026]",Exact,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","""mtd registration""",Phrase,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","""making tax digital register""",Phrase,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","""mtd for income tax registration""",Phrase,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","""sign up for mtd""",Phrase,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","making tax digital registration help",Broad,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","mtd income tax sign up",Broad,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core","register hmrc digital tax",Broad,4.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","[mtd software]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","[mtd compliant software]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","[making tax digital software]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","[best mtd software]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","[mtd app uk]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","[mtd bridging software]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","[hmrc approved mtd software]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","[mtd software for self employed]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","""mtd software""",Phrase,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","""making tax digital software""",Phrase,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","""mtd accounting software""",Phrase,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool","""mtd bridging software""",Phrase,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","[mtd agent]",Exact,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","[mtd accountant]",Exact,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","[making tax digital agent]",Exact,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","[hmrc authorised mtd agent]",Exact,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","[mtd filing agent]",Exact,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","[mtd tax agent uk]",Exact,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","[find an mtd agent]",Exact,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","[mtd compliance service]",Exact,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","""mtd agent""",Phrase,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","""making tax digital accountant""",Phrase,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant","""mtd compliance agent""",Phrase,3.00,Enabled
+"[GeniusTax] MTD High-Intent Search","Deadline Urgency","[mtd deadline april 2026]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","Deadline Urgency","[making tax digital deadline]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","Deadline Urgency","[mtd deadline april 6]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","Deadline Urgency","[register mtd before april]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","Deadline Urgency","[mtd deadline help]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","Deadline Urgency","[late mtd registration]",Exact,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","Deadline Urgency","""mtd april 2026 deadline""",Phrase,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","Deadline Urgency","""making tax digital april 6""",Phrase,3.50,Enabled
+"[GeniusTax] MTD High-Intent Search","Deadline Urgency","""register before mtd deadline""",Phrase,3.50,Enabled
+"[GeniusTax] MTD Awareness Search","Problem-Aware (HMRC Quarterly)","[hmrc quarterly reporting]",Exact,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Problem-Aware (HMRC Quarterly)","[quarterly tax returns uk]",Exact,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Problem-Aware (HMRC Quarterly)","[hmrc digital reporting self employed]",Exact,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Problem-Aware (HMRC Quarterly)","[send quarterly updates hmrc]",Exact,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Problem-Aware (HMRC Quarterly)","[hmrc making tax digital quarterly]",Exact,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Problem-Aware (HMRC Quarterly)","quarterly tax updates hmrc",Broad,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Problem-Aware (HMRC Quarterly)","hmrc digital quarterly returns",Broad,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Problem-Aware (HMRC Quarterly)","quarterly reporting self employed",Broad,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Digital Tax Returns","[digital tax return uk]",Exact,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Digital Tax Returns","[online self assessment tax return]",Exact,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Digital Tax Returns","[submit tax return digitally]",Exact,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Digital Tax Returns","[hmrc digital self assessment]",Exact,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Digital Tax Returns","[tax return software uk]",Exact,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Digital Tax Returns","""digital tax return""",Phrase,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Digital Tax Returns","""online tax return self employed""",Phrase,2.00,Enabled
+"[GeniusTax] MTD Awareness Search","Self-Employed Tax Digital","[self employed making tax digital]",Exact,2.50,Enabled
+"[GeniusTax] MTD Awareness Search","Self-Employed Tax Digital","[mtd self employed]",Exact,2.50,Enabled
+"[GeniusTax] MTD Awareness Search","Self-Employed Tax Digital","[freelancer making tax digital]",Exact,2.50,Enabled
+"[GeniusTax] MTD Awareness Search","Self-Employed Tax Digital","[self employed digital tax]",Exact,2.50,Enabled
+"[GeniusTax] MTD Awareness Search","Self-Employed Tax Digital","[sole trader mtd]",Exact,2.50,Enabled
+"[GeniusTax] MTD Awareness Search","Self-Employed Tax Digital","[sole trader making tax digital]",Exact,2.50,Enabled
+"[GeniusTax] MTD Awareness Search","Self-Employed Tax Digital","""self employed mtd""",Phrase,2.50,Enabled
+"[GeniusTax] MTD Awareness Search","Self-Employed Tax Digital","""making tax digital sole trader""",Phrase,2.50,Enabled
+"[GeniusTax] MTD Awareness Search","Self-Employed Tax Digital","""freelancer mtd""",Phrase,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Landlords MTD","[mtd for landlords]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Landlords MTD","[making tax digital landlords]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Landlords MTD","[landlord digital tax return]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Landlords MTD","[landlord mtd software]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Landlords MTD","[buy to let making tax digital]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Landlords MTD","[property income mtd]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Landlords MTD","[rental income mtd]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Landlords MTD","""mtd landlords""",Phrase,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Landlords MTD","""making tax digital landlord""",Phrase,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Landlords MTD","""landlord mtd 2026""",Phrase,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","[mtd for builders]",Exact,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","[making tax digital builder]",Exact,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","[mtd for plumbers]",Exact,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","[mtd for electricians]",Exact,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","[mtd for tradesmen]",Exact,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","[cis making tax digital]",Exact,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","[construction industry scheme mtd]",Exact,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","[trades mtd software]",Exact,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","""mtd builder""",Phrase,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","""mtd plumber""",Phrase,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","""mtd electrician""",Phrase,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Trades MTD","""tradesmen making tax digital""",Phrase,2.00,Enabled
+"[GeniusTax] Audience-Specific Search","Freelancers & Contractors","[mtd for contractors]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Freelancers & Contractors","[contractor making tax digital]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Freelancers & Contractors","[it contractor mtd]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Freelancers & Contractors","[freelancer mtd software]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Freelancers & Contractors","[consultant mtd registration]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Freelancers & Contractors","[ir35 making tax digital]",Exact,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Freelancers & Contractors","""mtd contractor""",Phrase,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Freelancers & Contractors","""freelancer making tax digital""",Phrase,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Freelancers & Contractors","""contractor mtd 2026""",Phrase,2.50,Enabled
+"[GeniusTax] Audience-Specific Search","Small Business MTD","[small business making tax digital]",Exact,2.25,Enabled
+"[GeniusTax] Audience-Specific Search","Small Business MTD","[small business mtd]",Exact,2.25,Enabled
+"[GeniusTax] Audience-Specific Search","Small Business MTD","[mtd for small business]",Exact,2.25,Enabled
+"[GeniusTax] Audience-Specific Search","Small Business MTD","[small company mtd]",Exact,2.25,Enabled
+"[GeniusTax] Audience-Specific Search","Small Business MTD","""small business mtd""",Phrase,2.25,Enabled
+"[GeniusTax] Audience-Specific Search","Small Business MTD","""mtd for small business""",Phrase,2.25,Enabled
+"[GeniusTax] Competitor Conquest","TaxScouts Alternatives","[taxscouts alternative]",Exact,3.00,Enabled
+"[GeniusTax] Competitor Conquest","TaxScouts Alternatives","[taxscouts vs]",Exact,3.00,Enabled
+"[GeniusTax] Competitor Conquest","TaxScouts Alternatives","[better than taxscouts]",Exact,3.00,Enabled
+"[GeniusTax] Competitor Conquest","TaxScouts Alternatives","taxscouts competitor",Broad,3.00,Enabled
+"[GeniusTax] Competitor Conquest","FreeAgent MTD","[freeagent mtd]",Exact,3.00,Enabled
+"[GeniusTax] Competitor Conquest","FreeAgent MTD","[freeagent making tax digital]",Exact,3.00,Enabled
+"[GeniusTax] Competitor Conquest","FreeAgent MTD","[freeagent alternative]",Exact,3.00,Enabled
+"[GeniusTax] Competitor Conquest","FreeAgent MTD","""freeagent mtd alternative""",Phrase,3.00,Enabled
+"[GeniusTax] Competitor Conquest","Coconut/GoSimpleTax","[coconut tax app alternative]",Exact,3.00,Enabled
+"[GeniusTax] Competitor Conquest","Coconut/GoSimpleTax","[gosimpletax alternative]",Exact,3.00,Enabled
+"[GeniusTax] Competitor Conquest","Coconut/GoSimpleTax","[gosimpletax making tax digital]",Exact,3.00,Enabled
+"[GeniusTax] Competitor Conquest","Coconut/GoSimpleTax","""coconut mtd app""",Phrase,3.00,Enabled

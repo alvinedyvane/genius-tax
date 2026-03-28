@@ -1,0 +1,15 @@
+Campaign,Ad Group,Status,Max CPC,Ad Group Type
+"[GeniusTax] MTD High-Intent Search","MTD Registration Core",Enabled,4.00,Search
+"[GeniusTax] MTD High-Intent Search","MTD Software/Tool",Enabled,3.50,Search
+"[GeniusTax] MTD High-Intent Search","MTD Agent/Accountant",Enabled,3.00,Search
+"[GeniusTax] MTD High-Intent Search","Deadline Urgency",Enabled,3.50,Search
+"[GeniusTax] MTD Awareness Search","Problem-Aware (HMRC Quarterly)",Enabled,2.00,Search
+"[GeniusTax] MTD Awareness Search","Digital Tax Returns",Enabled,2.00,Search
+"[GeniusTax] MTD Awareness Search","Self-Employed Tax Digital",Enabled,2.50,Search
+"[GeniusTax] Audience-Specific Search","Landlords MTD",Enabled,2.50,Search
+"[GeniusTax] Audience-Specific Search","Trades MTD",Enabled,2.00,Search
+"[GeniusTax] Audience-Specific Search","Freelancers & Contractors",Enabled,2.50,Search
+"[GeniusTax] Audience-Specific Search","Small Business MTD",Enabled,2.25,Search
+"[GeniusTax] Competitor Conquest","TaxScouts Alternatives",Enabled,3.00,Search
+"[GeniusTax] Competitor Conquest","FreeAgent MTD",Enabled,3.00,Search
+"[GeniusTax] Competitor Conquest","Coconut/GoSimpleTax",Enabled,3.00,Search

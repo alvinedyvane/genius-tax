@@ -1,0 +1,7 @@
+Campaign,Campaign Type,Status,Daily Budget,Budget Type,Bid Strategy Type,Target CPA,Languages,Location
+"[GeniusTax] MTD High-Intent Search",Search,Paused,75,Daily,Maximize Conversions,70,English,United Kingdom
+"[GeniusTax] MTD Awareness Search",Search,Paused,30,Daily,Maximize Clicks,,English,United Kingdom
+"[GeniusTax] Audience-Specific Search",Search,Paused,30,Daily,Maximize Conversions,,English,United Kingdom
+"[GeniusTax] Competitor Conquest",Search,Paused,15,Daily,Maximize Clicks,,English,United Kingdom
+"[GeniusTax] Remarketing Display",Display,Paused,15,Daily,Target CPA,60,English,United Kingdom
+"[GeniusTax] Performance Max",Performance Max,Paused,30,Daily,Maximize Conversions,,English,United Kingdom

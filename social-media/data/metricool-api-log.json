@@ -1,0 +1,2342 @@
+[
+  {
+    "logged_at": "2026-03-26T20:37:29.026192+00:00",
+    "date": "2026-03-26",
+    "time": "07:45",
+    "image": "branded-hero-square.png",
+    "text_preview": "\ud83c\udfe0 Landlords \u2014 if your rental income is \u00a350K+, Making Tax Digital applies to you from April 6. The co",
+    "channels": [
+      "twitter",
+      "facebook",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-26T07:45:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-26T20:37:30.208497+00:00",
+    "date": "2026-03-26",
+    "time": "11:30",
+    "image": "04-simple-pricing.png",
+    "text_preview": "10 days left until the MTD deadline. Our early bird price of from just \u00a35/week disappears April 5. L",
+    "channels": [
+      "twitter",
+      "facebook",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-26T11:30:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-26T20:37:31.570456+00:00",
+    "date": "2026-03-26",
+    "time": "16:00",
+    "image": "branded-pricing-square.png",
+    "text_preview": "Own rental property + earn \u00a350K+ from it? You're in the MTD net from April 6, 2026.\n\nQuarterly digit",
+    "channels": [
+      "twitter",
+      "facebook",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-26T16:00:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "timestamp": "2026-03-27T11:01:37.925593+00:00",
+    "schedule": "2026-03-27T11:06:00",
+    "channels": [
+      "twitter"
+    ],
+    "text_preview": "\u2705 Connection test \u2014 ignore this post. Genius Tax MTD compliance from \u00a35/week. geniustax.co.uk",
+    "image": null,
+    "dry_run": false,
+    "result": {
+      "status_code": 201,
+      "post_id": 308642291,
+      "success": true
+    }
+  },
+  {
+    "timestamp": "2026-03-27T11:05:28.829758+00:00",
+    "schedule": "2026-03-27T11:08:00",
+    "channels": [
+      "twitter"
+    ],
+    "text_preview": "\u2705 Test \u2014 Genius Tax MTD compliance sorted from \u00a35/week. geniustax.co.uk",
+    "image": null,
+    "dry_run": false,
+    "result": {
+      "status_code": 201,
+      "post_id": 308644370,
+      "success": true
+    }
+  },
+  {
+    "logged_at": "2026-03-27T20:16:09.802542+00:00",
+    "date": "2026-03-28",
+    "time": "07:45",
+    "image": "07-ready-sorted.png",
+    "text_preview": "Making Tax Digital replaces the annual self-assessment return with quarterly updates. Instead of one",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 308874098,
+          "publicationDate": {
+            "dateTime": "2026-03-28T07:45:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-27T20:16:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Making Tax Digital replaces the annual self-assessment return with quarterly updates. Instead of one big filing in January, you submit a summary of income and expenses four times a year and a final declaration at year end. The software needs to be HMRC-approved, which is where most people trip up. Genius Tax handles the whole thing, Sage included, for a flat annual fee. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/jb67a7A.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-8666274698379178543",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 308874098
+    }
+  },
+  {
+    "logged_at": "2026-03-27T20:16:13.418380+00:00",
+    "date": "2026-03-28",
+    "time": "11:30",
+    "image": "08-linkedin-hero.png",
+    "text_preview": "HMRC's penalty system for MTD non-compliance is points-based, which means it compounds over time. La",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 308874123,
+          "publicationDate": {
+            "dateTime": "2026-03-28T11:30:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-27T20:16:00",
+            "timezone": "Europe/London"
+          },
+          "text": "HMRC's penalty system for MTD non-compliance is points-based, which means it compounds over time. Late or missed quarterly submissions add up, and the fines escalate with each one. Getting registered and compliant before April 2026 removes that risk entirely. Genius Tax handles the whole compliance process for a flat fee, from five pounds a week or one hundred and ninety-nine pounds a year on the Essential plan. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/JmR52e2.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "661807925030045081",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 308874123
+    }
+  },
+  {
+    "logged_at": "2026-03-27T20:16:16.314111+00:00",
+    "date": "2026-03-28",
+    "time": "16:00",
+    "image": "09-pricing-detailed.png",
+    "text_preview": "Genius Tax offers three straightforward options. You can pay monthly from five pounds a week, or ann",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 308874135,
+          "publicationDate": {
+            "dateTime": "2026-03-28T16:00:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-27T20:16:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Genius Tax offers three straightforward options. You can pay monthly from five pounds a week, or annually on the Essential plan at one hundred and ninety-nine pounds, or the Growth plan at two hundred and ninety-nine in year one and five hundred from year two. All plans include HMRC registration, Sage accounting software, quarterly filing management, and your year-end declaration. No hidden extras at all. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/aCKst8G.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-7880199676746315375",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 308874135
+    }
+  },
+  {
+    "timestamp": "2026-03-28T14:49:49.077878+00:00",
+    "schedule": "2026-03-28 16:00",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "text_preview": "Genius Tax gives you everything you need for Making Tax Digital compliance from \u00a325 a month. Self-em",
+    "image": "/Users/donnapaulsen/Projects/genius-tax/social-media/images/09-pricing-detailed.png",
+    "dry_run": false,
+    "result": {
+      "status_code": 201,
+      "post_id": 309028467,
+      "success": true
+    }
+  },
+  {
+    "timestamp": "2026-03-28T14:50:06.820940+00:00",
+    "schedule": "2026-03-28 16:00",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "text_preview": "Genius Tax gives you everything you need for Making Tax Digital compliance from \u00a325 a month. Self-em",
+    "image": "/Users/donnapaulsen/Projects/genius-tax/social-media/images/branded/09-pricing-detailed.png",
+    "dry_run": false,
+    "result": {
+      "status_code": 201,
+      "post_id": 309028499,
+      "success": true
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:08.274422+00:00",
+    "date": "2026-03-26",
+    "time": "07:45",
+    "image": "branded-hero-square.png",
+    "text_preview": "Making Tax Digital for Income Tax is live from April 2026. If your income from self-employment or pr",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-26T07:45:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:09.529649+00:00",
+    "date": "2026-03-26",
+    "time": "11:30",
+    "image": "01-your-tax-sorted.png",
+    "text_preview": "Self-assessment as most people know it is changing. From April 2026, anyone earning over fifty thous",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-26T11:30:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:10.742060+00:00",
+    "date": "2026-03-26",
+    "time": "16:00",
+    "image": "02-built-for-people.png",
+    "text_preview": "Genius Tax was built for people who want their tax compliance sorted without having to become expert",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-26T16:00:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:12.051553+00:00",
+    "date": "2026-03-27",
+    "time": "07:45",
+    "image": "03-three-steps.png",
+    "text_preview": "If you are self-employed and your annual income is over fifty thousand pounds, Making Tax Digital ap",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-27T07:45:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:13.477512+00:00",
+    "date": "2026-03-27",
+    "time": "11:30",
+    "image": "04-simple-pricing.png",
+    "text_preview": "Getting set up with Genius Tax is straightforward. We register as your HMRC Authorised Agent, get yo",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-27T11:30:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:14.697938+00:00",
+    "date": "2026-03-27",
+    "time": "16:00",
+    "image": "06-pick-your-plan.png",
+    "text_preview": "Freelancers, consultants, sole traders. If your income is over fifty thousand pounds, Making Tax Dig",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-27T16:00:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:16.116658+00:00",
+    "date": "2026-03-29",
+    "time": "07:45",
+    "image": "10-pricing-5pw-landscape.png",
+    "text_preview": "Landlords with rental income over fifty thousand pounds are within scope for Making Tax Digital from",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028720,
+          "publicationDate": {
+            "dateTime": "2026-03-29T07:45:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Landlords with rental income over fifty thousand pounds are within scope for Making Tax Digital from April 2026. This includes income from residential and commercial property. Quarterly digital submissions to HMRC are required, using approved software and ideally with an authorised agent managing it on your behalf. That is exactly what Genius Tax provides. From \u00a325 a month at geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/dg6rz7Y.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "3346125533345629390",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028720
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:17.379096+00:00",
+    "date": "2026-03-29",
+    "time": "11:30",
+    "image": "10-pricing-5pw-square.png",
+    "text_preview": "The most common question from landlords: does Making Tax Digital apply to me? If your total qualifyi",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028735,
+          "publicationDate": {
+            "dateTime": "2026-03-29T11:30:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "The most common question from landlords: does Making Tax Digital apply to me? If your total qualifying income, which includes rental income and any self-employment income, is over fifty thousand pounds, yes, from April 2026. If it is over thirty thousand, the same applies from April 2027. Genius Tax makes the compliance side completely straightforward. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/IlbzscY.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "8867233559335224444",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028735
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:18.818456+00:00",
+    "date": "2026-03-29",
+    "time": "16:00",
+    "image": "branded-pricing-square.png",
+    "text_preview": "Some landlords run property alongside a limited company or other business interests and assume their",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028739,
+          "publicationDate": {
+            "dateTime": "2026-03-29T16:00:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Some landlords run property alongside a limited company or other business interests and assume their accountant has it all covered. Worth checking. Making Tax Digital for personal income, including rental income, is a separate obligation that requires specific registration, approved software and quarterly filings. Genius Tax specialises in exactly this. Essential one hundred and ninety-nine a year, Growth from two hundred and ninety-nine. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/NtqDJ43.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-6618805409700427888",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028739
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:20.171625+00:00",
+    "date": "2026-03-30",
+    "time": "07:45",
+    "image": "branded-steps-square.png",
+    "text_preview": "Making Tax Digital compliance comes down to three things. Being registered with HMRC, having approve",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028741,
+          "publicationDate": {
+            "dateTime": "2026-03-30T07:45:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Making Tax Digital compliance comes down to three things. Being registered with HMRC, having approved software in place, and submitting four quarterly updates plus a year-end declaration. Genius Tax handles all three as your HMRC Authorised Agent. The whole thing costs less than most people spend on a takeaway each week, from five pounds on the monthly plan. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/t4Q1n0M.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-5326715102845517524",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028741
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:21.419396+00:00",
+    "date": "2026-03-30",
+    "time": "11:30",
+    "image": "branded-hero-square.png",
+    "text_preview": "A lot of people assume their existing accountant is handling MTD automatically. That may not be the ",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028744,
+          "publicationDate": {
+            "dateTime": "2026-03-30T11:30:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "A lot of people assume their existing accountant is handling MTD automatically. That may not be the case. Making Tax Digital requires active registration with HMRC, approved software, and quarterly filings, and not all accountants have set this up for clients yet. If you are not sure where you stand, Genius Tax can step in and take over the whole thing for a flat fee from \u00a325 a month. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/pK8iwsK.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "4958486079096048276",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028744
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:22.750783+00:00",
+    "date": "2026-03-30",
+    "time": "16:00",
+    "image": "01-your-tax-sorted.png",
+    "text_preview": "The way Genius Tax works in practice is simple. At the end of each quarter you share your income and",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028746,
+          "publicationDate": {
+            "dateTime": "2026-03-30T16:00:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "The way Genius Tax works in practice is simple. At the end of each quarter you share your income and expense records with us, we enter them into Sage and file the quarterly update with HMRC, and you receive confirmation that it is done. Year end follows the same pattern. No chasing, no last-minute stress, no surprises. Plans from \u00a325 a month. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/dyDBphJ.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-8953254884604096853",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028746
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:24.161530+00:00",
+    "date": "2026-03-31",
+    "time": "07:45",
+    "image": "02-built-for-people.png",
+    "text_preview": "Six days until Making Tax Digital is live for incomes over fifty thousand pounds. If you earn over t",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028753,
+          "publicationDate": {
+            "dateTime": "2026-03-31T07:45:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Six days until Making Tax Digital is live for incomes over fifty thousand pounds. If you earn over that threshold from self-employment or property and have not sorted your compliance yet, this week is the week to do it. Genius Tax can still get you registered with HMRC and set up on Sage before April sixth. Plans from \u00a325 a month at geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/JA2Cicx.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-5696480569018464859",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028753
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:25.592019+00:00",
+    "date": "2026-03-31",
+    "time": "11:30",
+    "image": "03-three-steps.png",
+    "text_preview": "Last day of March and six days until the MTD deadline. Essential plan is one hundred and ninety-nine",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028757,
+          "publicationDate": {
+            "dateTime": "2026-03-31T11:30:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Last day of March and six days until the MTD deadline. Essential plan is one hundred and ninety-nine pounds a year, Growth is two hundred and ninety-nine in year one or five hundred from year two, and monthly plans start from \u00a325 a month. If you have been meaning to get this sorted before April, today is a sensible day to do it. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/6R1AiFZ.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-2300848188355818436",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028757
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:26.991289+00:00",
+    "date": "2026-03-31",
+    "time": "16:00",
+    "image": "04-simple-pricing.png",
+    "text_preview": "End of March. Six days until Making Tax Digital goes live for anyone earning over fifty thousand fro",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028759,
+          "publicationDate": {
+            "dateTime": "2026-03-31T16:00:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "End of March. Six days until Making Tax Digital goes live for anyone earning over fifty thousand from self-employment or property. Genius Tax keeps the process simple: you join, we handle HMRC registration, Sage setup, and every filing throughout the year. You just need to share your records with us each quarter and we do the rest. From one hundred and ninety-nine a year. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/JrqMJ3l.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-4147118517638377859",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028759
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:28.337255+00:00",
+    "date": "2026-04-01",
+    "time": "07:45",
+    "image": "06-pick-your-plan.png",
+    "text_preview": "Five days until Making Tax Digital is live. If your income from self-employment or property is over ",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028761,
+          "publicationDate": {
+            "dateTime": "2026-04-01T07:45:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Five days until Making Tax Digital is live. If your income from self-employment or property is over fifty thousand pounds and you are not yet registered with an HMRC Authorised Agent and on approved software, this is the week to sort it. Genius Tax can still get everything in place before the deadline. From \u00a325 a month at geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/Mx7dBpG.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-6683360159712589923",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028761
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:29.789074+00:00",
+    "date": "2026-04-01",
+    "time": "11:30",
+    "image": "07-ready-sorted.png",
+    "text_preview": "Contractors and tradespeople earning over fifty thousand pounds, Making Tax Digital applies to you t",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028765,
+          "publicationDate": {
+            "dateTime": "2026-04-01T11:30:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Contractors and tradespeople earning over fifty thousand pounds, Making Tax Digital applies to you too. Self-employed income through any route, whether sole trader, CIS work or otherwise, counts toward the threshold. Genius Tax handles the MTD obligations for contractors properly, including registration, Sage setup and quarterly filings. Five days left. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/jb67a7A.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-6679812215484363007",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028765
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:31.293975+00:00",
+    "date": "2026-04-01",
+    "time": "16:00",
+    "image": "08-linkedin-hero.png",
+    "text_preview": "The cost of getting MTD compliance sorted with Genius Tax is one hundred and ninety-nine pounds a ye",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028775,
+          "publicationDate": {
+            "dateTime": "2026-04-01T16:00:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "The cost of getting MTD compliance sorted with Genius Tax is one hundred and ninety-nine pounds a year on the Essential plan. The cost of not getting it sorted starts with an HMRC penalty and escalates with every missed quarterly submission under the points-based system. The maths are not complicated. Five days left. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/JmR52e2.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-1660996675651875361",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028775
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:32.831421+00:00",
+    "date": "2026-04-02",
+    "time": "07:45",
+    "image": "09-pricing-detailed.png",
+    "text_preview": "Three days until Making Tax Digital is live for incomes over fifty thousand pounds. If you have been",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028783,
+          "publicationDate": {
+            "dateTime": "2026-04-02T07:45:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Three days until Making Tax Digital is live for incomes over fifty thousand pounds. If you have been putting this off, today is realistically the last sensible day to get the process started. Genius Tax can still onboard you and get your HMRC registration in place before April sixth, but capacity is limited this week. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/aCKst8G.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "8181940028402126046",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028783
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:34.313480+00:00",
+    "date": "2026-04-02",
+    "time": "11:30",
+    "image": "10-pricing-5pw-landscape.png",
+    "text_preview": "Three days to go before MTD is live. Quarterly digital filing is a legal requirement for anyone with",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028787,
+          "publicationDate": {
+            "dateTime": "2026-04-02T11:30:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Three days to go before MTD is live. Quarterly digital filing is a legal requirement for anyone with self-employment or property income over fifty thousand pounds from April 2026. Genius Tax is an HMRC Authorised Agent, Sage is included on all plans, and the quarterly filings are fully managed on your behalf. Essential at one hundred and ninety-nine a year, Growth at two hundred and ninety-nine. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/dg6rz7Y.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-487051797917907115",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028787
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:35.746767+00:00",
+    "date": "2026-04-02",
+    "time": "16:00",
+    "image": "10-pricing-5pw-square.png",
+    "text_preview": "If you know someone who is self-employed or earns rental income over fifty thousand pounds, please s",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028788,
+          "publicationDate": {
+            "dateTime": "2026-04-02T16:00:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "If you know someone who is self-employed or earns rental income over fifty thousand pounds, please share this with them. Making Tax Digital is live in three days and a lot of people in scope have still not taken action. Genius Tax from \u00a325 a month, full MTD compliance handled for you. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/IlbzscY.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-2831300214628202630",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028788
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:37.204518+00:00",
+    "date": "2026-04-03",
+    "time": "07:45",
+    "image": "branded-pricing-square.png",
+    "text_preview": "Two days. Making Tax Digital is live on April sixth for anyone earning over fifty thousand pounds fr",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028789,
+          "publicationDate": {
+            "dateTime": "2026-04-03T07:45:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Two days. Making Tax Digital is live on April sixth for anyone earning over fifty thousand pounds from self-employment or property. If you are not yet registered with an HMRC Authorised Agent and on approved software, you need to act today. We are still accepting new clients but that will not remain the case much longer. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/NtqDJ43.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-5421576499363495001",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028789
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:38.457225+00:00",
+    "date": "2026-04-03",
+    "time": "11:30",
+    "image": "branded-steps-square.png",
+    "text_preview": "Tomorrow is the last full day before the MTD deadline. If you sign up with Genius Tax today we can s",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028791,
+          "publicationDate": {
+            "dateTime": "2026-04-03T11:30:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Tomorrow is the last full day before the MTD deadline. If you sign up with Genius Tax today we can still complete your HMRC registration and Sage setup before April sixth. After that, the opportunity to get compliant without penalty shrinks significantly. Monthly plans from \u00a325 a month, annual from one hundred and ninety-nine. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/t4Q1n0M.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-1464469291844877373",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028791
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:39.726286+00:00",
+    "date": "2026-04-03",
+    "time": "16:00",
+    "image": "branded-hero-square.png",
+    "text_preview": "Two days until Making Tax Digital is live and HMRC's penalty framework is unambiguous. Miss your reg",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028793,
+          "publicationDate": {
+            "dateTime": "2026-04-03T16:00:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Two days until Making Tax Digital is live and HMRC's penalty framework is unambiguous. Miss your registration and quarterly obligations and the fines accumulate under the points system with every missed submission. Getting compliant now is cheaper, simpler, and a lot less stressful. Genius Tax, HMRC Authorised, Sage included, full service from \u00a325 a month. geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/pK8iwsK.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "1023523203359525774",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028793
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:41.060319+00:00",
+    "date": "2026-04-04",
+    "time": "07:45",
+    "image": "01-your-tax-sorted.png",
+    "text_preview": "Today is April fourth. Making Tax Digital goes live tomorrow for anyone earning over fifty thousand ",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028794,
+          "publicationDate": {
+            "dateTime": "2026-04-04T07:45:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Today is April fourth. Making Tax Digital goes live tomorrow for anyone earning over fifty thousand pounds from self-employment or property. If you are not yet compliant, today is your last realistic chance to sort it. Genius Tax is still taking sign-ups. Get registered and sorted at geniustax.co.uk before the deadline.",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/dyDBphJ.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "5339017399969860220",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028794
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:42.457752+00:00",
+    "date": "2026-04-04",
+    "time": "11:30",
+    "image": "02-built-for-people.png",
+    "text_preview": "Last chance to get your MTD compliance in place before tomorrow's deadline. Genius Tax Essential is ",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028796,
+          "publicationDate": {
+            "dateTime": "2026-04-04T11:30:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "Last chance to get your MTD compliance in place before tomorrow's deadline. Genius Tax Essential is one hundred and ninety-nine pounds a year, Growth is two hundred and ninety-nine in year one and five hundred from year two, or you can pay monthly from \u00a325 a month. HMRC registration, Sage software and all quarterly filings included. Sign up today at geniustax.co.uk",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/JA2Cicx.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "2976995457040992835",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028796
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:43.904778+00:00",
+    "date": "2026-04-04",
+    "time": "16:00",
+    "image": "03-three-steps.png",
+    "text_preview": "The MTD deadline is tomorrow. For anyone earning over fifty thousand pounds from self-employment or ",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 201,
+      "response": {
+        "data": {
+          "id": 309028799,
+          "publicationDate": {
+            "dateTime": "2026-04-04T16:00:00",
+            "timezone": "Europe/London"
+          },
+          "creationDate": {
+            "dateTime": "2026-03-28T14:51:00",
+            "timezone": "Europe/London"
+          },
+          "text": "The MTD deadline is tomorrow. For anyone earning over fifty thousand pounds from self-employment or property, quarterly digital filing is a legal requirement from April sixth. It is not too late, but you need to act in the next few hours. Genius Tax at geniustax.co.uk, from \u00a325 a month, properly sorted.",
+          "firstCommentText": "",
+          "providers": [
+            {
+              "network": "twitter",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "instagram",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "linkedin",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            },
+            {
+              "network": "tiktok",
+              "status": "PENDING",
+              "detailedStatus": "Pending"
+            }
+          ],
+          "media": [
+            "https://i.imgur.com/6R1AiFZ.png"
+          ],
+          "autoPublish": true,
+          "saveExternalMediaFiles": false,
+          "mediaAltText": [
+            null
+          ],
+          "shortener": false,
+          "draft": false,
+          "twitterData": {
+            "type": "POST"
+          },
+          "instagramData": {
+            "autoPublish": true
+          },
+          "linkedinData": {
+            "previewIncluded": true,
+            "type": "POST"
+          },
+          "hasNotReadNotes": false,
+          "uuid": "-3245003173077696151",
+          "creatorUserMail": "alvin@geniusmoney.co.uk",
+          "creatorUserId": 4656212
+        }
+      },
+      "success": true,
+      "post_id": 309028799
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:55.191724+00:00",
+    "date": "2026-03-26",
+    "time": "07:45",
+    "image": "branded-hero-square.png",
+    "text_preview": "Making Tax Digital for Income Tax is live from April 2026. If your income from self-employment or pr",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-26T07:45:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:56.459901+00:00",
+    "date": "2026-03-26",
+    "time": "11:30",
+    "image": "01-your-tax-sorted.png",
+    "text_preview": "Self-assessment as most people know it is changing. From April 2026, anyone earning over fifty thous",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-26T11:30:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:57.807392+00:00",
+    "date": "2026-03-26",
+    "time": "16:00",
+    "image": "02-built-for-people.png",
+    "text_preview": "Genius Tax was built for people who want their tax compliance sorted without having to become expert",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-26T16:00:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:51:59.045536+00:00",
+    "date": "2026-03-27",
+    "time": "07:45",
+    "image": "03-three-steps.png",
+    "text_preview": "If you are self-employed and your annual income is over fifty thousand pounds, Making Tax Digital ap",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-27T07:45:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:52:00.540795+00:00",
+    "date": "2026-03-27",
+    "time": "11:30",
+    "image": "04-simple-pricing.png",
+    "text_preview": "Getting set up with Genius Tax is straightforward. We register as your HMRC Authorised Agent, get yo",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-27T11:30:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  },
+  {
+    "logged_at": "2026-03-28T14:52:01.846119+00:00",
+    "date": "2026-03-27",
+    "time": "16:00",
+    "image": "06-pick-your-plan.png",
+    "text_preview": "Freelancers, consultants, sole traders. If your income is over fifty thousand pounds, Making Tax Dig",
+    "channels": [
+      "twitter",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "result": {
+      "status_code": 400,
+      "response": {
+        "status": "BAD_REQUEST",
+        "code": "400",
+        "title": "Bad Request",
+        "detail": {
+          "scheduleNewPost.date/time": "Invalid value 'DateTimeInfo(dateTime=2026-03-27T16:00:00, timezone=Europe/London)'. Given datetime cannot be in the past."
+        }
+      },
+      "success": false
+    }
+  }
+]

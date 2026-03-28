@@ -48,7 +48,7 @@ log = logging.getLogger("genius-monitor")
 # ─────────────────────────────────────────────
 TEMPLATES = {
     "pricing": (
-        "Great question! Essential starts at £199/year, Growth early bird is £299/year "
+        "Great question! Essential starts at £199 upfront, Growth early bird is £299 upfront "
         "(ends April 5). Full details at geniustax.co.uk"
     ),
     "mtd": (

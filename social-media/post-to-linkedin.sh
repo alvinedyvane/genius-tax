@@ -32,7 +32,7 @@ RESPONSE=$(curl -s -X POST "https://api.linkedin.com/v2/ugcPosts" \
           \"status\": \"READY\",
           \"originalUrl\": \"https://geniustax.co.uk/signup\",
           \"title\": {\"text\": \"Genius Tax — Your Tax. Sorted.\"},
-          \"description\": {\"text\": \"Self-assessment from £199/year. MTD compliance from £299/year. HMRC-authorised.\"}
+          \"description\": {\"text\": \"Self-assessment from £199 upfront. MTD compliance from £299 upfront. HMRC-authorised.\"}
         }]
       }
     },

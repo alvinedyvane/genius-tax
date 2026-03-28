@@ -1,0 +1,855 @@
+{
+  "cookies": [
+    {
+      "name": "_mcid",
+      "value": "c8c726de62e1bb55",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806068116,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUlTrJBMUzTwK-JSPsoYyKBE-AcUvTrBYUmka8CwwiBIhBWXD1eh1ufBpV2Z",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1809092118.952566,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "mt_tt",
+      "value": "USER_SESSION",
+      "domain": "app.metricool.com",
+      "path": "/",
+      "expires": 1782417095.550579,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://metricool.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "mt_ui",
+      "value": "4656212",
+      "domain": "app.metricool.com",
+      "path": "/",
+      "expires": 1782417095.550598,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://metricool.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_mcool-rl-identified",
+      "value": "1",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1774618520,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1438422442.1774532120",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1809093092.056906,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__spdt",
+      "value": "171cc154792d44b7b81be28469c15eeb",
+      "domain": "app.metricool.com",
+      "path": "/",
+      "expires": 1806068120,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "_twpid",
+      "value": "tw.1774532120793.539292514976901020",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1808228121.473626,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "AWSALBTG",
+      "value": "EjQWvwWRz/oEXywkcFzTvlvmJnxYY20x4rbgh/TMj1Y4ygcrQvsWle3GzHEIeRCvaXzKY8rHiafM9uQ5Zsqh4658Dayb9d29nljXEXrnJpnP1JMXp4E4e9aViI1hd83mza/RSq4h9+iGerCYgSW5w5nNbJdTVuQLp3xNnDXKA0Nc",
+      "domain": "static.metricool.com",
+      "path": "/",
+      "expires": 1775137897.504301,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AWSALBTGCORS",
+      "value": "EjQWvwWRz/oEXywkcFzTvlvmJnxYY20x4rbgh/TMj1Y4ygcrQvsWle3GzHEIeRCvaXzKY8rHiafM9uQ5Zsqh4658Dayb9d29nljXEXrnJpnP1JMXp4E4e9aViI1hd83mza/RSq4h9+iGerCYgSW5w5nNbJdTVuQLp3xNnDXKA0Nc",
+      "domain": "static.metricool.com",
+      "path": "/",
+      "expires": 1775137897.504329,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AWSALB",
+      "value": "y+Os/KgciQRSPoe/mN4KawusA/Dz8ApYYLND/cKXzk1v8Tf9odrMc8A2/XNtNJ0h50EWmnF8+i/R0xuE4qzYQglkRAZFWhMkooYVoA23C+0HVZrlFk1It+r0fc1t",
+      "domain": "static.metricool.com",
+      "path": "/",
+      "expires": 1775137897.504343,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AWSALBCORS",
+      "value": "y+Os/KgciQRSPoe/mN4KawusA/Dz8ApYYLND/cKXzk1v8Tf9odrMc8A2/XNtNJ0h50EWmnF8+i/R0xuE4qzYQglkRAZFWhMkooYVoA23C+0HVZrlFk1It+r0fc1t",
+      "domain": "static.metricool.com",
+      "path": "/",
+      "expires": 1775137897.504356,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_fbp",
+      "value": "fb.1.1774532120799.769179526198575594",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1782309092,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ttp",
+      "value": "3BU87V1hIKXmQoSKw4sDYSLHtBj",
+      "domain": ".tiktok.com",
+      "path": "/",
+      "expires": 1808229098.07911,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "mautic_device_id",
+      "value": "kemo78pw649eyje9bck0odk",
+      "domain": "b4.metricool.com",
+      "path": "/",
+      "expires": 1806069090.922092,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "mtc_id",
+      "value": "7346499",
+      "domain": "b4.metricool.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "mtc_id",
+      "value": "7346499",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "mtc_sid",
+      "value": "kemo78pw649eyje9bck0odk",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "mautic_device_id",
+      "value": "kemo78pw649eyje9bck0odk",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".bat.bing.com",
+      "path": "/",
+      "expires": 1775136921.071206,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_tt_enable_cookie",
+      "value": "1",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1808229092,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ttp",
+      "value": "01KMN5PME24541K7DW0ZQTBD3W_.tt.1",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1808229092,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CLID",
+      "value": "c11584a9beaf406fbd55c46112051569.20260326.20270326",
+      "domain": "www.clarity.ms",
+      "path": "/",
+      "expires": 1806068121.030836,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "130D3CCFDA356D0F2A382BE7DB8B6C2C",
+      "domain": ".bing.com",
+      "path": "/",
+      "expires": 1808228121.456333,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "guest_id_marketing",
+      "value": "v1%3A177453212102885821",
+      "domain": ".twitter.com",
+      "path": "/",
+      "expires": 1809092121.087118,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "guest_id_ads",
+      "value": "v1%3A177453212102885821",
+      "domain": ".twitter.com",
+      "path": "/",
+      "expires": 1809092121.087136,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "personalization_id",
+      "value": "\"v1_Xt4fAnS6pbtOVWF09f2IHg==\"",
+      "domain": ".twitter.com",
+      "path": "/",
+      "expires": 1809092121.087142,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "guest_id",
+      "value": "v1%3A177453212102885821",
+      "domain": ".twitter.com",
+      "path": "/",
+      "expires": 1809092121.087151,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "muc_ads",
+      "value": "19d8a38a-f7b8-4505-8695-e70f3494d7d7",
+      "domain": ".t.co",
+      "path": "/",
+      "expires": 1809092121.113919,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "lidc",
+      "value": "\"b=OGST03:s=O:r=O:a=O:p=O:g=3762:u=1:x=1:i=1774532121:t=1774618521:v=2:sig=AQGMC9CU9oiah11kznsS4Era_nx3-3VI\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1774618522.142451,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ar_debug",
+      "value": "1",
+      "domain": ".pinterest.com",
+      "path": "/",
+      "expires": 1806069093.143919,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "li_sugr",
+      "value": "dfda57d7-5dff-4819-a0d6-8046974db035",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1782309098.162125,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bcookie",
+      "value": "\"v=2&459f98aa-2c86-4cde-83da-a1cee5862829\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1806069099.162153,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "UserMatchHistory",
+      "value": "AQJIAhKfh719nAAAAZ0qW1Ly_z_4o6z-hg3qCw2Yk41-A8nqcO8MzSnIl6TSw43rJ6yfCiUjc3wDcA",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1777124121.361034,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AnalyticsSyncHistory",
+      "value": "AQJdQ40HLPRRtwAAAZ0qW1LywL0Aeu7oKcOQmT2NsVyS8-Rpb7S7XuA6UVNPgX2_a9A7mOUqIf7JWe5nnacIng",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1777124121.361042,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_pin_unauth",
+      "value": "dWlkPVpUUTVNamN4TW1NdE1qRmxNQzAwWmpFNExXSTVOMkV0TURFME0yTmtaVEZoTURsag",
+      "domain": ".app.metricool.com",
+      "path": "/",
+      "expires": 1806069093,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1775136921.456375,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SRM_B",
+      "value": "130D3CCFDA356D0F2A382BE7DB8B6C2C",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1808228121.456387,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "rl_anonymous_id",
+      "value": "RS_ENC_v3_ImQyOWI3MTMyLWVlODgtNGIxYy1hMjk1LWRlZjAyZjdiMTEzNyI%3D",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806069090,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "rl_page_init_referrer",
+      "value": "RS_ENC_v3_IiRkaXJlY3Qi",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806069090,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "rl_trait",
+      "value": "RS_ENC_v3_eyJkbHByb3AiOiIiLCJuZXR3b3JrcyI6eyJibHVlc2t5IjpmYWxzZSwid2ViIjpmYWxzZSwidHdpdHRlciI6dHJ1ZSwiZmFjZWJvb2siOmZhbHNlLCJpbnN0YWdyYW0iOnRydWUsImluc3RhZ3JhbUJ1c2luZXNzIjpmYWxzZSwibGlua2VkaW4iOnRydWUsImdhZHMiOmZhbHNlLCJnbWIiOmZhbHNlLCJwaW50ZXJlc3QiOmZhbHNlLCJmYmFkcyI6dHJ1ZSwieW91dHViZSI6dHJ1ZSwidHdpdGNoIjpmYWxzZSwiZmJncm91cCI6ZmFsc2UsInRpa3RvayI6ZmFsc2UsInRpa3Rva0J1c2luZXNzIjpmYWxzZSwidGlrdG9rQWRzIjpmYWxzZSwidGhyZWFkcyI6ZmFsc2V9LCJsYW5ndWFnZSI6ImVuIiwidXNlcklkIjoiNDY1NjIxMiIsInN1YnNjcmlwdGlvbl90eXBlIjoiU1RBUlRFUl81IiwidXNlci1zdWJzY3JpcHRpb24tdHlwZSI6IlNUQVJURVJfNSIsInVzZXItc3Vic2NyaXB0aW9uLWN5Y2xlIjoiQU5OVUFMIiwicmVnaXN0ZXItZGF0ZSI6eyJ2YWx1ZSI6IjIwMjYtMDMtMjVUMTE6NDk6MzEiLCJkYXRlIjoiMjAyNi0wMy0yNVQxNTo0OTozMS4wMDBaIn0sIm93bmVySWQiOiI0NjU2MjEyIiwiYmxvZ0lkIjoiNjAyOTk5NiIsInR3aXR0ZXJTdWJzY3JpcHRpb25UeXBlIjoiTm9uZSIsImVtYWlsIjoiYWx2aW5AZ2VuaXVzbW9uZXkuY28udWsiLCJ1c2VybmFtZSI6ImFsdmluQGdlbml1c21vbmV5LmNvLnVrIiwiZmlyc3RuYW1lIjoiQWx2aW4iLCJsYXN0bmFtZSI6IkVkeXZhbmUiLCJwcmVmZXJyZWRfbG9jYWxlIjoiZW4iLCJjb3VudHJ5IjoiR0IiLCJjb21wYW55bmFtZSI6Ikdlbml1cyBNb25leSBMaW1pdGVkIiwiYnV5ZXJfcGVyc29uYSI6IkJyYW5kIE1hbmFnZXIiLCJnb2FsIjpbIlBsYW5uZXIiLCJBbmFseXRpY3MiLCJTbWFydGxpbmtzIiwiSW5ib3giXSwic2l6ZSI6IlRlYW1tYXRlcyIsInByZW1pdW0iOnRydWV9",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806069090,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "rl_user_id",
+      "value": "RS_ENC_v3_IjQ2NTYyMTIi",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806069090,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SM",
+      "value": "C",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "130D3CCFDA356D0F2A382BE7DB8B6C2C",
+      "domain": ".clarity.ms",
+      "path": "/",
+      "expires": 1808228121.526126,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": 1775136921.526143,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bscookie",
+      "value": "\"v=1&20260326133521c56172df-bd98-4170-862e-58a0b1cf8e80AQFjzkYj_6Mycnv-qhxY6YiV4JdwYT2a\"",
+      "domain": ".www.linkedin.com",
+      "path": "/",
+      "expires": 1806068121.572353,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "UBXs1V9lGyU6wiaU9IhttnrtRDnDXVk5q537ev54dxA-1774532121-1.0.1.1-EQntjQrpvuIIQNUFI9SRqL1bNZleULxvfDEW17uwoL0DB4ZrT88ei4RrFbCJKkV7EyjQifxx4aB_j2bmEK4QLAHyeFbDiPNMccmzXVHzn4k",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1774533921.572373,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_clck",
+      "value": "1mxvrr1%5E2%5Eg4o%5E0%5E2276",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806068121,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_mcool-is-premium",
+      "value": "0",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806069097,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_mc-l",
+      "value": "2026-03-26T13:51:30.096Z",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806069090,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "mautic_referer_id",
+      "value": "246501871",
+      "domain": "b4.metricool.com",
+      "path": "/",
+      "expires": 1774534890.922123,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_rdt_uuid",
+      "value": "1774532120716.80917427-3765-49a7-abbe-28518b5a1051",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1782309092,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "_uetsid",
+      "value": "a28a5240291811f19eb85951a839be81",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1774619492,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_uetvid",
+      "value": "a28a5be0291811f1a7526700bf7261a9",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1808229092,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.2122413762.1774532117.983930029.1774532119.1774533096",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1782308117,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "mt_vrf",
+      "value": "BEhykVEEhBKKu$264502326-9a1c53fa0bcfb2f6d622ef3608e5faac6680a5d507f333f36e6c076183250de2",
+      "domain": "app.metricool.com",
+      "path": "/",
+      "expires": 1774533995.550539,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict",
+      "partitionKey": "https://metricool.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "mt_r_vrf",
+      "value": "2uEBKUuuE2hhz$201468265-8e64ee252f3c1e23672bf42cf8be217c1f39d3394db17e74d54b82eb0197f2ee",
+      "domain": "app.metricool.com",
+      "path": "/",
+      "expires": 1782417095.550558,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict",
+      "partitionKey": "https://metricool.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_mcool-l",
+      "value": "2026-03-26T13:51:37.160Z",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806069097,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_rdt_em",
+      "value": ":d266be3b83d5a9a6e2c3f103279f25c2005fc75c70e855b29faa2830744cf417",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1782309097,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "rl_session",
+      "value": "RS_ENC_v3_eyJhdXRvVHJhY2siOnRydWUsInRpbWVvdXQiOjE4MDAwMDAsImV4cGlyZXNBdCI6MTc3NDUzNDg5NzM0NCwiaWQiOjE3NzQ1MzIxMjE1MTMsInNlc3Npb25TdGFydCI6ZmFsc2V9",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806069097,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ttcsid",
+      "value": "1774532121028::fb2u6FCwD4LKBPuQw0WH.1.1774533098512.0",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1808229098,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ttcsid_BSNAMUVRH2682FEL6M80",
+      "value": "1774532121028::3w-xsZCz0VdO7sxATT8U.1.1774533098512.1",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1808229098,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AWSALBTG",
+      "value": "ZHj+T+vQVF1DcoFyO9EKeYRLQbf7Q8FlTaqW++7XHsJFcTbRp7dbVKAJMhJ1s5yt2QlA7dK60jwInnZ7V6JSfz8yhNs53I0RJveMwNqtB9aipq9ACgo3F5/V3dTv/9XL7yNNaPYsEKffHMTKSHTE6Ysm6O/A62TMyrfwTMGGgmjL",
+      "domain": "app.metricool.com",
+      "path": "/",
+      "expires": 1775137898.582453,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AWSALBTGCORS",
+      "value": "ZHj+T+vQVF1DcoFyO9EKeYRLQbf7Q8FlTaqW++7XHsJFcTbRp7dbVKAJMhJ1s5yt2QlA7dK60jwInnZ7V6JSfz8yhNs53I0RJveMwNqtB9aipq9ACgo3F5/V3dTv/9XL7yNNaPYsEKffHMTKSHTE6Ysm6O/A62TMyrfwTMGGgmjL",
+      "domain": "app.metricool.com",
+      "path": "/",
+      "expires": 1775137898.582467,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AWSALB",
+      "value": "JqXYjg8O2TeL9oESa5Ln8DpMOS983Z6sLhhD2UZtIK8/QjAHK24YW6QZYhrkHN2K9T0PBHXZ1B16ViRUJoIs6Dd7BHkkvJceOHNF/Hizf5sikbAR6phA15iJmljz",
+      "domain": "app.metricool.com",
+      "path": "/",
+      "expires": 1775137898.582478,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AWSALBCORS",
+      "value": "JqXYjg8O2TeL9oESa5Ln8DpMOS983Z6sLhhD2UZtIK8/QjAHK24YW6QZYhrkHN2K9T0PBHXZ1B16ViRUJoIs6Dd7BHkkvJceOHNF/Hizf5sikbAR6phA15iJmljz",
+      "domain": "app.metricool.com",
+      "path": "/",
+      "expires": 1775137898.582489,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_clsk",
+      "value": "fm2sr7%5E1774533099105%5E4%5E1%5El.clarity.ms%2Fcollect",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1774619499,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_XNWPVKYTBS",
+      "value": "GS2.1.s1774532120$o1$g1$t1774533099$j51$l0$h150122171",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1809093099.110852,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_mcf-last-visited",
+      "value": "{%22lastVisited%22:%22intapp/login%22%2C%22lastVisitedCategoryGroup%22:%22DirectApp%22}",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1774534901,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_mcool-att-0",
+      "value": "eyJmaXJzdCI6eyJmTGFuZGluZyI6ImludGFwcC9sb2dpbiIsImZMYW5kaW5nQ2ciOiJEaXJlY3RBcHAiLCJmU291cmNlIjoiZGlyZWN0IiwiZk1lZGl1bSI6ImRpcmVjdCIsImZEYXRlIjoiMjAyNi0wMy0yNlQxMzozNToyNC4zNThaIiwiZlZpc2l0ZWQiOiJpbnRhcHAvbG9naW4iLCJmVmlzaXRlZENnIjoiRGlyZWN0QXBwIn0sImxhc3QiOnsibFNvdXJjZSI6ImRpcmVjdCIsImxNZWRpdW0iOiJkaXJlY3QiLCJsTGFuZGluZyI6ImludGFwcC9sb2dpbiIsImxMYW5kaW5nQ2ciOiJEaXJlY3RBcHAiLCJsVmlzaXRlZCI6ImludGFwcC8iLCJsVmlzaXRlZENnIjoiRGlyZWN0QXBwIiwiUmVnaXN0cmF0aW9uTG9jYXRpb24iOiJBcHBsaWNhdGlvbiJ9LCJsU291cmNlIjoiZGlyZWN0IiwibE1lZGl1bSI6ImRpcmVjdCIsImxMYW5kaW5nIjoiaW50YXBwL2xvZ2luIiwibExhbmRpbmdDZyI6IkRpcmVjdEFwcCIsImxWaXNpdGVkIjoiaW50YXBwLyIsImxWaXNpdGVkQ2ciOiJEaXJlY3RBcHAiLCJSZWdpc3RyYXRpb25Mb2NhdGlvbiI6",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806069101,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_mcool-att-1",
+      "value": "IkFwcGxpY2F0aW9uIn0=",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1806069101,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_mcf-last-att",
+      "value": "{%22lSource%22:%22direct%22%2C%22lMedium%22:%22direct%22%2C%22lLanding%22:%22intapp/login%22%2C%22lLandingCg%22:%22DirectApp%22%2C%22lVisited%22:%22intapp/%22%2C%22lVisitedCg%22:%22DirectApp%22%2C%22RegistrationLocation%22:%22Application%22}",
+      "domain": ".metricool.com",
+      "path": "/",
+      "expires": 1774534901,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://app.metricool.com",
+      "localStorage": [
+        {
+          "name": "evolution.range",
+          "value": "{\"name\":\"last30Days\",\"start\":\"2026-02-24T04:00:00.000Z\",\"end\":\"2026-03-26T03:59:59.999Z\"}"
+        },
+        {
+          "name": "_li_ses.8698.expires",
+          "value": "1774534898198"
+        },
+        {
+          "name": "_uetvid_exp",
+          "value": "Tue, 20 Apr 2027 13:51:32 GMT"
+        },
+        {
+          "name": "rudder_1y7oyxlz0W3Is35RJvG64KRSV6B.0ea953e7-e5d7-4dac-8080-345b95e32bdb.ack",
+          "value": "\"1774533102133\""
+        },
+        {
+          "name": "_gcl_ls",
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"errors\":0,\"creationTimeMs\":1774532116554},\"expires\":1782308116554}}"
+        },
+        {
+          "name": "_li_id.8698",
+          "value": "bd9cd479-99dc-45eb-9f4f-ca503310ae06.1774532121.1.1774533098..5a2c98e1-9949-4ffd-a9fb-1cfe121d46a5..4cbf0cd3-5bdc-45a0-91b4-f762ca010d95.1774532121397.14"
+        },
+        {
+          "name": "snowplowOutQueue_leadinfo_cl1_post2",
+          "value": "[]"
+        },
+        {
+          "name": "mtc_id",
+          "value": "7346499"
+        },
+        {
+          "name": "_uetvid",
+          "value": "a28a5be0291811f1a7526700bf7261a9"
+        },
+        {
+          "name": "lastExternalReferrer",
+          "value": "empty"
+        },
+        {
+          "name": "userpilot:sessions",
+          "value": "{\"590521913\":[]}"
+        },
+        {
+          "name": "global.authData",
+          "value": "{\"token\":\"eyJhbGciOiJIUzUxMiIsInppcCI6IkRFRiJ9.eJxVj01PgzAAhv9Lry5rsQMCyQ6MjblEwSwLRC6mlK8iBWrL5-J_Fz2YeHyfw5vnuQPSp8AGpVKdDSHpui3P1CejbVtvacvBBjCigK2Z5k7HGFnGBjRJ_h9kU_cHrB_A1XtXr69nK1zUc5IbsgiXJk7xwqzGi1MNzvWZv3g3Q8RD_HGLy7CPdFkjqI8WH5xUmW-uToanw-US5NAPTlOVO-NrEFKxSyiM_LFAhQyxYVYVFddIserxgCaOXMaQI5LjMBKvOJVHJURqerKc3Wv7gLAuse_s92uVmrtsNewloeBXWA3r1MDXN2xtVfI.pnOSD-5jS1LeRmNePTNqmZ5i6m_SCEe1EtAyPnyj5Zp1BJdU24nfdPE7dWGuU1f7dppuztvioXy1ctO8WpXf3A\",\"refreshToken\":\"eyJhbGciOiJIUzUxMiIsInppcCI6IkRFRiJ9.eJxVj8tugkAARf9lthh56gCJCzJUUSgGTaWwaaYjpbwHGB7Tpv9e6q7LexY353wDPNyBCT4Zo6YoYkrXVcK6jDRNuSZNBVYgwwyYMoTaRlUlY7sC9fvHf5DM9A_oiibDB6jYGy2XV6xF1q3zilc72galaKX1ZbKchNdwPArq4Rzx-V40-hAbXwg9PReuEhY0ptEJzrivDWzrNc6MsGvn8_7Cb47rH3JkvRzHjECJ--4GtTnqT5V0vbJAQ9XIeSOHoRDuVYV4ttfBVKJCMhISDFPsTH7e4ind7ZYqxmmyGA59x8BDmI3LlMHPLzWSVlY.zMV1RNVP0pHw1v1W-DdV39lctiZ9qqfKVP9tQa_tXOBsvCDysZZchT4D1ZyEBqALCXcdcgrh3AEWjB9dvainqw\",\"creationDate\":\"2026-03-26T13:51:36.552Z\",\"type\":\"USER_SESSION\",\"userId\":4656212}"
+        },
+        {
+          "name": "li_adsId",
+          "value": "ade7901b-9a4a-4a14-a744-6e6f45d8d27e"
+        },
+        {
+          "name": "rudder_1y7oyxlz0W3Is35RJvG64KRSV6B.0ea953e7-e5d7-4dac-8080-345b95e32bdb.inProgress",
+          "value": "\"{}\""
+        },
+        {
+          "name": "userpilotUser1313517136",
+          "value": "{\"token\":\"NX-e81ac2fa\",\"version\":\"1.784\",\"endpoint\":\"api.userpilot.io/socket/\",\"domain\":\"js.userpilot.io\",\"accessibility\":1,\"auto_props\":true,\"integrations_interfaces\":{},\"noConflictId\":\"\",\"proxy\":\"socket\",\"broadcastURL\":false,\"pageview\":true,\"sri\":\"\",\"auto_capture\":{},\"callbacks\":{},\"continuity\":0,\"sdk\":{},\"customer\":{\"dlprop\":\"\",\"is_teamblue\":false,\"name\":\"Alvin Edyvane\",\"email\":\"alvin@geniusmoney.co.uk\",\"created_at\":\"[object Object]\",\"userConnections\":\"6\",\"locale_code\":\"en\",\"country\":\"GB\",\"subscription_type\":\"STARTER_5\",\"subscription_cycle\":\"ANNUAL\",\"goal\":\"Planner,Analytics,Smartlinks,Inbox\",\"size\":\"Teammates\",\"buyer_persona\":\"Brand Manager\",\"twitterSubscriptionType\":\"None\",\"isOwner\":true,\"company\":{\"id\":\"6029996\",\"blueskyconnected\":false,\"webconnected\":false,\"twitterconnected\":true,\"facebookconnected\":false,\"instagramconnected\":true,\"linkedinconnected\":true,\"gadsconnected\":false,\"gmbconnected\":false,\"pinterestconnected\":false,\"fbadsconnected\":true,\"youtubeconnected\":true,\"twitchconnected\":false,\"fbgroupconnected\":false,\"tiktokconnected\":false,\"tiktokbusinessconnected\":false,\"tiktokadsconnected\":false,\"threadsconnected\":false},\"blueskyconnected\":false,\"webconnected\":false,\"twitterconnected\":true,\"facebookconnected\":false,\"instagramconnected\":true,\"linkedinconnected\":true,\"gadsconnected\":false,\"gmbconnected\":false,\"pinterestconnected\":false,\"fbadsconnected\":true,\"youtubeconnected\":true,\"twitchconnected\":false,\"fbgroupconnected\":false,\"tiktokconnected\":false,\"tiktokbusinessconnected\":false,\"tiktokadsconnected\":false,\"threadsconnected\":false,\"browser_language\":\"en-US\",\"browser\":\"Chrome - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36\",\"device_type\":\"Desktop\",\"os\":\"Mac\",\"host name\":\"app.metricool.com\",\"last_seen\":1},\"userid\":\"4656212\",\"auto\":{\"viewport_width\":1280,\"viewport_height\":720,\"browser_language\":\"en-US\",\"browser\":\"Chrome - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36\",\"device_type\":\"Desktop\",\"os\":\"Mac\",\"host name\":\"app.metricool.com\"}}"
+        },
+        {
+          "name": "mautic_device_id",
+          "value": "kemo78pw649eyje9bck0odk"
+        },
+        {
+          "name": "userpilot:session_id",
+          "value": "{\"4656212\":{\"id\":\"600991398\",\"last_active\":1774532121685}}"
+        },
+        {
+          "name": "rudder_1y7oyxlz0W3Is35RJvG64KRSV6B.0ea953e7-e5d7-4dac-8080-345b95e32bdb.batchQueue",
+          "value": "\"[]\""
+        },
+        {
+          "name": "_li_ses.8698",
+          "value": "*"
+        },
+        {
+          "name": "_uetsid",
+          "value": "a28a5240291811f19eb85951a839be81"
+        },
+        {
+          "name": "user.4656212:global.lastBlogId",
+          "value": "6029996"
+        },
+        {
+          "name": "lastExternalReferrerTime",
+          "value": "1774533092437"
+        },
+        {
+          "name": "mtc_sid",
+          "value": "kemo78pw649eyje9bck0odk"
+        },
+        {
+          "name": "snowplowOutQueue_leadinfo_cl1_post2.expires",
+          "value": "1837605098527"
+        },
+        {
+          "name": "_uetsid_exp",
+          "value": "Fri, 27 Mar 2026 13:51:32 GMT"
+        },
+        {
+          "name": "user_hashed_email",
+          "value": "d266be3b83d5a9a6e2c3f103279f25c2005fc75c70e855b29faa2830744cf417"
+        },
+        {
+          "name": "rudder_1y7oyxlz0W3Is35RJvG64KRSV6B.0ea953e7-e5d7-4dac-8080-345b95e32bdb.queue",
+          "value": "\"[]\""
+        },
+        {
+          "name": "userpilotSDK1313517136",
+          "value": "{}"
+        },
+        {
+          "name": "_li_id.8698.expires",
+          "value": "1837605098198"
+        }
+      ]
+    }
+  ]
+}
