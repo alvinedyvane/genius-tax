@@ -3,7 +3,7 @@
 
 **Brand:** Genius Tax | Powered by Genius Money | HMRC Authorised Agent
 **Website:** geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026
-**Pricing:** £29/month standard | £49/month early bird (was £79) — expires April 5 | £149/month premium
+**Pricing:** from £20/month entry | £149/month premium — early bird offer expires April 5
 **Key Deadline:** April 5, 2026 = registration/compliance deadline | April 6 = MTD goes live
 
 ---
@@ -17,7 +17,7 @@
 ⏰ 12 days until Making Tax Digital goes live for self-employed earning £50K+. Are you registered? Don't get caught out. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #MakingTaxDigital
 
 **Afternoon:**
-🚨 Early bird deal: £49/month (was £79) — ONLY until April 5. Genius Tax = HMRC Authorised Agent + Sage software + zero stress. Don't wait. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
+🚨 Early bird deal: from £20/month (was £79) — ONLY until April 5. Genius Tax = HMRC Authorised Agent + Sage software + zero stress. Don't wait. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
 
 **Evening:**
 The clock is ticking on MTD. Freelancers, contractors, landlords — earn £50K+ self-employed? This affects YOU. 12 days left. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #SelfEmployed #MTD
@@ -39,7 +39,7 @@ This isn't optional. It's law.
 
 The good news? Genius Tax makes the whole thing seamless. We're an HMRC Authorised Agent using Sage software — the gold standard in digital tax management.
 
-👉 Sign up now at geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 — and grab our early bird rate of £49/month (usually £79) before it expires on April 5.
+👉 Sign up now at geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 — and grab our early bird rate of from £20/month (usually £79) before it expires on April 5.
 
 #GeniusTax #MTD #MakingTaxDigital #SelfAssessment #HMRC #Freelancer #Contractor #UKTax #TaxTips #SmallBusiness
 
@@ -62,7 +62,7 @@ Miss it and you're looking at:
 
 Genius Tax handles everything — registration, software, quarterly submissions, and more.
 
-From just £29/month — or grab our early bird price of £49/month (was £79) before it disappears on April 5.
+From just from £20/month — or grab our early bird price of from £20/month (was £79) before it disappears on April 5.
 
 Link in bio 👆
 
@@ -83,7 +83,7 @@ Here's what changes:
 
 At Genius Tax, we're an HMRC Authorised Agent powered by Genius Money. We use Sage software to handle registration, quarterly submissions, and year-end declarations — so you don't have to think about it.
 
-Right now, we're offering our early bird price of £49/month (usually £79) — valid until April 5, 2026.
+Right now, we're offering our early bird price of from £20/month (usually £79) — valid until April 5, 2026.
 
 If you're not yet compliant, don't leave this until the last minute. The earlier you start, the smoother the transition.
 
@@ -100,7 +100,7 @@ If you're not yet compliant, don't leave this until the last minute. The earlier
 Builders, electricians, plumbers — MTD affects YOU if you earn £50K+ self-employed. 11 days to get compliant. Don't lose money to HMRC fines. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #Trades
 
 **Afternoon:**
-Still filing paper returns? That ends for the self-employed from April 6. MTD is digital-only. We'll handle the switch. £49/month early bird. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
+Still filing paper returns? That ends for the self-employed from April 6. MTD is digital-only. We'll handle the switch. from £20/month. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
 
 **Evening:**
 💡 MTD myth: "It's just for big businesses." WRONG. It starts with anyone earning £50K+ self-employed. Plumbers, builders, freelancers, landlords. 11 days. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
@@ -125,7 +125,7 @@ The good news? You don't need to figure any of this out yourself.
 
 Genius Tax is built for people like you. We handle registration, software setup, and all quarterly submissions. You just keep doing the work you're good at.
 
-👉 Early bird offer: £49/month (was £79). Expires April 5.
+👉 Early bird offer: from £20/month (was £79). Expires April 5.
 geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026
 
 #GeniusTax #MTD #MakingTaxDigital #Trades #Construction #Builder #SoleTrader #HMRC #UKTax #TaxCompliance
@@ -146,7 +146,7 @@ This isn't something you can ignore. HMRC is making digital tax reporting mandat
 ✅ Genius Tax sets you up properly
 ✅ HMRC Authorised Agent
 ✅ Powered by Sage software
-✅ From £29/month
+✅ From from £20/month
 
 Get ahead of the crowd. Link in bio 👆
 
@@ -166,7 +166,7 @@ For tradespeople and contractors, the change is significant: quarterly digital s
 
 At Genius Tax, we've made this transition simple. We handle HMRC registration, software onboarding via Sage, and all quarterly filings. Our clients don't need to become tax experts — that's our job.
 
-We're currently offering our early bird rate of £49/month (down from £79) ahead of the April 5 deadline.
+We're currently offering our early bird rate of from £20/month (down from £79) ahead of the April 5 deadline.
 
 If you work in construction, trades, or professional services and aren't yet MTD-ready, now is the time to act. Visit geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 or get in touch directly.
 
@@ -181,7 +181,7 @@ If you work in construction, trades, or professional services and aren't yet MTD
 Landlords — if your rental income is £50K+, MTD applies to you. 10 days to the deadline. Register with an HMRC Authorised Agent NOW. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #Landlord
 
 **Afternoon:**
-10 days left. Our early bird price of £49/month disappears April 5. Lock it in today before it's gone. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #EarlyBird
+10 days left. Our early bird price of from £20/month disappears April 5. Lock it in today before it's gone. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #EarlyBird
 
 **Evening:**
 Own rental property + earn £50K+ from it? You're in the MTD net. Quarterly digital filings. HMRC software. Deadlines. OR: let Genius Tax handle all of it. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #Landlord
@@ -205,7 +205,7 @@ You need to be set up and registered before April 5.
 
 Genius Tax specialises in making MTD effortless for landlords. We're an HMRC Authorised Agent — and we handle everything from registration to quarterly filings to year-end declarations.
 
-📌 Early bird price: £49/month (was £79). Offer ends April 5.
+📌 Early bird price: from £20/month (was £79). Offer ends April 5.
 
 geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 — link in bio 👆
 
@@ -228,7 +228,7 @@ Sounds like more work? It doesn't have to be.
 
 Genius Tax manages all of this for you — quarterly, on time, every time. You stay compliant, we stay on top of it.
 
-💰 From £29/month standard | £49/month early bird (was £79) — offer expires April 5
+💰 From from £20/month standard | from £20/month early bird — offer expires April 5
 🌐 geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026
 
 #GeniusTax #MTD #Landlord #PropertyTax #MakingTaxDigital #HMRC #RentalProperty #UKTax #TaxDeadline #TaxTips
@@ -250,7 +250,7 @@ At Genius Tax (powered by Genius Money), we work with landlords to make this tra
 
 If you're a landlord affected by these changes and you haven't yet taken action, I'd encourage you to do so this week. The closer we get to April 5, the more pressure on onboarding capacity.
 
-Our early bird rate of £49/month (usually £79) is available until April 5. Visit geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 for details or reach out to discuss your specific situation.
+Our early bird rate of from £20/month (usually £79) is available until April 5. Visit geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 for details or reach out to discuss your specific situation.
 
 ---
 
@@ -263,7 +263,7 @@ Our early bird rate of £49/month (usually £79) is available until April 5. Vis
 Freelancers — billing over £50K/year? MTD is your problem too. 9 days to register. Sort it once and forget it. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #Freelancer
 
 **Afternoon:**
-Imagine your tax sorted for £49/month. No stress. No late filings. No HMRC letters. That's Genius Tax. Early bird closes April 5. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
+Imagine your tax sorted for from £20/month. No stress. No late filings. No HMRC letters. That's Genius Tax. Early bird closes April 5. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
 
 **Evening:**
 9 days until the MTD deadline. Every day you wait is a day closer to the £100 initial fine. Get ahead of it now. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #TaxTips
@@ -292,7 +292,7 @@ And here's the other truth:
 
 So you can focus on client work, not tax admin.
 
-£49/month early bird (was £79). Offer ends April 5.
+from £20/month early bird. Offer ends April 5.
 👉 geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026
 
 #GeniusTax #MTD #MakingTaxDigital #Freelancer #Consultant #SelfEmployed #HMRC #UKTax #TaxDeadline #WorkFromHome
@@ -314,7 +314,7 @@ And what happens if you ARE compliant with Genius Tax:
 ✅ Quarterly filings handled — you just share your records
 ✅ Peace of mind. Every quarter.
 
-Don't leave it to chance. £49/month early bird — link in bio 👆
+Don't leave it to chance. from £20/month — link in bio 👆
 
 #GeniusTax #MTD #MakingTaxDigital #TaxPenalties #HMRC #SelfEmployed #Freelancer #UKTax #TaxCompliance #SelfAssessment
 
@@ -335,7 +335,7 @@ For freelancers managing their own finances, this typically means:
 
 At Genius Tax, we work specifically with self-employed professionals to make this transition frictionless. We handle the registration, the software, and the quarterly filings — so your focus stays on billable work.
 
-Our early bird price of £49/month (down from £79) is available until 5 April.
+Our early bird price of from £20/month (down from £79) is available until 5 April.
 
 If you're a freelancer or consultant affected by MTD and you haven't yet acted, this week is the time. Find out more at geniustax.co.uk.
 
@@ -350,10 +350,10 @@ If you're a freelancer or consultant affected by MTD and you haven't yet acted, 
 Non-compliance with MTD = £100 fine. Then more. HMRC doesn't do second chances. 8 days to get compliant. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #HMRC
 
 **Afternoon:**
-The early bird price of £49/month disappears on April 5. So does your chance to avoid MTD penalties. These things are connected. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
+The early bird price of from £20/month disappears on April 5. So does your chance to avoid MTD penalties. These things are connected. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
 
 **Evening:**
-8 days. Sorted or scrambling? Genius Tax = HMRC Authorised Agent + Sage software + no fines. From £49/month early bird. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #TaxCompliance
+8 days. Sorted or scrambling? Genius Tax = HMRC Authorised Agent + Sage software + no fines. From from £20/month. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #TaxCompliance
 
 ---
 
@@ -374,7 +374,7 @@ The MTD compliance deadline is April 5, 2026. That's 8 days away.
 The cost of getting this wrong is far higher than the cost of getting it right.
 
 Genius Tax: HMRC Authorised Agent. Sage software. Quarterly filings done for you.
-💰 £49/month early bird (was £79) — expires April 5.
+💰 from £20/month early bird — expires April 5.
 
 Don't gamble with HMRC. Link in bio 👆
 
@@ -396,7 +396,7 @@ If you're self-employed or a landlord earning £50K+, here's your to-do list:
 
 OR — skip all of that and let Genius Tax handle everything.
 
-From £49/month early bird (normally £79). This offer expires April 5.
+From from £20/month (normally £79). This offer expires April 5.
 
 geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 — get sorted today. Link in bio 👆
 
@@ -414,7 +414,7 @@ More importantly, the burden of compliance sits with the taxpayer — not with t
 
 At Genius Tax, we take on that responsibility. As an HMRC Authorised Agent powered by Genius Money, we ensure our clients' quarterly submissions are filed correctly and on time — every time. Sage provides the digital infrastructure; we provide the expertise and oversight.
 
-If you're a self-employed professional or landlord earning over £50,000 and you're not yet compliant, the deadline is 5 April 2026. Our early bird price of £49/month (usually £79) is available until then.
+If you're a self-employed professional or landlord earning over £50,000 and you're not yet compliant, the deadline is 5 April 2026. Our early bird price of from £20/month (usually £79) is available until then.
 
 Details at geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 — or message me directly.
 
@@ -429,10 +429,10 @@ Details at geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd
 ONE WEEK until the MTD deadline. If you haven't sorted this yet, today is the day. We make it simple. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #OneWeekLeft
 
 **Afternoon:**
-What does Genius Tax actually do? ✅ HMRC registration ✅ Sage setup ✅ Quarterly filings ✅ Year-end declaration — all for £49/month early bird. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
+What does Genius Tax actually do? ✅ HMRC registration ✅ Sage setup ✅ Quarterly filings ✅ Year-end declaration — all for from £20/month. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
 
 **Evening:**
-7 days. The clock's ticking louder now. £49/month early bird. HMRC Authorised. Sorted. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #TaxDeadline
+7 days. The clock's ticking louder now. from £20/month. HMRC Authorised. Sorted. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #TaxDeadline
 
 ---
 
@@ -453,7 +453,7 @@ Here's what Genius Tax does for you:
 
 We're powered by Genius Money, and we're HMRC Authorised. This isn't a side project — it's what we do.
 
-💰 Early bird price: £49/month (was £79). Expires April 5.
+💰 Early bird price: from £20/month (was £79). Expires April 5.
 🌐 geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 — link in bio 👆
 
 Don't let this week slip by.
@@ -471,7 +471,7 @@ Loads of people offer "MTD help." Here's what sets us apart:
 ✅ Flat monthly fee — no surprises, no hidden extras
 ✅ Full service — registration, filings, AND year-end
 
-Plus: our early bird price is £49/month. Less than £2 a day for complete MTD compliance handled by professionals.
+Plus: our early bird price is from £20/month. Less than £2 a day for complete MTD compliance handled by professionals.
 
 The deadline is April 5. 7 days.
 
@@ -493,7 +493,7 @@ We are an HMRC Authorised Agent. We use Sage — one of the most widely used and
 
 Our service covers: MTD registration, quarterly submissions, and year-end declarations — under one flat monthly fee.
 
-For those still weighing up options, consider this: the cost of non-compliance (penalties starting at £100, with escalating fines and HMRC scrutiny) versus the cost of professional support (£49/month early bird until 5 April, then £79/month).
+For those still weighing up options, consider this: the cost of non-compliance (penalties starting at £100, with escalating fines and HMRC scrutiny) versus the cost of professional support (from £20/month until 5 April, then £79/month).
 
 The maths aren't complicated.
 
@@ -510,7 +510,7 @@ Visit geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 
 HMRC's MTD for Income Tax: 4 quarterly submissions + 1 year-end declaration per year. We handle ALL of it. 6 days left. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #HMRC
 
 **Afternoon:**
-6 days until the MTD deadline AND the early bird closes. £49/month is gone after April 5. Lock in your price today. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #EarlyBird
+6 days until the MTD deadline AND the early bird closes. from £20/month is gone after April 5. Lock in your price today. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #EarlyBird
 
 **Evening:**
 "I didn't know about MTD" won't fly with HMRC. 6 days. Get sorted. We handle the rest. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #SelfEmployed
@@ -535,7 +535,7 @@ This has to be done digitally — no paper, no manual spreadsheets.
 
 Sounds like a lot? With Genius Tax, you just share your records each quarter and we handle the rest. HMRC Authorised. Sage-powered.
 
-💰 £49/month early bird (was £79). 6 days left.
+💰 from £20/month early bird. 6 days left.
 geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 — link in bio 👆
 
 #GeniusTax #MTD #MakingTaxDigital #HMRC #QuarterlyTax #SelfAssessment #UKTax #TaxTips #TaxCompliance #SelfEmployed
@@ -553,7 +553,7 @@ Here's what's waiting on the other side of April 5 if you don't act:
 Here's what's waiting if you DO act with Genius Tax:
 ✅ Fully compliant before the deadline
 ✅ Quarterly filings handled for you
-✅ £49/month early bird locked in (saves £360/year vs standard)
+✅ from £20/month locked in (saves £360/year vs standard)
 ✅ One less thing to worry about — forever
 
 Sign up at geniustax.co.uk. Link in bio.
@@ -579,7 +579,7 @@ HMRC-approved software is mandatory. Manual or spreadsheet-based records will no
 
 At Genius Tax, we use Sage and manage the entire process on behalf of our clients. Quarterly, year-end, and everything in between.
 
-Six days remain until the compliance deadline. Our early bird price of £49/month (normally £79) expires on 5 April.
+Six days remain until the compliance deadline. Our early bird price of from £20/month (normally £79) expires on 5 April.
 
 Find out more at geniustax.co.uk.
 
@@ -591,7 +591,7 @@ Find out more at geniustax.co.uk.
 ### X/Twitter
 
 **Morning:**
-Imagine never worrying about HMRC again. Quarterly filings? Handled. Year-end? Done. All for £49/month early bird. 5 days left. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
+Imagine never worrying about HMRC again. Quarterly filings? Handled. Year-end? Done. All for from £20/month. 5 days left. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
 
 **Afternoon:**
 5 days until the MTD deadline. Still on the fence? Consider the alternative: £100 fine + escalating penalties + HMRC letters. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #TaxPenalties
@@ -616,7 +616,7 @@ Here's how it works in practice:
 ✅ You get confirmation — we handle any follow-up
 📋 Year-end declaration? Already in our calendar
 
-For £49/month early bird (was £79), that's peace of mind, compliance, and professional handling — all year round.
+For from £20/month early bird, that's peace of mind, compliance, and professional handling — all year round.
 
 5 days until the offer expires. 5 days until the compliance deadline.
 
@@ -629,7 +629,7 @@ IT'S THE LAST DAY OF MARCH 🗓️
 
 Which means it's also 5 days until:
 ⚠️ The MTD compliance deadline (April 5)
-⚠️ Our early bird offer expires (£49/month → back to £79)
+⚠️ Our early bird offer expires (from £20/month → back to £79)
 
 If you've been meaning to sort your MTD compliance this month — this is your final March warning.
 
@@ -659,7 +659,7 @@ If you're self-employed or a landlord earning over £50,000, and you haven't reg
 
 What we hear consistently from clients who came to us in the last week before major deadlines: "I wish I'd done this sooner." Not because the process is complicated — it isn't, with the right support — but because the stress of leaving it late isn't worth it.
 
-At Genius Tax, we can get you compliant before the deadline. Our early bird price of £49/month (normally £79) is available until 5 April.
+At Genius Tax, we can get you compliant before the deadline. Our early bird price of from £20/month (normally £79) is available until 5 April.
 
 This is a straightforward decision. Get it done.
 
@@ -676,7 +676,7 @@ Visit geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 
 4 DAYS. No April Fools — the MTD deadline is real and it's coming. Contractors, are you registered? geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #Contractors
 
 **Afternoon:**
-Not a joke: £49/month for full MTD compliance, handled by HMRC Authorised agents. 4 days left. Lock it in. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #EarlyBird
+Not a joke: from £20/month for full MTD compliance, handled by HMRC Authorised agents. 4 days left. Lock it in. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #EarlyBird
 
 **Evening:**
 Contractors earning £50K+ self-employed: MTD is your problem too. April 5 deadline. Sorted in minutes with Genius Tax. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #UKContractor
@@ -701,7 +701,7 @@ What Genius Tax gives you:
 ✅ Complete MTD compliance handled for you
 ✅ HMRC Authorised Agent — officially recognised
 ✅ Sage software — HMRC-approved
-✅ £49/month early bird (locks in BEFORE April 5)
+✅ from £20/month (locks in BEFORE April 5)
 
 Contractors, this especially applies to you. CIS work + self-employed income over £50K = you're in scope.
 
@@ -724,7 +724,7 @@ Here's what Genius Tax handles for contractors:
 → CIS deductions tracked correctly
 → Year-end final declaration
 
-All under one flat monthly fee. Early bird price: £49/month (was £79). Expires April 5.
+All under one flat monthly fee. Early bird price: from £20/month (was £79). Expires April 5.
 
 Don't miss this. Link in bio 👆
 geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026
@@ -743,7 +743,7 @@ This is an area where DIY approaches can fall short. The interaction between CIS
 
 At Genius Tax, we work with contractors specifically on this. We understand how CIS income interacts with MTD requirements, and our Sage-based system handles it accurately from the start.
 
-If you're a contractor earning over £50,000 and you haven't yet engaged an HMRC Authorised Agent for MTD, you have four days before the deadline — and four days before our early bird price of £49/month (normally £79) expires.
+If you're a contractor earning over £50,000 and you haven't yet engaged an HMRC Authorised Agent for MTD, you have four days before the deadline — and four days before our early bird price of from £20/month (normally £79) expires.
 
 Visit geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 today.
 
@@ -758,7 +758,7 @@ Visit geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 
 🚨 3 DAYS. If you're not MTD compliant by April 5, HMRC will notice. Fines start at £100 and escalate. Don't be that person. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #Urgent
 
 **Afternoon:**
-3 days. £49/month. HMRC Authorised. Sage included. Everything done for you. This is the last sensible moment to act. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #LastChance
+3 days. from £20/month. HMRC Authorised. Sage included. Everything done for you. This is the last sensible moment to act. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #LastChance
 
 **Evening:**
 We're seeing a surge this week. Don't wait until April 4 or 5. Sign up TODAY and get confirmed before the deadline. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #ActNow
@@ -783,7 +783,7 @@ Here's what happens if you don't:
 ⚠️ £100 initial penalty
 ⚠️ Penalty points that stack up
 ⚠️ HMRC scrutiny for repeat failures
-⚠️ £79/month instead of the £49 early bird — that's £360 extra per year
+⚠️ £79/month instead of the from £20 early bird — that's £648 extra per year
 
 Genius Tax can still get you sorted before April 5. But we're filling up fast.
 
@@ -795,7 +795,7 @@ geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 — DO
 THE MATHS ARE SIMPLE. 💰
 
 MTD compliance WITH Genius Tax:
-✅ £49/month early bird (expires April 5)
+✅ from £20/month (expires April 5)
 ✅ = £588/year
 ✅ Covers registration, quarterly filings, year-end declaration
 ✅ HMRC Authorised Agent, Sage software
@@ -806,7 +806,7 @@ MTD non-compliance:
 ❌ Risk of HMRC scrutiny
 ❌ Stress, letters, chasing — every quarter
 
-After April 5, the price goes to £79/month = £948/year. That's £360 more every year.
+After April 5, the price goes to £79/month = £948/year. That's £648 more every year.
 
 Every day you wait costs you more. Every day without compliance risks more.
 
@@ -829,7 +829,7 @@ The consequences of inaction:
 1. Financial penalties starting at £100, escalating with each missed obligation
 2. A points-based system that compounds over time
 3. HMRC scrutiny that accompanies repeated non-compliance
-4. Missing the early bird rate — £49/month now versus £79/month after April 5 — a difference of £360 per year
+4. Missing the early bird rate — from £20/month now versus £79/month after April 5 — a difference of £360 per year
 
 At Genius Tax, we can still onboard clients before the deadline. As an HMRC Authorised Agent powered by Genius Money, using Sage software, our process is efficient and our clients are protected.
 
@@ -865,7 +865,7 @@ April 5 is 48 hours away. The MTD deadline. The day our early bird price expires
 You have TWO DAYS to:
 ✅ Register with an HMRC Authorised Agent
 ✅ Get set up on approved software
-✅ Lock in your £49/month early bird price (before it reverts to £79)
+✅ Lock in your from £20/month price (before it reverts to £79)
 
 After April 5:
 ❌ Standard price goes to £79/month
@@ -894,7 +894,7 @@ Don't be that person.
 
 Here's what you can do RIGHT NOW:
 1️⃣ Go to geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026
-2️⃣ Sign up for our early bird plan at £49/month
+2️⃣ Sign up for our early bird plan at from £20/month
 3️⃣ We handle registration, Sage setup, everything
 4️⃣ You're compliant before April 5
 
@@ -921,7 +921,7 @@ What Genius Tax provides:
 • Year-end final declaration
 • Ongoing support
 
-All for £49/month until 5 April, then £79/month.
+All for from £20/month until 5 April, then £79/month.
 
 To everyone in my network: if you know someone affected by MTD who hasn't acted — a freelance colleague, a self-employed friend, a landlord in your network — please share this today.
 
@@ -941,7 +941,7 @@ The window is closing. Visit geniustax.co.uk?utm_source=social&utm_medium=organi
 TODAY is effectively the last day. Early bird price. MTD compliance window. Both end TOMORROW. Go to geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 right now. #GeniusTax #MTD #FinalDay
 
 **Evening:**
-Tomorrow: April 5. The MTD deadline. End of our £49/month early bird. If you're reading this and still haven't acted — please, do it now. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
+Tomorrow: April 5. The MTD deadline. End of our from £20/month. If you're reading this and still haven't acted — please, do it now. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD
 
 ---
 
@@ -955,7 +955,7 @@ The deadline. The day MTD compliance is expected. The day our early bird price e
 If you haven't registered yet — TODAY is your last chance to do both.
 
 What you get when you sign up by end of day TODAY:
-✅ £49/month locked in (normally £79)
+✅ from £20/month locked in (normally £79)
 ✅ HMRC registration handled by Genius Tax
 ✅ Sage software set up for you
 ✅ Quarterly filings managed
@@ -986,7 +986,7 @@ Penalty: starts at £100. Escalates. Compounds. Follows you.
 
 Solution: go to geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 RIGHT NOW.
 
-This is genuinely the last opportunity to lock in the early bird price of £49/month (normally £79) AND get compliant before the deadline.
+This is genuinely the last opportunity to lock in the early bird price of from £20/month (normally £79) AND get compliant before the deadline.
 
 Don't wait until tomorrow. Link in bio 👆
 
@@ -1004,7 +1004,7 @@ I'll be brief: if you are self-employed or a landlord with income over £50,000 
 
 After today:
 • Non-compliant individuals will be subject to HMRC's penalty framework from 6 April
-• Our early bird price of £49/month reverts to £79/month
+• Our early bird price of from £20/month reverts to £79/month
 
 At Genius Tax, we've been onboarding clients all week. Today is the final day we can guarantee compliance registration ahead of the April 5 deadline.
 
@@ -1025,7 +1025,7 @@ One day left. geniustax.co.uk.
 🔴 TODAY IS THE MTD DEADLINE. April 5. Self-employed, £50K+, not yet compliant? There are still hours to act. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #DeadlineDay
 
 **Afternoon:**
-Hours left. Our early bird £49/month expires TONIGHT. MTD deadline is TODAY. There's still time — just. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #LastHours
+Hours left. Our early bird from £20/month expires TONIGHT. MTD deadline is TODAY. There's still time — just. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #LastHours
 
 **Evening:**
 Early bird officially closed. MTD is live from tomorrow. Missed it? We can still help at standard rates. Don't let penalties pile up. geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 #GeniusTax #MTD #MTDIsAlmostLive
@@ -1045,7 +1045,7 @@ What we can do for you TODAY:
 ⚡ Rush registration with HMRC
 💻 Sage software setup
 📋 Quarterly compliance in place
-🔒 Lock in the early bird price of £49/month (TODAY ONLY)
+🔒 Lock in the early bird price of from £20/month (TODAY ONLY)
 
 After today:
 ❌ Early bird price gone (back to £79/month)
@@ -1132,7 +1132,7 @@ Here's what we offer:
 ✅ Year-end declaration managed
 ✅ Ongoing professional support
 
-Standard pricing: from £29/month | Premium: £149/month
+Standard pricing: from from £20/month | Premium: £149/month
 
 Don't let another day of non-compliance go by.
 geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 — link in bio 👆
@@ -1156,7 +1156,7 @@ The sooner you act, the less exposure you carry.
 ✅ HMRC Authorised Agent
 ✅ Sage software
 ✅ Powered by Genius Money
-✅ Full service from £29/month
+✅ Full service from from £20/month
 
 This is day one of a new system. Start it right.
 geniustax.co.uk?utm_source=social&utm_medium=organic&utm_campaign=mtd2026 — link in bio 👆
@@ -1177,7 +1177,7 @@ For those who haven't yet acted: the message is simple — start now. The penalt
 
 Genius Tax remains open for new clients. We're an HMRC Authorised Agent, powered by Genius Money, using Sage software. We handle registration, quarterly submissions, and year-end declarations.
 
-Standard pricing starts from £29/month. Premium service is available at £149/month.
+Standard pricing starts from from £20/month. Premium service is available at £149/month.
 
 This isn't the end of a campaign — it's the beginning of a system that will affect millions of UK taxpayers over the coming years. If you or someone in your network needs support navigating MTD, we're here for the long term.
 

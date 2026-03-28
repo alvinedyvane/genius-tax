@@ -9,7 +9,7 @@
  *  4. Pricing overview (all three plans)
  *  5. Essential plan (£199/year / £20/month, 24-month commitment)
  *  6. Growth plan (£299/year / £30/month early bird before 5 April 2026)
- *  7. Premium plan (£149/month)
+ *  7. Premium plan (£130/month)
  *  8. How to sign up (the 3-step process)
  *  9. Early bird deadline (5 April 2026)
  * 10. Contact / I have a question
@@ -409,13 +409,13 @@
       action: 'mtd-affects' },
     { patterns: ['penalty','penalt','fine','miss','late','points'],
       action: 'mtd-penalty' },
-    { patterns: ['price','pricing','cost','how much','£29','£49','£79','£149','£199','£299','£25','20','plan','plans','monthly'],
+    { patterns: ['price','pricing','cost','how much',,,,,'£199','£299','£20','20','plan','plans','monthly'],
       action: 'cost' },
-    { patterns: ['essential','standard','£29','£199','29/month','29 month','199/year','20','annual'],
+    { patterns: ['essential','standard',,'£199','29/month','29 month','199/year','20','annual'],
       action: 'plan-std' },
-    { patterns: ['growth','mtd compliance','£49','£299','£25','49/month','early bird','49 month','299/year','25/month'],
+    { patterns: ['growth','mtd compliance',,'£299','£20','30/month','early bird','30 month','299/year','20/month'],
       action: 'plan-mtd' },
-    { patterns: ['premium','£149','149/month','payroll','cis','vat'],
+    { patterns: ['premium',,'130/month','payroll','cis','vat'],
       action: 'plan-premium' },
     { patterns: ['sign up','signup','get started','register','join'],
       action: 'signup' },
@@ -652,14 +652,14 @@
       'Annual self-assessment. Ideal for income under £50K.<br><br>' +
       '<strong>⭐ Growth — £299/year</strong> <em style="color:#888">(just £30/month — early bird before 5 Apr 2026)</em><br>' +
       'Full quarterly MTD reporting via Sage. Early Bird — <strong>save £289/year vs standard rate</strong>. Most popular.<br><br>' +
-      '<strong>🏆 Premium — £149/month</strong><br>' +
+      '<strong>🏆 Premium — £130/month</strong><br>' +
       'Growth + payroll, CIS, VAT &amp; senior accountant.<br><br>' +
       '<em style="color:#e5007d;font-weight:700;">🐣 Early Bird ends 5th April 2026 — don\'t miss it!</em>'
     );
     setQR([
       { label: 'Essential — £199/year',  action: 'plan-std'     },
       { label: 'Growth — £299/year',     action: 'plan-mtd'     },
-      { label: 'Premium — £149/month',   action: 'plan-premium' },
+      { label: 'Premium — £130/month',   action: 'plan-premium' },
       { label: 'Sign up',                action: 'signup'       }
     ]);
   }
@@ -708,7 +708,7 @@
   /* TOPIC 7 — Premium plan */
   function answerPremium() {
     addMsg('bot',
-      '<strong>Premium Plan — £149/month</strong> 🏆<br><br>' +
+      '<strong>Premium Plan — £130/month</strong> 🏆<br><br>' +
       'For contractors, CIS workers and sole traders who need the full service. Everything in MTD Compliance, plus:<br><br>' +
       '&nbsp;✓ Payroll management<br>' +
       '&nbsp;✓ CIS deduction handling<br>' +
@@ -744,8 +744,8 @@
   function answerEarlyBird() {
     addMsg('bot',
       '🐣 <strong>Early Bird offer</strong><br><br>' +
-      'Our Growth plan normally costs <strong>£49/month (£588/year)</strong> in Year 1. Sign up before <strong>5th April 2026</strong> and lock in just <strong>£299/year (£30/month)</strong> — a 3-year commitment.<br><br>' +
-      'Year 2: £49/month. Year 3: £79/month. Early bird year-1 rate ends 5 April 2026.<br><br>' +
+      'Our Growth plan normally costs <strong>£30/month (£588/year)</strong> in Year 1. Sign up before <strong>5th April 2026</strong> and lock in just <strong>£299/year (£30/month)</strong> — a 3-year commitment.<br><br>' +
+      'Year 2: £30/month. Year 3: £79/month. Early bird year-1 rate ends 5 April 2026.<br><br>' +
       '<button class="gtax-cta" onclick="gtaxScrollToSignup()">Claim Early Bird →</button>'
     );
     setQR([
