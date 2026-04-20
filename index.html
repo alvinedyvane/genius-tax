@@ -1160,6 +1160,39 @@
     .success-msg .success-icon { font-size: 3rem; margin-bottom: 1rem; }
     .success-msg h3 { font-size: 1.1rem; font-weight: 800; color: var(--white); margin-bottom: 0.5rem; }
     .success-msg p { font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+    .success-actions {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1.35rem;
+    }
+    .success-pay-btn,
+    .success-email-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.35rem;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      min-width: 220px;
+      transition: transform 0.15s, background 0.2s, border-color 0.2s;
+    }
+    .success-pay-btn {
+      background: var(--pink);
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(229,0,125,0.28);
+    }
+    .success-pay-btn:hover { transform: translateY(-1px); background: var(--pink-dark); }
+    .success-email-btn {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    .success-email-btn:hover { transform: translateY(-1px); border-color: rgba(255,255,255,0.35); }
 
     /* ─────────────────────────────────────────
        FOOTER
@@ -1925,8 +1958,12 @@
             </div>
             <div class="success-msg" id="success-msg">
               <div class="success-icon">✅</div>
-              <h3>Details captured.</h3>
-              <p>Sending you to secure Stripe checkout now.</p>
+              <h3>Details received.</h3>
+              <p>Your enquiry step is complete. Next, click the button below to continue to secure Stripe payment.</p>
+              <div class="success-actions">
+                <a id="stripe-payment-link" class="success-pay-btn" href="#" target="_blank" rel="noopener">Click here to sign up and pay →</a>
+                <a class="success-email-btn" href="mailto:hello@geniustax.co.uk?subject=Genius%20Tax%20enquiry">Email Genius Tax instead</a>
+              </div>
             </div>
           </div>
         </div>
@@ -2134,15 +2171,15 @@
       });
 
       document.getElementById('lead-submit').disabled = true;
-      document.getElementById('lead-submit').textContent = 'Opening Stripe...';
+      document.getElementById('lead-submit').textContent = 'Details sent';
       document.getElementById('form-container').style.display = 'none';
       var msg = document.getElementById('success-msg');
+      var paymentLink = document.getElementById('stripe-payment-link');
+      if (paymentLink) {
+        paymentLink.href = stripeLink;
+      }
       msg.style.display = 'block';
       msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-      window.setTimeout(function() {
-        window.location.href = stripeLink + (stripeLink.indexOf('?') === -1 ? '?' : '&') + params.toString();
-      }, 400);
     }
   </script>
 
