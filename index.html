@@ -2148,31 +2148,59 @@
     });
 
     function sendLeadEmail(formData) {
-      return fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: 'Genius Tax Website Lead - ' + formData.firstName + ' ' + formData.surname,
-          from_name: 'Genius Tax Website',
-          to: 'alvin@geniusmoney.co.uk',
-          name: formData.firstName + ' ' + formData.surname,
-          email: formData.email,
-          phone: formData.mobile,
-          message:
-            'New Genius Tax website lead\\n\\n' +
-            'First name: ' + formData.firstName + '\\n' +
-            'Surname: ' + formData.surname + '\\n' +
-            'Job title: ' + formData.jobTitle + '\\n' +
-            'Town: ' + formData.town + '\\n' +
-            'Mobile: ' + formData.mobile + '\\n' +
-            'Email: ' + formData.email + '\\n' +
-            'Plan: ' + formData.plan + '\\n' +
-            'Mode: ' + SIGNUP_MODE + '\\n' +
-            'Page: ' + window.location.href,
-          replyto: formData.email
-        })
-      }).then(function(r) { return r.json(); });
+      var form = document.createElement('form');
+      form.method = 'POST';
+      form.action = 'https://api.web3forms.com/submit';
+      form.style.display = 'none';
+      form.target = 'web3forms-hidden-frame';
+
+      var fields = {
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: 'Genius Tax Website Lead - ' + formData.firstName + ' ' + formData.surname,
+        from_name: 'Genius Tax Website',
+        name: formData.firstName + ' ' + formData.surname,
+        email: formData.email,
+        phone: formData.mobile,
+        message:
+          'New Genius Tax website lead\\n\\n' +
+          'First name: ' + formData.firstName + '\\n' +
+          'Surname: ' + formData.surname + '\\n' +
+          'Job title: ' + formData.jobTitle + '\\n' +
+          'Town: ' + formData.town + '\\n' +
+          'Mobile: ' + formData.mobile + '\\n' +
+          'Email: ' + formData.email + '\\n' +
+          'Plan: ' + formData.plan + '\\n' +
+          'Mode: ' + SIGNUP_MODE + '\\n' +
+          'Page: ' + window.location.href,
+        replyto: formData.email,
+        redirect: window.location.origin + window.location.pathname + '?lead_submitted=1',
+        botcheck: ''
+      };
+
+      Object.keys(fields).forEach(function(key) {
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = fields[key];
+        form.appendChild(input);
+      });
+
+      var iframe = document.getElementById('web3forms-hidden-frame');
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.name = 'web3forms-hidden-frame';
+        iframe.id = 'web3forms-hidden-frame';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+      }
+
+      document.body.appendChild(form);
+      form.submit();
+      window.setTimeout(function() {
+        form.remove();
+      }, 1500);
+
+      return Promise.resolve({ success: true });
     }
 
     function handleSignup(e) {
