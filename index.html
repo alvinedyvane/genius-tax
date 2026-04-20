@@ -1902,12 +1902,12 @@
       <div class="signup-inner">
         <div class="section-eyebrow">Get Started</div>
         <h2 class="sh">Ready to Get<br>Sorted?</h2>
-        <p class="section-lead">Fill in your details, then go straight to Stripe. We capture the lead first, then send you to secure payment.</p>
+        <p class="section-lead">Fill in your details, then either go straight to Stripe or just send an enquiry. Every submission is emailed to Alvin.</p>
 
         <div class="signup-form-box">
           <div class="signup-form-header">
-            <h3>Lead Capture → Stripe Checkout</h3>
-            <p>Required details first. Then payment. Clean and simple.</p>
+            <h3>Details First. Then Your Next Step.</h3>
+            <p>Buy-now journeys go straight to Stripe after submit. Contact-us journeys can choose payment or enquiry only.</p>
           </div>
           <div class="signup-form-body">
             <div id="form-status" class="form-status" aria-live="polite"></div>
@@ -1953,16 +1953,16 @@
                   <option value="premium-monthly">Premium — £149/month</option>
                 </select>
               </div>
-              <button type="button" id="lead-submit" class="form-submit" onclick="handleSignup(event)">Continue to Secure Payment →</button>
-              <p class="form-note">🔒 We capture your lead details first, then send you to Stripe for payment. By continuing, you agree to be contacted by Genius Tax.</p>
+              <button type="button" id="lead-submit" class="form-submit" onclick="handleSignup(event)">Send Details →</button>
+              <p class="form-note">🔒 Your details are emailed to Alvin at alvin@geniusmoney.co.uk. Buy-now journeys then go straight to Stripe. Contact-us journeys can choose what happens next.</p>
             </div>
             <div class="success-msg" id="success-msg">
               <div class="success-icon">✅</div>
-              <h3>Details received.</h3>
-              <p>Your enquiry step is complete. Next, click the button below to continue to secure Stripe payment.</p>
-              <div class="success-actions">
+              <h3 id="success-title">Details received.</h3>
+              <p id="success-copy">We have your details and emailed them on. Choose your next step below.</p>
+              <div class="success-actions" id="success-actions">
                 <a id="stripe-payment-link" class="success-pay-btn" href="#" target="_blank" rel="noopener">Click here to sign up and pay →</a>
-                <a class="success-email-btn" href="mailto:hello@geniustax.co.uk?subject=Genius%20Tax%20enquiry">Email Genius Tax instead</a>
+                <a id="enquiry-email-link" class="success-email-btn" href="mailto:hello@geniustax.co.uk?subject=Genius%20Tax%20enquiry">Email Genius Tax instead</a>
               </div>
             </div>
           </div>
@@ -2094,6 +2094,9 @@
     }, { passive: true });
 
     // ── Sign up form ──
+    var WEB3FORMS_ACCESS_KEY = '869a7fca-8813-4924-837c-524d27de33ba';
+    var SIGNUP_MODE = 'contact';
+
     var STRIPE_LINKS = {
       'essential-monthly': 'https://buy.stripe.com/6oU7sLauAddlbJg2Qz9EI0a',
       'essential-annual': 'https://buy.stripe.com/3cI7sL9qw4GP00ydvd9EI08',
@@ -2110,6 +2113,19 @@
       status.style.display = message ? 'block' : 'none';
     }
 
+    function updateSignupUi() {
+      var button = document.getElementById('lead-submit');
+      var copy = document.querySelector('.section-lead');
+      if (button) {
+        button.textContent = SIGNUP_MODE === 'buy' ? 'Send Details and Go to Secure Payment →' : 'Send Details →';
+      }
+      if (copy) {
+        copy.textContent = SIGNUP_MODE === 'buy'
+          ? 'Fill in your details and we will email them to Alvin, then take you straight to Stripe.'
+          : 'Fill in your details, and we will email them to Alvin. Then you can choose payment or a simple enquiry.';
+      }
+    }
+
     document.querySelectorAll('a[data-plan]').forEach(function(link) {
       link.addEventListener('click', function() {
         var plan = link.getAttribute('data-plan');
@@ -2117,8 +2133,47 @@
         if (planSelect && plan) {
           planSelect.value = plan;
         }
+        SIGNUP_MODE = 'buy';
+        updateSignupUi();
       });
     });
+
+    document.querySelectorAll('a[href="#signup"]').forEach(function(link) {
+      if (!link.hasAttribute('data-plan')) {
+        link.addEventListener('click', function() {
+          SIGNUP_MODE = 'contact';
+          updateSignupUi();
+        });
+      }
+    });
+
+    function sendLeadEmail(formData) {
+      return fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: 'Genius Tax Website Lead - ' + formData.firstName + ' ' + formData.surname,
+          from_name: 'Genius Tax Website',
+          to: 'alvin@geniusmoney.co.uk',
+          name: formData.firstName + ' ' + formData.surname,
+          email: formData.email,
+          phone: formData.mobile,
+          message:
+            'New Genius Tax website lead\\n\\n' +
+            'First name: ' + formData.firstName + '\\n' +
+            'Surname: ' + formData.surname + '\\n' +
+            'Job title: ' + formData.jobTitle + '\\n' +
+            'Town: ' + formData.town + '\\n' +
+            'Mobile: ' + formData.mobile + '\\n' +
+            'Email: ' + formData.email + '\\n' +
+            'Plan: ' + formData.plan + '\\n' +
+            'Mode: ' + SIGNUP_MODE + '\\n' +
+            'Page: ' + window.location.href,
+          replyto: formData.email
+        })
+      }).then(function(r) { return r.json(); });
+    }
 
     function handleSignup(e) {
       e.preventDefault();
@@ -2169,27 +2224,52 @@
         console.warn('Could not store lead locally', err);
       }
 
-      var params = new URLSearchParams({
-        prefilled_email: formData.email,
-        client_reference_id: [formData.firstName, formData.surname, Date.now()].join('-').replace(/\s+/g, '-'),
-        'prefilled_metadata[first_name]': formData.firstName,
-        'prefilled_metadata[surname]': formData.surname,
-        'prefilled_metadata[job_title]': formData.jobTitle,
-        'prefilled_metadata[town]': formData.town,
-        'prefilled_metadata[mobile]': formData.mobile,
-        'prefilled_metadata[email]': formData.email
-      });
-
       document.getElementById('lead-submit').disabled = true;
-      document.getElementById('lead-submit').textContent = 'Details sent';
-      document.getElementById('form-container').style.display = 'none';
-      var msg = document.getElementById('success-msg');
-      var paymentLink = document.getElementById('stripe-payment-link');
-      if (paymentLink) {
-        paymentLink.href = stripeLink;
-      }
-      msg.style.display = 'block';
-      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      document.getElementById('lead-submit').textContent = 'Sending details...';
+
+      sendLeadEmail(formData)
+        .then(function(result) {
+          if (!result || result.success !== true) {
+            throw new Error('Lead email failed');
+          }
+
+          document.getElementById('form-container').style.display = 'none';
+          var msg = document.getElementById('success-msg');
+          var paymentLink = document.getElementById('stripe-payment-link');
+          var enquiryLink = document.getElementById('enquiry-email-link');
+          var successTitle = document.getElementById('success-title');
+          var successCopy = document.getElementById('success-copy');
+
+          if (paymentLink) {
+            paymentLink.href = stripeLink;
+          }
+          if (enquiryLink) {
+            enquiryLink.href = 'mailto:hello@geniustax.co.uk?subject=' + encodeURIComponent('Genius Tax enquiry from ' + formData.firstName + ' ' + formData.surname) + '&body=' + encodeURIComponent('Name: ' + formData.firstName + ' ' + formData.surname + '\nEmail: ' + formData.email + '\nPhone: ' + formData.mobile + '\nJob title: ' + formData.jobTitle + '\nTown: ' + formData.town + '\nPlan: ' + formData.plan);
+          }
+
+          if (SIGNUP_MODE === 'buy') {
+            if (successTitle) successTitle.textContent = 'Details sent. Opening payment...';
+            if (successCopy) successCopy.textContent = 'Your details have been emailed to Alvin. Taking you straight to secure Stripe payment now.';
+            msg.style.display = 'block';
+            msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            window.setTimeout(function() {
+              window.location.href = stripeLink;
+            }, 600);
+            return;
+          }
+
+          if (successTitle) successTitle.textContent = 'Details received.';
+          if (successCopy) successCopy.textContent = 'Your details have been emailed to Alvin. Choose your next step below.';
+          msg.style.display = 'block';
+          msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          document.getElementById('lead-submit').disabled = false;
+          document.getElementById('lead-submit').textContent = 'Send Details →';
+        })
+        .catch(function() {
+          document.getElementById('lead-submit').disabled = false;
+          document.getElementById('lead-submit').textContent = SIGNUP_MODE === 'buy' ? 'Send Details and Go to Secure Payment →' : 'Send Details →';
+          setFormStatus('We could not email your details through yet. Please try again or email hello@geniustax.co.uk directly.', 'error');
+        });
     }
   </script>
 
