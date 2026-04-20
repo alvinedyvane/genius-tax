@@ -573,9 +573,9 @@
        URGENCY / COUNTDOWN BAR
     ───────────────────────────────────────── */
     .urgency-bar {
-      background: #ffffff;
-      border-bottom: 1px solid #e0e0e0;
-      padding: 0.9rem 2rem;
+      background: linear-gradient(90deg, #4d0000 0%, #7d0000 50%, #a50000 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 1rem 2rem;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -583,52 +583,55 @@
       justify-content: center;
       gap: 1rem 2rem;
       text-align: center;
+      box-shadow: inset 0 -1px 0 rgba(255,255,255,0.08);
     }
     .urgency-left {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.35rem;
     }
     .urgency-header {
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 900;
-      letter-spacing: 5px;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      color: #2D2D2D;
+      color: #ffd6d6;
     }
     .urgency-label {
-      font-size: 0.75rem;
-      font-weight: 800;
-      letter-spacing: 2px;
+      font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      color: #6B6B6B;
+      color: #ffffff;
     }
     .urgency-sub {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: #6B6B6B;
-      letter-spacing: 0.5px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.88);
+      letter-spacing: 0.2px;
     }
     .urgency-countdown {
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .cd-unit {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: rgba(229,0,125,0.07);
-      border: 1px solid rgba(229,0,125,0.25);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
       border-radius: 10px;
-      padding: 0.6rem 1rem;
-      min-width: 72px;
+      padding: 0.7rem 1rem;
+      min-width: 82px;
     }
     .cd-num {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 900;
-      color: var(--pink);
+      color: #ffffff;
       letter-spacing: -2px;
       line-height: 1;
     }
@@ -637,29 +640,32 @@
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #6B6B6B;
+      color: rgba(255,255,255,0.7);
       margin-top: 0.3rem;
     }
-    .cd-sep { font-size: 1.8rem; font-weight: 900; color: var(--pink); opacity: 0.45; margin: 0 0.1rem; padding-bottom: 1rem; }
+    .cd-sep { font-size: 1.8rem; font-weight: 900; color: rgba(255,255,255,0.4); margin: 0 0.1rem; padding-bottom: 1rem; }
     .urgency-cta {
-      background: var(--pink);
-      color: var(--white);
-      padding: 0.65rem 1.6rem;
+      background: #ffffff;
+      color: #8b0000;
+      padding: 0.75rem 1.65rem;
       border-radius: 100px;
       font-size: 0.8rem;
-      font-weight: 800;
+      font-weight: 900;
       text-decoration: none;
       letter-spacing: 0.5px;
       text-transform: uppercase;
       white-space: nowrap;
-      transition: background 0.2s;
+      transition: transform 0.15s, background 0.2s;
       margin-top: 0.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
     }
-    .urgency-cta:hover { background: var(--pink-dark); }
+    .urgency-cta:hover { background: #ffe8e8; transform: translateY(-1px); }
     @media (max-width: 600px) {
-      .urgency-bar { flex-direction: column; gap: 0.5rem; padding: 1.2rem 1rem 1rem; }
-      .cd-num { font-size: 1.7rem; }
-      .cd-unit { min-width: 54px; padding: 0.5rem 0.6rem; }
+      .urgency-bar { flex-direction: column; gap: 0.65rem; padding: 1.2rem 1rem 1rem; }
+      .urgency-label { font-size: 0.92rem; }
+      .urgency-sub { font-size: 0.82rem; }
+      .cd-num { font-size: 1.8rem; }
+      .cd-unit { min-width: 58px; padding: 0.55rem 0.65rem; }
       .cd-sep { font-size: 1.4rem; padding-bottom: 0.7rem; }
     }
 
@@ -1125,6 +1131,27 @@
       margin-top: 1rem;
       line-height: 1.6;
     }
+    .form-status {
+      display: none;
+      margin-bottom: 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius);
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+    .form-status.error {
+      display: block;
+      background: rgba(255, 107, 107, 0.14);
+      border: 1px solid rgba(255, 107, 107, 0.35);
+      color: #ffd7d7;
+    }
+    .form-status.success {
+      display: block;
+      background: rgba(46, 213, 115, 0.14);
+      border: 1px solid rgba(46, 213, 115, 0.35);
+      color: #d9ffe7;
+    }
     .success-msg {
       display: none;
       text-align: center;
@@ -1514,20 +1541,22 @@
   <!-- ═══════════════════════════════════════
        URGENCY / COUNTDOWN
   ═══════════════════════════════════════ -->
-  <div class="urgency-bar" role="timer" aria-live="polite" aria-label="Countdown to MTD deadline">
+  <div class="urgency-bar" role="timer" aria-live="polite" aria-label="MTD deadline warning">
     <div class="urgency-left">
-      <div class="urgency-header">MTD DEADLINE</div>
-      <div class="urgency-countdown" id="countdown">
-        <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days</span></div>
-        <span class="cd-sep">:</span>
-        <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
-        <span class="cd-sep">:</span>
-        <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">Mins</span></div>
-        <span class="cd-sep">:</span>
-        <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">Secs</span></div>
-      </div>
+      <div class="urgency-header">MTD DEADLINE WARNING</div>
+      <div class="urgency-label" id="urgency-label">MTD has passed. Act now.</div>
+      <div class="urgency-sub" id="urgency-sub">Every day you wait increases the risk of falling behind HMRC requirements.</div>
     </div>
-    <a href="https://buy.stripe.com/dRm14n46c6OXfZwcr99EI0b" target="_blank" rel="noopener" class="urgency-cta">Claim Early Bird</a>
+    <div class="urgency-countdown" id="countdown">
+      <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days Over</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">Mins</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">Secs</span></div>
+    </div>
+    <a href="#signup" class="urgency-cta">Talk To Us Straight Away</a>
   </div>
 
   <!-- ═══════════════════════════════════════
@@ -1540,7 +1569,7 @@
           <span class="hmrc-badge-icon">🛡️</span>
           <span class="hmrc-badge-text">HMRC Authorised Tax Agent &nbsp;·&nbsp; AML Approved</span>
         </div>
-        <div class="hero-eyebrow">MTD Making Tax Digital — Mandatory from 6 April 2026</div>
+        <div class="hero-eyebrow">MTD has passed. If you are not set up yet, you need to move now.</div>
         <h1>Your Tax.<br><em>Sorted.</em></h1>
         <p class="hero-sub">
           From self-assessment to MTD compliance — Genius Tax handles everything so you don't have to. <strong>Fully HMRC-authorised. Digital records included.</strong>
@@ -1551,8 +1580,8 @@
         </div>
       </div>
       <div class="hero-card" aria-hidden="true">
-        <span class="hero-card-badge">Deadline approaching</span>
-        <p class="hero-card-headline">MTD ITSA becomes mandatory</p>
+        <span class="hero-card-badge">Deadline passed</span>
+        <p class="hero-card-headline">MTD ITSA is now live</p>
         <div class="hero-card-deadline">
           <small>6 April</small>
           2026
@@ -1840,14 +1869,15 @@
       <div class="signup-inner">
         <div class="section-eyebrow">Get Started</div>
         <h2 class="sh">Ready to Get<br>Sorted?</h2>
-        <p class="section-lead">Fill in your details and a Genius Tax advisor will be in touch within one working day to get you set up.</p>
+        <p class="section-lead">Fill in your details, then go straight to Stripe. We capture the lead first, then send you to secure payment.</p>
 
         <div class="signup-form-box">
           <div class="signup-form-header">
-            <h3>Sign Up — Takes 3 Minutes</h3>
-            <p>No payment taken until your account is fully active. HMRC authorisation included.</p>
+            <h3>Lead Capture → Stripe Checkout</h3>
+            <p>Required details first. Then payment. Clean and simple.</p>
           </div>
           <div class="signup-form-body">
+            <div id="form-status" class="form-status" aria-live="polite"></div>
             <div id="form-container">
               <div class="form-row">
                 <div class="fg">
@@ -1855,45 +1885,48 @@
                   <input type="text" id="fname" placeholder="Jane" required autocomplete="given-name" />
                 </div>
                 <div class="fg">
-                  <label for="lname">Last Name *</label>
+                  <label for="lname">Surname *</label>
                   <input type="text" id="lname" placeholder="Smith" required autocomplete="family-name" />
                 </div>
               </div>
-              <div class="fg">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" placeholder="jane@example.com" required autocomplete="email" />
+              <div class="form-row">
+                <div class="fg">
+                  <label for="job-title">Job Title *</label>
+                  <input type="text" id="job-title" placeholder="Electrician" required autocomplete="organization-title" />
+                </div>
+                <div class="fg">
+                  <label for="town">Town *</label>
+                  <input type="text" id="town" placeholder="Portsmouth" required autocomplete="address-level2" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="fg">
+                  <label for="phone">Mobile *</label>
+                  <input type="tel" id="phone" placeholder="07700 000000" required autocomplete="tel" />
+                </div>
+                <div class="fg">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" placeholder="jane@example.com" required autocomplete="email" />
+                </div>
               </div>
               <div class="fg">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" placeholder="07700 000000" required autocomplete="tel" />
-              </div>
-              <div class="fg">
-                <label for="income">Annual Gross Income *</label>
-                <select id="income" required>
-                  <option value="" disabled selected>Select income band</option>
-                  <option value="under-30k">Under £30,000</option>
-                  <option value="30-50k">£30,000 – £50,000 (MTD in 2027)</option>
-                  <option value="50-75k">£50,000 – £75,000 (MTD now)</option>
-                  <option value="75-100k">£75,000 – £100,000</option>
-                  <option value="100k+">£100,000+</option>
+                <label for="plan">Choose Your Plan *</label>
+                <select id="plan" required>
+                  <option value="" disabled selected>Select your plan</option>
+                  <option value="essential-monthly">Essential — £20/month</option>
+                  <option value="essential-annual">Essential — £199 upfront</option>
+                  <option value="growth-monthly">Growth — £30/month</option>
+                  <option value="growth-annual">Growth — £299 upfront</option>
+                  <option value="premium-monthly">Premium — £149/month</option>
                 </select>
               </div>
-              <div class="fg">
-                <label for="plan">Plan of Interest</label>
-                <select id="plan">
-                  <option value="mtd" selected>Growth — £299 upfront or £30/month</option>
-                  <option value="standard">Essential — £199 upfront or £20/month</option>
-                  <option value="premium">Premium — contact us</option>
-                  <option value="unsure">Not sure — advise me</option>
-                </select>
-              </div>
-              <button type="button" class="form-submit" onclick="handleSignup(event)">Get Started — Genius Tax →</button>
-              <p class="form-note">🔒 Your details are kept private and will never be shared with third parties.<br>By submitting, you agree to be contacted by a Genius Tax advisor.</p>
+              <button type="button" id="lead-submit" class="form-submit" onclick="handleSignup(event)">Continue to Secure Payment →</button>
+              <p class="form-note">🔒 We capture your lead details first, then send you to Stripe for payment. By continuing, you agree to be contacted by Genius Tax.</p>
             </div>
             <div class="success-msg" id="success-msg">
               <div class="success-icon">✅</div>
-              <h3>You're on the list!</h3>
-              <p>A Genius Tax advisor will be in touch within one working day to complete your setup. Check your inbox — and your spam folder just in case.</p>
+              <h3>Details captured.</h3>
+              <p>Sending you to secure Stripe checkout now.</p>
             </div>
           </div>
         </div>
@@ -1965,31 +1998,35 @@
        JAVASCRIPT
   ═══════════════════════════════════════ -->
   <script>
-    // ── Countdown to 6 April 2026 00:00:00 BST ──
-    // BST = UTC+1, so target is 2026-04-05T23:00:00Z in UTC
+    // ── Time since MTD deadline passed ──
+    // Deadline was 6 April 2026 00:00 BST, which is 2026-04-05T23:00:00Z in UTC.
     const DEADLINE = new Date('2026-04-05T23:00:00Z').getTime();
 
     function pad(n) { return String(n).padStart(2, '0'); }
 
     function updateCountdown() {
       const now = Date.now();
-      const diff = DEADLINE - now;
+      const diff = now - DEADLINE;
+      const elapsed = diff > 0 ? diff : 0;
 
-      if (diff <= 0) {
-        document.getElementById('countdown').innerHTML =
-          '<span style="color:rgba(255,255,255,0.55);font-size:0.85rem;font-weight:700;">The MTD deadline has passed.</span>';
-        return;
-      }
+      const days  = Math.floor(elapsed / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((elapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins  = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
+      const secs  = Math.floor((elapsed % (1000 * 60)) / 1000);
 
-      const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const secs  = Math.floor((diff % (1000 * 60)) / 1000);
-
-      document.getElementById('cd-days').textContent  = pad(days);
+      document.getElementById('cd-days').textContent  = String(days);
       document.getElementById('cd-hours').textContent = pad(hours);
       document.getElementById('cd-mins').textContent  = pad(mins);
       document.getElementById('cd-secs').textContent  = pad(secs);
+
+      var label = document.getElementById('urgency-label');
+      var sub = document.getElementById('urgency-sub');
+      if (label) {
+        label.textContent = days === 1 ? 'MTD has passed by 1 day.' : 'MTD has passed by ' + days + ' days.';
+      }
+      if (sub) {
+        sub.textContent = 'If you are still not set up, speak to us straight away and get compliant fast.';
+      }
     }
 
     updateCountdown();
@@ -2020,28 +2057,92 @@
     }, { passive: true });
 
     // ── Sign up form ──
+    var STRIPE_LINKS = {
+      'essential-monthly': 'https://buy.stripe.com/6oU7sLauAddlbJg2Qz9EI0a',
+      'essential-annual': 'https://buy.stripe.com/3cI7sL9qw4GP00ydvd9EI08',
+      'growth-monthly': 'https://buy.stripe.com/dRm14n46c6OXfZwcr99EI0b',
+      'growth-annual': 'https://buy.stripe.com/aFadR90U04GP6oW2Qz9EI09',
+      'premium-monthly': 'https://buy.stripe.com/00w6oH3285KT5kSbn59EI05'
+    };
+
+    function setFormStatus(message, kind) {
+      var status = document.getElementById('form-status');
+      if (!status) return;
+      status.className = 'form-status' + (kind ? ' ' + kind : '');
+      status.textContent = message || '';
+      status.style.display = message ? 'block' : 'none';
+    }
+
     function handleSignup(e) {
       e.preventDefault();
-      var fname  = document.getElementById('fname').value.trim();
-      var email  = document.getElementById('email').value.trim();
-      var phone  = document.getElementById('phone').value.trim();
-      var income = document.getElementById('income').value;
+      setFormStatus('');
 
-      if (!fname || !email || !phone || !income) {
-        alert('Please fill in all required fields.');
+      var formData = {
+        firstName: document.getElementById('fname').value.trim(),
+        surname: document.getElementById('lname').value.trim(),
+        jobTitle: document.getElementById('job-title').value.trim(),
+        town: document.getElementById('town').value.trim(),
+        mobile: document.getElementById('phone').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        plan: document.getElementById('plan').value
+      };
+
+      var missing = Object.keys(formData).filter(function(key) { return !formData[key]; });
+      if (missing.length) {
+        setFormStatus('Please fill in every field before continuing to payment.', 'error');
         return;
       }
 
       var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRe.test(email)) {
-        alert('Please enter a valid email address.');
+      if (!emailRe.test(formData.email)) {
+        setFormStatus('Please enter a valid email address.', 'error');
         return;
       }
 
+      var stripeLink = STRIPE_LINKS[formData.plan];
+      if (!stripeLink) {
+        setFormStatus('The selected plan is not wired to Stripe yet.', 'error');
+        return;
+      }
+
+      var payload = {
+        capturedAt: new Date().toISOString(),
+        source: 'geniustax.co.uk',
+        page: window.location.href,
+        userAgent: navigator.userAgent,
+        utm: Object.fromEntries(new URLSearchParams(window.location.search).entries()),
+        ...formData
+      };
+
+      try {
+        var existing = JSON.parse(localStorage.getItem('geniusTaxLeads') || '[]');
+        existing.push(payload);
+        localStorage.setItem('geniusTaxLeads', JSON.stringify(existing));
+      } catch (err) {
+        console.warn('Could not store lead locally', err);
+      }
+
+      var params = new URLSearchParams({
+        prefilled_email: formData.email,
+        client_reference_id: [formData.firstName, formData.surname, Date.now()].join('-').replace(/\s+/g, '-'),
+        'prefilled_metadata[first_name]': formData.firstName,
+        'prefilled_metadata[surname]': formData.surname,
+        'prefilled_metadata[job_title]': formData.jobTitle,
+        'prefilled_metadata[town]': formData.town,
+        'prefilled_metadata[mobile]': formData.mobile,
+        'prefilled_metadata[email]': formData.email
+      });
+
+      document.getElementById('lead-submit').disabled = true;
+      document.getElementById('lead-submit').textContent = 'Opening Stripe...';
       document.getElementById('form-container').style.display = 'none';
       var msg = document.getElementById('success-msg');
       msg.style.display = 'block';
       msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      window.setTimeout(function() {
+        window.location.href = stripeLink + (stripeLink.indexOf('?') === -1 ? '?' : '&') + params.toString();
+      }, 400);
     }
   </script>
 
